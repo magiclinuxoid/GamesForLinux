@@ -6,7 +6,7 @@
 
 # Name of this version of winetricks (YYYYMMDD)
 # (This doesn't change often, use the sha256sum of the file when reporting problems)
-WINETRICKS_VERSION=20200412-next
+WINETRICKS_VERSION=20201206-next
 
 # This is a UTF-8 file
 # You should see an o with two dots over it here [ö]
@@ -5817,7 +5817,8 @@ helper_win2ksp4()
     # Mirror list at http://www.filewatcher.com/m/w2ksp4_en.exe.135477136-0.html
     # This URL doesn't need rename from w2ksp4_en.exe to W2KSP4_EN.EXE
     # to avoid users having to redownload for a file rename
-    w_download_to win2ksp4 https://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/win2000/Service_Packs/usa/W2KSP4_EN.EXE 167bb78d4adc957cc39fb4902517e1f32b1e62092353be5f8fb9ee647642de7e
+    # 2020/12/09: https://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/win2000/Service_Packs/usa/W2KSP4_EN.EXE
+    w_download_to win2ksp4 http://x3270.bgp.nu/download/specials/W2KSP4_EN.EXE 167bb78d4adc957cc39fb4902517e1f32b1e62092353be5f8fb9ee647642de7e
     w_try_cabextract -d "${W_TMP}" -L -F "${filename}" "${W_CACHE}"/win2ksp4/W2KSP4_EN.EXE
 }
 
@@ -5850,7 +5851,8 @@ helper_winxpsp3()
     # https://download.microsoft.com/download/d/3/0/d30e32d8-418a-469d-b600-f32ce3edf42d/WindowsXP-KB936929-SP3-x86-ENU.exe
     # Mirror list: http://www.filewatcher.com/m/WindowsXP-KB936929-SP3-x86-ENU.exe.331805736-0.html
     # 2018/04/04: http://www.download.windowsupdate.com/msdownload/update/software/dflt/2008/04/windowsxp-kb936929-sp3-x86-enu_c81472f7eeea2eca421e116cd4c03e2300ebfde4.exe
-    w_download_to winxpsp3 https://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/winxp/Service_Packs/WindowsXP-KB936929-SP3-x86-ENU.exe 62e524a552db9f6fd22d469010ea4d7e28ee06fa615a1c34362129f808916654
+    # 2020/12/09: https://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/winxp/Service_Packs/WindowsXP-KB936929-SP3-x86-ENU.exe
+    w_download_to winxpsp3 http://www.download.windowsupdate.com/msdownload/update/software/dflt/2008/04/windowsxp-kb936929-sp3-x86-enu_c81472f7eeea2eca421e116cd4c03e2300ebfde4.exe 62e524a552db9f6fd22d469010ea4d7e28ee06fa615a1c34362129f808916654
 
     w_try_cabextract -d "${W_TMP}" -L -F "${filename}" "${W_CACHE}"/winxpsp3/WindowsXP-KB936929-SP3-x86-ENU.exe
 }
@@ -6033,11 +6035,8 @@ w_metadata cmd dlls \
 
 load_cmd()
 {
-    # Originally at: https://download.microsoft.com/download/8/d/c/8dc79965-dfbc-4b25-9546-e23bc4b791c6/Q811493_W2K_SP4_X86_EN.exe
-    # Mirror list: http://www.filewatcher.com/_/?q=Q811493_W2K_SP4_X86_EN.exe
-    w_download https://ftp.gnome.org/mirror/archive/ftp.sunet.se/pub/security/vendor/microsoft/win2000/Security_Bulletins/Q811493_W2K_SP4_X86_EN.exe b5574b3516a724c2cba0d864162a3d1d684db1cf30de8db4b0e0ea6a1f6f1480
+    w_download https://web.archive.org/web/20150526022037/http://download.microsoft.com/download/8/d/c/8dc79965-dfbc-4b25-9546-e23bc4b791c6/Q811493_W2K_SP4_X86_EN.exe b5574b3516a724c2cba0d864162a3d1d684db1cf30de8db4b0e0ea6a1f6f1480
     w_try_cabextract --directory="${W_SYSTEM32_DLLS}" "${W_CACHE}/${W_PACKAGE}/${file1}" -F cmd.exe
-
     w_override_dlls native,builtin cmd.exe
 }
 
@@ -6915,7 +6914,7 @@ load_directplay()
     w_try_cabextract -d "${W_SYSTEM32_DLLS}" -L -F 'dpnsvr.exe' "${W_TMP}/dxnt.cab"
     w_try_cabextract -d "${W_SYSTEM32_DLLS}" -L -F 'dpwsockx.dll' "${W_TMP}/dxnt.cab"
 
-    w_override_dlls native dplayx dpnet dpnhpast dpnsvr.exe dpwsockx
+    w_override_dlls native dplaysvr.exe dplayx dpnet dpnhpast dpnsvr.exe dpwsockx
 
     w_try_regsvr dplayx.dll
     w_try_regsvr dpnet.dll
@@ -8316,6 +8315,24 @@ load_dxvk172()
     helper_dxvk_d9vk "${file1}" "5.8" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
 }
 
+w_metadata dxvk173 dlls \
+    title="Vulkan-based D3D9/D3D10/D3D11 implementation for Linux / Wine (1.7.3)" \
+    publisher="Philip Rebohle" \
+    year="2017" \
+    media="download" \
+    file1="dxvk-1.7.3.tar.gz" \
+    installed_file1="${W_SYSTEM32_DLLS_WIN}/d3d9.dll" \
+    installed_file2="${W_SYSTEM32_DLLS_WIN}/d3d10core.dll" \
+    installed_file3="${W_SYSTEM32_DLLS_WIN}/d3d11.dll" \
+    installed_file4="${W_SYSTEM32_DLLS_WIN}/dxgi.dll"
+
+load_dxvk173()
+{
+    # https://github.com/doitsujin/dxvk
+    w_download "https://github.com/doitsujin/dxvk/releases/download/v1.7.3/dxvk-1.7.3.tar.gz" e4c2444256b7ad63455fa6329638e3f42900ec7462dc9c26da56187a2040aba0
+    helper_dxvk_d9vk "${file1}" "5.8" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
+}
+
 #----------------------------------------------------------------
 
 w_metadata dxvk dlls \
@@ -9653,6 +9670,56 @@ load_dotnetcore2()
 
 #----------------------------------------------------------------
 
+w_metadata dotnetcore3 dlls \
+    title="MS .NET Core Runtime 3.1 LTS" \
+    publisher="Microsoft" \
+    year="2020" \
+    media="download" \
+    file1="dotnet-runtime-3.1.10-win-x86.exe" \
+    installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
+
+load_dotnetcore3()
+{
+    # Official version, see https://dotnet.microsoft.com/download/dotnet-core/3.1
+    w_download https://download.visualstudio.microsoft.com/download/pr/abb3fb5d-4e82-4ca8-bc03-ac13e988e608/b34036773a72b30c5dc5520ee6a2768f/dotnet-runtime-3.1.10-win-x86.exe 6ae8d2fb7a23ac4770fa815bc27614b2db0e89f5c078eb2744771bf5541cdba3
+
+    w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
+    w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
+
+    if [ "${W_ARCH}" = "win64" ]; then
+        # Also install the 64-bit version
+        w_download https://download.visualstudio.microsoft.com/download/pr/9845b4b0-fb52-48b6-83cf-4c431558c29b/41025de7a76639eeff102410e7015214/dotnet-runtime-3.1.10-win-x64.exe 78ef39c732ec35e79a0c1a10010ea797733df2811d774709b0fde23dce02efdf
+        w_try "${WINE}" "dotnet-runtime-3.1.10-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+    fi
+}
+
+#----------------------------------------------------------------
+
+w_metadata dotnetcoredesktop3 dlls \
+    title="MS .NET Core Desktop Runtime 3.1 LTS" \
+    publisher="Microsoft" \
+    year="2020" \
+    media="download" \
+    file1="windowsdesktop-runtime-3.1.10-win-x86.exe" \
+    installed_file1="${W_PROGRAMS_WIN}/dotnet/dotnet.exe"
+
+load_dotnetcoredesktop3()
+{
+    # Official version, see https://dotnet.microsoft.com/download/dotnet-core/3.1
+    w_download https://download.visualstudio.microsoft.com/download/pr/865d0be5-16e2-4b3d-a990-f4c45acd280c/ec867d0a4793c0b180bae85bc3a4f329/windowsdesktop-runtime-3.1.10-win-x86.exe 4da245d9048642ed3f25c04e8fa0156e1d2966b4d257c12a9a3d3a0c929102aa
+
+    w_try_cd "${W_CACHE}"/"${W_PACKAGE}"
+    w_try "${WINE}" "${file1}" ${W_OPT_UNATTENDED:+/quiet}
+
+    if [ "${W_ARCH}" = "win64" ]; then
+        # Also install the 64-bit version
+        w_download https://download.visualstudio.microsoft.com/download/pr/513acf37-8da2-497d-bdaa-84d6e33c1fee/eb7b010350df712c752f4ec4b615f89d/windowsdesktop-runtime-3.1.10-win-x64.exe 32286b9a35d9a53d28807ef761f3dba43b71e602efd2b794f843fcf5ea8438a9
+        w_try "${WINE}" "windowsdesktop-runtime-3.1.10-win-x64.exe" ${W_OPT_UNATTENDED:+/quiet}
+    fi
+}
+
+#----------------------------------------------------------------
+
 w_metadata dotnet_verifier dlls \
     title="MS .NET Verifier" \
     publisher="Microsoft" \
@@ -10728,6 +10795,44 @@ load_l3codecx()
     w_try_cabextract -d "${W_SYSTEM32_DLLS}" -L -F 'l3codecx.ax' "${W_TMP}/dxnt.cab"
 
     w_try_regsvr l3codecx.ax
+}
+
+#----------------------------------------------------------------
+
+w_metadata lavfilters dlls \
+    title="LAV Filters" \
+    publisher="Hendrik Leppkes" \
+    year="2019" \
+    media="download" \
+    conflicts="lavfilters702" \
+    file1="LAVFilters-0.74.1-Installer.exe" \
+    installed_file1="${W_PROGRAMS_X86_WIN}/LAV Filters/x86/avfilter-lav-7.dll" \
+    homepage="https://github.com/Nevcairiel/LAVFilters"
+
+load_lavfilters()
+{
+    w_download https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe 181e24428eaa34d0121cd53ec829c18e52d028689e12a7326f952989daa44ddb
+    w_try_cd "${W_CACHE}/${W_PACKAGE}"
+    w_try "${WINE}" LAVFilters-0.74.1-Installer.exe ${W_OPT_UNATTENDED:+ /VERYSILENT}
+}
+
+#----------------------------------------------------------------
+
+w_metadata lavfilters702 dlls \
+    title="LAV Filters 0.70.2" \
+    publisher="Hendrik Leppkes" \
+    year="2017" \
+    media="download" \
+    conflicts="lavfilters" \
+    file1="LAVFilters-0.70.2-Installer.exe" \
+    installed_file1="${W_PROGRAMS_X86_WIN}/LAV Filters/x86/avfilter-lav-6.dll" \
+    homepage="https://github.com/Nevcairiel/LAVFilters"
+
+load_lavfilters702()
+{
+    w_download https://github.com/Nevcairiel/LAVFilters/releases/download/0.70.2/LAVFilters-0.70.2-Installer.exe 526e6f2de21759c0d5a60bfd2471880b5720cfb88a3b70163865a9d6cd2aa7cc
+    w_try_cd "${W_CACHE}/${W_PACKAGE}"
+    w_try "${WINE}" LAVFilters-0.70.2-Installer.exe ${W_OPT_UNATTENDED:+ /VERYSILENT}
 }
 
 #----------------------------------------------------------------
@@ -14472,7 +14577,7 @@ w_metadata adobe_diged4 apps \
 
 load_adobe_diged4()
 {
-    w_download https://download.adobe.com/pub/adobe/digitaleditions/ADE_4.5_Installer.exe
+    w_download https://download.adobe.com/pub/adobe/digitaleditions/ADE_4.5_Installer.exe a21a9d5389728fdac6a7288953dddeea774ef2bee07f1caf7ea20bbed8f5a2c6
 
     if w_workaround_wine_bug 32323; then
         w_call corefonts

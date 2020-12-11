@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=WINEARCH=win64 WINEPREFIX="/home/dron/prefix#1" /home/dron/.local/share/lutris/runners/wine/lutris-lol-5.5-2-x86_64/bin/wine "/home/dron/prefix#1/drive_c/Riot Games/League of Legends/LeagueClient.exe"
+Type=Application
+Path=/home/dron/prefix#1/drive_c/Riot Games/League of Legends

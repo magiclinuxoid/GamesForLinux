@@ -183,7 +183,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         if self.text2 != 'wine':
             if self.nameprefix != "":
                 self.cb=self.comboBox.currentText()
-                self.lineEdit.setText("")
+                #self.lineEdit.setText("")
                 f = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/' + self.nameprefix 
                 f = open(f, mode="w", encoding="utf_8")
                 f.write('#!/bin/sh'+'\n')

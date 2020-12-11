@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=WINEARCH=win64 WINEPREFIX="/home/dron/prefix#1" /home/dron/.local/share/lutris/runners/wine/lutris-5.0-x86_64/bin/wine "/home/dron/prefix#1/drive_c/Program Files (x86)/Battle.net/Battle.net.exe"
+Type=Application
+Path=/home/dron/prefix#1/drive_c/Program Files (x86)/Battle.net
