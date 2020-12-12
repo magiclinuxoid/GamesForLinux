@@ -28,22 +28,22 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.toolButton.clicked.connect(self.searchItem)
         self.toolButton_2.clicked.connect(self.clear_search)
         self.toolButton_10.clicked.connect(self.open_icon)
-        self.directory_6 = '/home/'+os.getlogin()+'/Games4Linux/code_files/runner/'
+        self.directory_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/runner/'
         print(self.directory_6)
         for item in os.listdir(self.directory_6):  # для каждого файла в директории
             self.comboBox_2.addItem(item)   # добавить файл в comboBox
             
-        self.directory_7 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/'
+        self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(self.item_2)   # добавить файл в listWidget 
             
-        self.directory_9 = '/home/'+os.getlogin()+'/Games4Linux/code_files/icon'
+        self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon'
         for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
             self.listWidget_3.addItem(self.item_3)
             
     def clear_search(self):
         self.listWidget_2.clear() 
-        self.directory_7 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/'
+        self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(self.item_2)   # добавить файл в listWidget 
         
@@ -51,7 +51,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
          self.search_string = self.lineEdit_2.text()
          if self.search_string == "":
                 self.listWidget_2.clear() 
-                self.directory_7 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/'
+                self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
                 for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
                     self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
          else:
@@ -123,7 +123,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
   
             msg.exec()
             if msg.clickedButton() == okButton:
-                self.directory_8 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate_delete/'
+                self.directory_8 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/'
                 self.selectItem_3 = self.listWidget_2.currentItem().text()
                 setups = 'rm '+'"'+self.directory_7 + self.selectItem_3+'"'
                 print(setups)
@@ -134,7 +134,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                 os.system("bash -c '%s'" % delete_prefix_sh)
                 os.system("bash -c '%s'" % setups)
                 self.listWidget_2.clear() 
-                self.directory_7 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/'
+                self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
                 for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
                     self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
         except AttributeError:
@@ -151,16 +151,15 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         if self.text2 == 'wine':
             if self.nameprefix != "":
                 self.cb=self.comboBox.currentText()
-                #self.lineEdit.setText("")
-                f = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/' + self.nameprefix 
+                f = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/' + self.nameprefix 
                 f = open(f, mode="w", encoding="utf_8")
                 f.write('#!/bin/sh'+'\n')
-                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"'+' WINE=/bin/wine ' + '/home/'+os.getlogin()+'/Games4Linux/code_files/winetricks &'+'\n')
+                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"'+' WINE=/bin/wine ' + '/home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks &'+'\n')
                 f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"' +' '+'/bin/wine '+ ' winecfg &'+'\n')
                 f.write(self.text+'/drive_c/'+'\n')
                 f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+'/bin/wine' +' "')
                 f.close()
-                f2='/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate_delete/' + self.nameprefix 
+                f2='/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/' + self.nameprefix 
                 f2 = open(f2, mode="w", encoding="utf_8")
                 f2.write('#!/bin/sh'+'\n')
                 f2.write('rm -r '+'"'+self.text+'"')
@@ -180,18 +179,26 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
 "font:11pt;"
 "font-weight:900;")
                 msg.exec()
+        self.name = QFileInfo(str(self.directory)).fileName()
+        print(self.name)
+        self.nameprefix = self.name
         if self.text2 != 'wine':
             if self.nameprefix != "":
                 self.cb=self.comboBox.currentText()
                 #self.lineEdit.setText("")
-                f = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/' + self.nameprefix 
+                f = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/' + self.nameprefix 
                 f = open(f, mode="w", encoding="utf_8")
                 f.write('#!/bin/sh'+'\n')
-                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'" WINE='+self.text2+' /home/'+os.getlogin()+'/Games4Linux/code_files/winetricks &'+'\n')
+                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"' ' WINE='+self.text2+'/bin/wine'+' /home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks &'+'\n')
                 f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"' +' '+self.text2+'/bin/wine'+' winecfg &'+'\n')
                 f.write(self.text+'/drive_c/'+'\n')
                 f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+self.text2+'/bin/wine'+' "')
                 f.close()
+                f2='/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/' + self.nameprefix 
+                f2 = open(f2, mode="w", encoding="utf_8")
+                f2.write('#!/bin/sh'+'\n')
+                f2.write('rm -r '+'"'+self.text+'"')
+                f2.close()
             else: 
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
@@ -208,7 +215,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
 "font-weight:900;")
                 msg.exec()
         self.listWidget_2.clear() 
-        self.directory_7 = '/home/'+os.getlogin()+'/Games4Linux/code_files/prefix_locate/'
+        self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
     def Installexe(self):
@@ -219,7 +226,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             print(self.f_3)
             e = str(self.f_3.readlines()[4])
             e = e.replace("\n", "")
-            #exe_file='/home/'+os.getlogin()+'/Games4Linux/code_files/wine-create-shortcut'+" "+'"'+self.text3+'"'
+            #exe_file='/home/'+os.getlogin()+'/GamesForLinux/code_files/wine-create-shortcut'+" "+'"'+self.text3+'"'
             #print(exe_file)
             #os.system("bash -c '%s'" % exe_file)
             installexe = e + self.text3 + '"'
@@ -243,17 +250,17 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             print(path_exe)
             print(path)
             print(self.filename)
-            f_1 = '/home/'+os.getlogin()+'/Games4Linux/code_files/icon/' +  self.filename
+            f_1 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +  self.filename
             f_1 = open(f_1, mode="w", encoding="utf_8")
             f_1.write('[Desktop Entry]'+'\n')
             f_1.write('Exec='+self.str2+path_exe+'"'+'\n')
             f_1.write('Type=Application'+'\n')
             f_1.write('Path='+directory_10+'\n')
             f_1.close()
-            chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/Games4Linux/code_files/icon/' +  '"'+self.filename+'"'
+            chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +  '"'+self.filename+'"'
             os.system("bash -c '%s'" % chmod)
             self.listWidget_3.clear()
-            self.directory_9 = '/home/'+os.getlogin()+'/Games4Linux/code_files/icon/'
+            self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/'
             for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
                 self.listWidget_3.addItem(self.item_3)
             
@@ -295,7 +302,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         except IndexError:
             error_4 = 'Выбери пути!'
             QMessageBox.question(self, 'Введено', error_4, QMessageBox.Ok, QMessageBox.Ok)
-        update =  '/home/'+os.getlogin()+'/Games4Linux/code_files/winetricks --self-update'
+        update =  '/home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks --self-update'
         os.system("bash -c '%s'" % update)
         
     def Selectexe(self):
@@ -360,6 +367,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication
-    Games4Linux = ExampleApp()  # Создаём объект класса ExampleApp
-    Games4Linux.show()# Показываем окно
+    GamesForLinux = ExampleApp()  # Создаём объект класса ExampleApp
+    GamesForLinux.show()# Показываем окно
     app.exec_()  # и запускаем приложение

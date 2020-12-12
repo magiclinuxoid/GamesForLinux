@@ -1,5 +1,0 @@
-#!/bin/sh
-WINEARCH="win32" WINEPREFIX="1" WINE=/bin/wine /home/dron/Games4Linux/code_files/winetricks &
-WINEARCH=win32 WINEPREFIX="1" /bin/wine  winecfg &
-1/drive_c/
-WINEARCH=win32 WINEPREFIX="1" /bin/wine " 

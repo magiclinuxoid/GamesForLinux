@@ -1,5 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Exec=WINEARCH=win64 WINEPREFIX="/home/dron/Префиксы/Prefix Heroes of Might and Magic V - Gold Edition x64" /bin/wine "/home/dron/Префиксы/Prefix Heroes of Might and Magic V - Gold Edition x64/drive_c/Program Files (x86)/Heroes of Might and Magic V - Gold Edition/Hammers of Fate/bin/H5_Game.exe"
-Type=Application
-Path=/home/dron/Префиксы/Prefix Heroes of Might and Magic V - Gold Edition x64/drive_c/Program Files (x86)/Heroes of Might and Magic V - Gold Edition/Hammers of Fate
