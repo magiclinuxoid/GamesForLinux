@@ -1,5 +1,0 @@
-#!/bin/sh
-WINEARCH="win64" WINEPREFIX="/home/dron/GamesForLinux/Prefix x64" WINE=/home/dron/.local/share/lutris/runners/wine/lutris-5.5-2-x86_64/bin/wine /home/dron/GamesForLinux/code_files/winetricks &
-WINEARCH=win64 WINEPREFIX="/home/dron/GamesForLinux/Prefix x64" /home/dron/.local/share/lutris/runners/wine/lutris-5.5-2-x86_64/bin/wine winecfg &
-/home/dron/GamesForLinux/Prefix x64/drive_c/
-WINEARCH=win64 WINEPREFIX="/home/dron/GamesForLinux/Prefix x64" /home/dron/.local/share/lutris/runners/wine/lutris-5.5-2-x86_64/bin/wine "
