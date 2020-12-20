@@ -483,41 +483,7 @@
     </sizepolicy>
    </property>
    <property name="styleSheet">
-    <string notr="true">QTabBar::tab:selected{
-background-color: rgb(48, 48, 48);
-color: rgb(255, 255, 255);
-}
-QTabBar::tab:hover {}
-QTabBar{
-background-color:rgb(255, 16, 72);
-border-top-left-radius: 8px;
-border-bottom-left-radius: 8px;
-color: rgb(255, 255, 255);
-font:  11pt;
-}
-QToolButton{
-background-color: transparent;
-border:none;
-font:  11pt;
-font-weight:900;
-color: rgb(255, 255, 255);
-}
-QTabWidget{
-background-color: rgb(48, 48, 48);
-border:none;
-}
-QTabBar::tab {
-	background-color: rgb(255, 16, 72);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding-bottom:13px;
-	padding-top:13px;
-	padding-left:4px;
-	padding-right:4px;
-    border:15px;
-}
-
-</string>
+    <string notr="true"/>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
@@ -541,13 +507,53 @@ QTabBar::tab {
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QToolButton::checked{
+border-radius:10px;
+font: 16pt &quot;Franxurter Totally&quot;;
+background-color: rgb(255, 16, 72);
+}
+QToolButton{
+background-color: transparent;
+border:none;
+color: rgb(255, 255, 255);
+border-radius:10px;
+font: 16pt &quot;Franxurter Totally&quot;;
+background-color: rgb(255, 16, 72);
+}
+QTabBar::tab:selected{
+background-color: rgb(48, 48, 48);
+color: rgb(255, 255, 255);
+}
+
+QTabBar{
+background-color:rgb(255, 16, 72);
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+color: rgb(255, 255, 255);
+font: 14pt &quot;Franxurter Totally&quot;;
+}
+QTabWidget{
+background-color: rgb(48, 48, 48);
+border:none;
+}
+QTabBar::tab {
+	background-color: rgb(255, 16, 72);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-bottom:13px;
+	padding-top:13px;
+	padding-left:4px;
+	padding-right:4px;
+    border:15px;
+}
+
+</string>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -875,7 +881,7 @@ font:  11pt;
                  <property name="styleSheet">
                   <string notr="true">border: 1px 1px 0px 1px;
 color: rgb(255, 255, 255);
-</string>
+font: 16pt &quot;Franxurter Totally&quot;;</string>
                  </property>
                  <property name="placeholderText">
                   <string>Поиск</string>
@@ -932,8 +938,7 @@ background: none;
 QListWidget{
 color:rgb(255, 255, 255);
 background-color: rgb(71, 71, 71);
-font:11pt;
-font-weight:900;
+font: 16pt &quot;Franxurter Totally&quot;;
 border:none;
 border-radius:13px;
 padding:5px;
@@ -1545,7 +1550,7 @@ padding:7px;
                    <property name="styleSheet">
                     <string notr="true">border: 1px 1px 0px 1px;
 color: rgb(255, 255, 255);
-</string>
+font: 16pt &quot;Franxurter Totally&quot;;</string>
                    </property>
                    <property name="placeholderText">
                     <string>Поиск</string>
@@ -1696,8 +1701,7 @@ color:rgb(255, 255, 255);
 background-color: rgb(255, 16, 72);
 border-radius:10px;
 border:none;
-font:11pt;
-font-weight:900;
+font: 16pt &quot;Franxurter Totally&quot;;
 padding:1px;
 color: rgb(255, 255, 255);</string>
             </property>
@@ -1727,8 +1731,7 @@ border-style: solid;
 background-color: rgb(255, 16, 72);
 border-radius:10px;
 border:none;
-font:11pt;
-font-weight:900;
+font: 16pt &quot;Franxurter Totally&quot;;
 padding:1px;
 color: rgb(255, 255, 255);</string>
             </property>
@@ -1863,8 +1866,7 @@ border-style: solid;
 background-color: rgb(255, 16, 72);
 border-radius:10px;
 border:none;
-font:11pt;
-font-weight:900;
+font: 16pt &quot;Franxurter Totally&quot;;
 padding:5px;
 color: rgb(255, 255, 255);
 }
@@ -1985,6 +1987,7 @@ background-color: rgb(255, 16, 72);;
             <property name="styleSheet">
              <string notr="true">QToolButton::checked{
 border-radius:10px;
+font: 16pt &quot;Franxurter Totally&quot;;
 background-color: rgb(255, 16, 72);
 }</string>
             </property>
@@ -2191,6 +2194,22 @@ background-color: rgb(255, 16, 72);
           </item>
          </layout>
         </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="styleSheet">
+           <string notr="true">border-width: 1px;        
+background-color: rgb(255, 16, 72);
+border-radius:10px;
+border:none;
+font: 16pt &quot;Franxurter Totally&quot;;
+padding:1px;
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Путь к установщику:</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox">
           <property name="sizePolicy">
@@ -2209,6 +2228,139 @@ padding:7px;
 </string>
           </property>
           <layout class="QGridLayout" name="gridLayout_3">
+           <item row="4" column="0">
+            <widget class="QListWidget" name="listWidget_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>510</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ваапвап&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:vertical {
+background-color: transparent;
+width: 25px;
+margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: rgb(48, 48, 48);
+min-height: 48px;
+}
+
+/* This remvoes the bottom button by setting the height to 0px */
+QScrollBar::add-line:vertical {
+height: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+/* This remvoes the top button by setting the height to 0px */
+QScrollBar::sub-line:vertical {
+height: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+QListWidget{
+color:rgb(255, 255, 255);
+background-color: rgb(71, 71, 71);
+font: 16pt &quot;Franxurter Totally&quot;;
+border:none;
+border-radius:13px;
+padding:5px;
+
+}
+QListWidget::item::selected{
+padding:-0px;
+border-radius:7px;
+background-color:  rgb(255, 16, 72);
+color:rgb(255, 255, 255);
+}
+QListWidget::item{
+padding:5px;
+color:rrgb(255, 16, 72);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::WinPanel</enum>
+             </property>
+             <property name="showDropIndicator" stdset="0">
+              <bool>false</bool>
+             </property>
+             <property name="dragDropMode">
+              <enum>QAbstractItemView::NoDragDrop</enum>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>13</width>
+               <height>13</height>
+              </size>
+             </property>
+             <property name="isWrapping" stdset="0">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QToolButton" name="toolButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton{
+border-radius:16px;
+background-color: rgb(255, 16, 72);
+border:none;
+font:  11pt;
+}</string>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/newPrefix/img/search-3-16.ico</normaloff>:/newPrefix/img/search-3-16.ico</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonIconOnly</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>false</bool>
+             </property>
+             <property name="arrowType">
+              <enum>Qt::NoArrow</enum>
+             </property>
+            </widget>
+           </item>
            <item row="3" column="0">
             <widget class="QLineEdit" name="lineEdit_2">
              <property name="enabled">
@@ -2437,6 +2589,7 @@ padding:7px;
              <property name="styleSheet">
               <string notr="true">border: 1px 1px 0px 1px;
 color: rgb(255, 255, 255);
+font: 16pt &quot;Franxurter Totally&quot;;
 </string>
              </property>
              <property name="text">
@@ -2456,52 +2609,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="clearButtonEnabled">
               <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QToolButton" name="toolButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="baseSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QToolButton{
-border-radius:16px;
-background-color: rgb(255, 16, 72);
-border:none;
-font:  11pt;
-}</string>
-             </property>
-             <property name="text">
-              <string>Поиск</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/newPrefix/img/search-3-16.ico</normaloff>:/newPrefix/img/search-3-16.ico</iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonIconOnly</enum>
-             </property>
-             <property name="autoRaise">
-              <bool>false</bool>
-             </property>
-             <property name="arrowType">
-              <enum>Qt::NoArrow</enum>
              </property>
             </widget>
            </item>
@@ -2537,95 +2644,14 @@ font:  11pt;
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
-            <widget class="QListWidget" name="listWidget_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>510</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="whatsThis">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ваапвап&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QScrollBar:vertical {
-background-color: transparent;
-width: 25px;
-margin: 0px 0px 0px 0px;
-}
-QScrollBar::handle:vertical {
-border-radius: 5px;
-background: rgb(48, 48, 48);
-min-height: 48px;
-}
-
-/* This remvoes the bottom button by setting the height to 0px */
-QScrollBar::add-line:vertical {
-height: 0px;
-subcontrol-position: bottom;
-subcontrol-origin: margin;
-}
-
-/* This remvoes the top button by setting the height to 0px */
-QScrollBar::sub-line:vertical {
-height: 0px;
-subcontrol-position: top;
-subcontrol-origin: margin;
-}
-
-/* need this to get rid of crosshatching on scrollbar background */
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-background: none;
-}
-QListWidget{
-color:rgb(255, 255, 255);
-background-color: rgb(71, 71, 71);
-font:11pt;
-font-weight:900;
-border:none;
-border-radius:13px;
-padding:5px;
-
-}
-QListWidget::item::selected{
-padding:-0px;
-border-radius:7px;
-background-color:  rgb(255, 16, 72);
-color:rgb(255, 255, 255);
-}
-QListWidget::item{
-padding:5px;
-color:rrgb(255, 16, 72);
-}</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::WinPanel</enum>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>false</bool>
-             </property>
-             <property name="dragDropMode">
-              <enum>QAbstractItemView::NoDragDrop</enum>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>13</width>
-               <height>13</height>
-              </size>
-             </property>
-             <property name="isWrapping" stdset="0">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
           </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string/>
+          </property>
          </widget>
         </item>
        </layout>

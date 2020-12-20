@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/dron/Games4Linux/code_files/untitled.ui'
+# Form implementation generated from reading ui file 'untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -175,24 +175,44 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
-        self.centralwidget.setStyleSheet("QTabBar::tab:selected{\n"
+        self.centralwidget.setStyleSheet("")
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
+        self.tabWidget.setSizePolicy(sizePolicy)
+        self.tabWidget.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.tabWidget.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.tabWidget.setAutoFillBackground(False)
+        self.tabWidget.setStyleSheet("QToolButton::checked{\n"
+"border-radius:10px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"background-color: rgb(255, 16, 72);\n"
+"}\n"
+"QToolButton{\n"
+"background-color: transparent;\n"
+"border:none;\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius:10px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"background-color: rgb(255, 16, 72);\n"
+"}\n"
+"QTabBar::tab:selected{\n"
 "background-color: rgb(48, 48, 48);\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
-"QTabBar::tab:hover {}\n"
+"\n"
 "QTabBar{\n"
 "background-color:rgb(255, 16, 72);\n"
 "border-top-left-radius: 8px;\n"
 "border-bottom-left-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
-"font:  11pt;\n"
-"}\n"
-"QToolButton{\n"
-"background-color: transparent;\n"
-"border:none;\n"
-"font:  11pt;\n"
-"font-weight:900;\n"
-"color: rgb(255, 255, 255);\n"
+"font: 14pt \"Franxurter Totally\";\n"
 "}\n"
 "QTabWidget{\n"
 "background-color: rgb(48, 48, 48);\n"
@@ -210,20 +230,6 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.centralwidget.setObjectName("centralwidget")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
-        self.tabWidget.setSizePolicy(sizePolicy)
-        self.tabWidget.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.tabWidget.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.tabWidget.setAutoFillBackground(False)
-        self.tabWidget.setStyleSheet("")
         self.tabWidget.setTabPosition(QtWidgets.QTabWidget.West)
         self.tabWidget.setIconSize(QtCore.QSize(35, 40))
         self.tabWidget.setUsesScrollButtons(True)
@@ -359,7 +365,7 @@ class Ui_MainWindow(object):
         self.lineEdit_4.setPalette(palette)
         self.lineEdit_4.setStyleSheet("border: 1px 1px 0px 1px;\n"
 "color: rgb(255, 255, 255);\n"
-"")
+"font: 16pt \"Franxurter Totally\";")
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.gridLayout_11.addWidget(self.lineEdit_4, 0, 0, 1, 1)
         self.listWidget_3 = QtWidgets.QListWidget(self.groupBox_4)
@@ -402,8 +408,7 @@ class Ui_MainWindow(object):
 "QListWidget{\n"
 "color:rgb(255, 255, 255);\n"
 "background-color: rgb(71, 71, 71);\n"
-"font:11pt;\n"
-"font-weight:900;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "border:none;\n"
 "border-radius:13px;\n"
 "padding:5px;\n"
@@ -686,7 +691,7 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setEnabled(False)
         self.lineEdit_3.setStyleSheet("border: 1px 1px 0px 1px;\n"
 "color: rgb(255, 255, 255);\n"
-"")
+"font: 16pt \"Franxurter Totally\";")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.gridLayout_10.addWidget(self.lineEdit_3, 0, 0, 1, 1)
         self.toolButton_3 = QtWidgets.QToolButton(self.groupBox_2)
@@ -784,8 +789,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 16, 72);\n"
 "border-radius:10px;\n"
 "border:none;\n"
-"font:11pt;\n"
-"font-weight:900;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "padding:1px;\n"
 "color: rgb(255, 255, 255);")
         self.label_3.setObjectName("label_3")
@@ -802,8 +806,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 16, 72);\n"
 "border-radius:10px;\n"
 "border:none;\n"
-"font:11pt;\n"
-"font-weight:900;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "padding:1px;\n"
 "color: rgb(255, 255, 255);")
         self.label_4.setObjectName("label_4")
@@ -866,8 +869,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 16, 72);\n"
 "border-radius:10px;\n"
 "border:none;\n"
-"font:11pt;\n"
-"font-weight:900;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "padding:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
@@ -933,6 +935,7 @@ class Ui_MainWindow(object):
         self.selectexe.setMinimumSize(QtCore.QSize(0, 40))
         self.selectexe.setStyleSheet("QToolButton::checked{\n"
 "border-radius:10px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "background-color: rgb(255, 16, 72);\n"
 "}")
         self.selectexe.setCheckable(True)
@@ -1119,6 +1122,7 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.lineEdit_2.setStyleSheet("border: 1px 1px 0px 1px;\n"
 "color: rgb(255, 255, 255);\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "")
         self.lineEdit_2.setText("")
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -1195,8 +1199,7 @@ class Ui_MainWindow(object):
 "QListWidget{\n"
 "color:rgb(255, 255, 255);\n"
 "background-color: rgb(71, 71, 71);\n"
-"font:11pt;\n"
-"font-weight:900;\n"
+"font: 16pt \"Franxurter Totally\";\n"
 "border:none;\n"
 "border-radius:13px;\n"
 "padding:5px;\n"
@@ -1254,7 +1257,7 @@ class Ui_MainWindow(object):
         self.action_2.setObjectName("action_2")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(2)
         self.tabWidget_2.setCurrentIndex(0)
         self.comboBox_2.setCurrentIndex(-1)
         self.comboBox.setCurrentIndex(0)
@@ -1316,13 +1319,3 @@ class Ui_MainWindow(object):
         self.actionEnglish.setText(_translate("MainWindow", "English"))
         self.action_2.setText(_translate("MainWindow", "Русский"))
 import resource_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())

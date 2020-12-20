@@ -245,6 +245,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             print(self.str2)
             directory_10 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберете папку приложения",path)
             directory_11 = QtWidgets.QFileDialog.getOpenFileNames(self,"выберете установщик",  directory_10,"Windows Files (*.exe)")[0]
+            print(directory_11)
             self.filename = QFileInfo(str(directory_10)).fileName()
             path_exe = str(directory_11[0])
             print(path_exe)
@@ -362,7 +363,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
     def open_icon(self):
         self.selectItem_6 = self.listWidget_3.currentItem().text()
         xdg2 ='"'+ self.directory_9 +'/'+ self.selectItem_6 + '"'
-        os.system("bash -c '%s'" % xdg2)
+        os.system("bash -c '%s'" % xdg2 + '&')
         print(xdg2)
             
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
