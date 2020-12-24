@@ -553,7 +553,7 @@ QTabBar::tab {
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -881,7 +881,7 @@ font:  11pt;
                  <property name="styleSheet">
                   <string notr="true">border: 1px 1px 0px 1px;
 color: rgb(255, 255, 255);
-font: 16pt &quot;Franxurter Totally&quot;;</string>
+font: 16pt ;</string>
                  </property>
                  <property name="placeholderText">
                   <string>Поиск</string>

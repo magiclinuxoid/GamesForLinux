@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file '/home/evgenij/GamesForLinux/code_files/untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -1029,6 +1029,16 @@ class Ui_MainWindow(object):
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_5.addItem(spacerItem3)
         self.gridLayout_6.addLayout(self.verticalLayout_5, 0, 3, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.tab_2)
+        self.label_5.setStyleSheet("border-width: 1px;        \n"
+"background-color: rgb(255, 16, 72);\n"
+"border-radius:10px;\n"
+"border:none;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"padding:1px;\n"
+"color: rgb(255, 255, 255);")
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_6.addWidget(self.label_5, 1, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(self.tab_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -1045,6 +1055,88 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout_3.setObjectName("gridLayout_3")
+        self.listWidget_2 = QtWidgets.QListWidget(self.groupBox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
+        self.listWidget_2.setSizePolicy(sizePolicy)
+        self.listWidget_2.setMinimumSize(QtCore.QSize(510, 0))
+        self.listWidget_2.setStyleSheet("QScrollBar:vertical {\n"
+"background-color: transparent;\n"
+"width: 25px;\n"
+"margin: 0px 0px 0px 0px;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"border-radius: 5px;\n"
+"background: rgb(48, 48, 48);\n"
+"min-height: 48px;\n"
+"}\n"
+"\n"
+"/* This remvoes the bottom button by setting the height to 0px */\n"
+"QScrollBar::add-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* This remvoes the top button by setting the height to 0px */\n"
+"QScrollBar::sub-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* need this to get rid of crosshatching on scrollbar background */\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"}\n"
+"QListWidget{\n"
+"color:rgb(255, 255, 255);\n"
+"background-color: rgb(71, 71, 71);\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"border:none;\n"
+"border-radius:13px;\n"
+"padding:5px;\n"
+"\n"
+"}\n"
+"QListWidget::item::selected{\n"
+"padding:-0px;\n"
+"border-radius:7px;\n"
+"background-color:  rgb(255, 16, 72);\n"
+"color:rgb(255, 255, 255);\n"
+"}\n"
+"QListWidget::item{\n"
+"padding:5px;\n"
+"color:rrgb(255, 16, 72);\n"
+"}")
+        self.listWidget_2.setFrameShape(QtWidgets.QFrame.WinPanel)
+        self.listWidget_2.setProperty("showDropIndicator", False)
+        self.listWidget_2.setDragDropMode(QtWidgets.QAbstractItemView.NoDragDrop)
+        self.listWidget_2.setIconSize(QtCore.QSize(13, 13))
+        self.listWidget_2.setProperty("isWrapping", False)
+        self.listWidget_2.setObjectName("listWidget_2")
+        self.gridLayout_3.addWidget(self.listWidget_2, 4, 0, 1, 1)
+        self.toolButton = QtWidgets.QToolButton(self.groupBox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolButton.sizePolicy().hasHeightForWidth())
+        self.toolButton.setSizePolicy(sizePolicy)
+        self.toolButton.setMinimumSize(QtCore.QSize(0, 0))
+        self.toolButton.setBaseSize(QtCore.QSize(0, 0))
+        self.toolButton.setStyleSheet("QToolButton{\n"
+"border-radius:16px;\n"
+"background-color: rgb(255, 16, 72);\n"
+"border:none;\n"
+"font:  11pt;\n"
+"}")
+        self.toolButton.setIcon(icon2)
+        self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
+        self.toolButton.setAutoRaise(False)
+        self.toolButton.setArrowType(QtCore.Qt.NoArrow)
+        self.toolButton.setObjectName("toolButton")
+        self.gridLayout_3.addWidget(self.toolButton, 3, 2, 1, 1)
         self.lineEdit_2 = QtWidgets.QLineEdit(self.groupBox)
         self.lineEdit_2.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
@@ -1131,26 +1223,6 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setClearButtonEnabled(False)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.gridLayout_3.addWidget(self.lineEdit_2, 3, 0, 1, 1)
-        self.toolButton = QtWidgets.QToolButton(self.groupBox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.toolButton.sizePolicy().hasHeightForWidth())
-        self.toolButton.setSizePolicy(sizePolicy)
-        self.toolButton.setMinimumSize(QtCore.QSize(0, 0))
-        self.toolButton.setBaseSize(QtCore.QSize(0, 0))
-        self.toolButton.setStyleSheet("QToolButton{\n"
-"border-radius:16px;\n"
-"background-color: rgb(255, 16, 72);\n"
-"border:none;\n"
-"font:  11pt;\n"
-"}")
-        self.toolButton.setIcon(icon2)
-        self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
-        self.toolButton.setAutoRaise(False)
-        self.toolButton.setArrowType(QtCore.Qt.NoArrow)
-        self.toolButton.setObjectName("toolButton")
-        self.gridLayout_3.addWidget(self.toolButton, 3, 2, 1, 1)
         self.toolButton_2 = QtWidgets.QToolButton(self.groupBox)
         self.toolButton_2.setMinimumSize(QtCore.QSize(32, 0))
         self.toolButton_2.setText("")
@@ -1160,69 +1232,11 @@ class Ui_MainWindow(object):
         self.toolButton_2.setAutoRaise(False)
         self.toolButton_2.setObjectName("toolButton_2")
         self.gridLayout_3.addWidget(self.toolButton_2, 3, 1, 1, 1)
-        self.listWidget_2 = QtWidgets.QListWidget(self.groupBox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
-        self.listWidget_2.setSizePolicy(sizePolicy)
-        self.listWidget_2.setMinimumSize(QtCore.QSize(510, 0))
-        self.listWidget_2.setStyleSheet("QScrollBar:vertical {\n"
-"background-color: transparent;\n"
-"width: 25px;\n"
-"margin: 0px 0px 0px 0px;\n"
-"}\n"
-"QScrollBar::handle:vertical {\n"
-"border-radius: 5px;\n"
-"background: rgb(48, 48, 48);\n"
-"min-height: 48px;\n"
-"}\n"
-"\n"
-"/* This remvoes the bottom button by setting the height to 0px */\n"
-"QScrollBar::add-line:vertical {\n"
-"height: 0px;\n"
-"subcontrol-position: bottom;\n"
-"subcontrol-origin: margin;\n"
-"}\n"
-"\n"
-"/* This remvoes the top button by setting the height to 0px */\n"
-"QScrollBar::sub-line:vertical {\n"
-"height: 0px;\n"
-"subcontrol-position: top;\n"
-"subcontrol-origin: margin;\n"
-"}\n"
-"\n"
-"/* need this to get rid of crosshatching on scrollbar background */\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
-"background: none;\n"
-"}\n"
-"QListWidget{\n"
-"color:rgb(255, 255, 255);\n"
-"background-color: rgb(71, 71, 71);\n"
-"font: 16pt \"Franxurter Totally\";\n"
-"border:none;\n"
-"border-radius:13px;\n"
-"padding:5px;\n"
-"\n"
-"}\n"
-"QListWidget::item::selected{\n"
-"padding:-0px;\n"
-"border-radius:7px;\n"
-"background-color:  rgb(255, 16, 72);\n"
-"color:rgb(255, 255, 255);\n"
-"}\n"
-"QListWidget::item{\n"
-"padding:5px;\n"
-"color:rrgb(255, 16, 72);\n"
-"}")
-        self.listWidget_2.setFrameShape(QtWidgets.QFrame.WinPanel)
-        self.listWidget_2.setProperty("showDropIndicator", False)
-        self.listWidget_2.setDragDropMode(QtWidgets.QAbstractItemView.NoDragDrop)
-        self.listWidget_2.setIconSize(QtCore.QSize(13, 13))
-        self.listWidget_2.setProperty("isWrapping", False)
-        self.listWidget_2.setObjectName("listWidget_2")
-        self.gridLayout_3.addWidget(self.listWidget_2, 4, 0, 1, 1)
         self.gridLayout_6.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.tab_2)
+        self.label_6.setText("")
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_6.addWidget(self.label_6, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setStyleSheet("background-color: rgb(48, 48, 48);")
@@ -1257,7 +1271,7 @@ class Ui_MainWindow(object):
         self.action_2.setObjectName("action_2")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.comboBox_2.setCurrentIndex(-1)
         self.comboBox.setCurrentIndex(0)
@@ -1307,10 +1321,11 @@ class Ui_MainWindow(object):
         self.Winetricks.setText(_translate("MainWindow", "Winetricks"))
         self.WineCfg.setText(_translate("MainWindow", "Winecfg"))
         self.toolButton_6.setText(_translate("MainWindow", "..."))
-        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Поиск"))
-        self.toolButton.setText(_translate("MainWindow", "Поиск"))
-        self.toolButton_2.setShortcut(_translate("MainWindow", "Backspace"))
+        self.label_5.setText(_translate("MainWindow", "Путь к установщику:"))
         self.listWidget_2.setWhatsThis(_translate("MainWindow", "<html><head/><body><p>ваапвап</p></body></html>"))
+        self.toolButton.setText(_translate("MainWindow", "Поиск"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Поиск"))
+        self.toolButton_2.setShortcut(_translate("MainWindow", "Backspace"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Префиксы"))
         self.toolButton1.setText(_translate("MainWindow", "обновление "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Настройки"))
