@@ -620,6 +620,91 @@ background-color:rgb(255, 16, 72);
             <string>Моя библиотека</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QToolButton" name="toolButton_10">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton::checked{
+border-radius:5px;
+background-color: rgb(255, 16, 72);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Запустить</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>true</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="toolButton_7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton::checked{
+border-radius:5px;
+background-color: rgb(255, 16, 72);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Удалить</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>true</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
             <item row="0" column="0" rowspan="8">
              <widget class="QGroupBox" name="groupBox_4">
               <property name="sizePolicy">
@@ -881,7 +966,7 @@ font:  11pt;
                  <property name="styleSheet">
                   <string notr="true">border: 1px 1px 0px 1px;
 color: rgb(255, 255, 255);
-font: 16pt ;</string>
+font: 16pt &quot;Franxurter Totally&quot;;</string>
                  </property>
                  <property name="placeholderText">
                   <string>Поиск</string>
@@ -992,91 +1077,6 @@ color:rrgb(255, 16, 72);
                </item>
               </layout>
              </widget>
-            </item>
-            <item row="0" column="1">
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QToolButton" name="toolButton_10">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QToolButton::checked{
-border-radius:5px;
-background-color: rgb(255, 16, 72);
-}</string>
-                </property>
-                <property name="text">
-                 <string>Запустить</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <property name="autoRepeat">
-                 <bool>true</bool>
-                </property>
-                <property name="autoExclusive">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QToolButton" name="toolButton_7">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QToolButton::checked{
-border-radius:5px;
-background-color: rgb(255, 16, 72);
-}</string>
-                </property>
-                <property name="text">
-                 <string>Удалить</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <property name="autoRepeat">
-                 <bool>true</bool>
-                </property>
-                <property name="autoExclusive">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
             </item>
            </layout>
           </widget>
@@ -1680,6 +1680,22 @@ color:rgb(255, 255, 255);
             </item>
            </layout>
           </widget>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_5">
+          <property name="styleSheet">
+           <string notr="true">border-width: 1px;        
+background-color: rgb(255, 16, 72);
+border-radius:5px;
+border:none;
+font: 14pt &quot;Franxurter Totally&quot;;
+padding:6px;
+color: rgb(255, 255, 255);font: 14pt &quot;Franxurter Totally&quot;;</string>
+          </property>
+          <property name="text">
+           <string>DXVK_HUD=</string>
+          </property>
          </widget>
         </item>
        </layout>

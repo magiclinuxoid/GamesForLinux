@@ -10,6 +10,8 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         # Это здесь нужно для доступа к переменным, методам
         # и т.д. в файле theme.py
         super().__init__()
+        F1 = 'export DXVK_HUD=full'
+        os.system("bash -c '%s'" % F1)  
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
         self.Createprefix.clicked.connect(self.browse_folder_prefix)
         self.Selectwine.clicked.connect(self.browse_folder_wine)
@@ -29,10 +31,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.toolButton_2.clicked.connect(self.clear_search)
         self.toolButton_10.clicked.connect(self.open_icon)
         self.toolButton_7.clicked.connect(self.delete_icon)
-        DXVK_HUD = 'full=DXVK_HUD=1'
-        os.system("bash -c '%s'" % DXVK_HUD )
-        DXVK_HUD = 'export $full'
-        os.system("bash -c '%s'" % DXVK_HUD )        
         Font_install = 'mkdir -p ~/.local/share/fonts'
         os.system("bash -c '%s'" % Font_install)
         Font_install_2 = 'cp /home/'+os.getlogin()+'/GamesForLinux/code_files/Font/Franxurter-Totally.ttf ~/.local/share/fonts'
@@ -51,7 +49,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon'
         for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
             self.listWidget_3.addItem(self.item_3)
-            
+
     def clear_search(self):
         self.listWidget_2.clear() 
         self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
@@ -98,7 +96,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
   
         msg.exec()
         if msg.clickedButton() == okButton:
-            self.wine = 'wine64'
+            self.wine = 'wine'
             self.label_2.setText(self.wine)
         else:
             directory_2 = QtWidgets.QFileDialog.getExistingDirectory()
@@ -261,22 +259,22 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             print(path_exe)
             print(path)
             print(self.filename)
-            f_1 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +  self.filename
+            f_1 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +self.selectItem_3 + ' | ' + self.filename
             f_1 = open(f_1, mode="w", encoding="utf_8")
             f_1.write('[Desktop Entry]'+'\n')
             f_1.write('Exec='+self.str2+path_exe+'"'+'\n')
             f_1.write('Type=Application'+'\n')
             f_1.write('Path='+self.directory_10+'\n')
             f_1.close()
-            f_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' +  self.filename
+            f_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' + self.selectItem_3 + ' | ' + self.filename
             f_6 = open(f_6, mode="w", encoding="utf_8")
             f_6.write('#!/bin/sh'+'\n')
             f_6.write(self.str2+'uninstaller'+'"'+'\n')
-            f_6.write('/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +  self.filename)
+            f_6.write('/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + self.selectItem_3 + ' | ' + self.filename)
             f_6.close()
-            chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' +  '"'+self.filename+'"'
+            chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
             os.system("bash -c '%s'" % chmod)
-            chmod_2 = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +  '"'+self.filename+'"'
+            chmod_2 = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
             os.system("bash -c '%s'" % chmod_2)
             self.listWidget_3.clear()
             self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/'
@@ -290,25 +288,44 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             error_2 = 'Выбери пути!'
             QMessageBox.question(self, 'Введено', error_2, QMessageBox.Ok, QMessageBox.Ok)
     def delete_icon(self):
-        self.selectItem_4 = self.listWidget_3.currentItem().text()
-        self.directory_12 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/'
-        self.f_8 = self.directory_12 + self.selectItem_4
-        self.f_8 = open(self.f_8, mode="r", encoding="utf_8")
-        self.str2=str(self.f_8.readlines()[1])
-        start_uninstaller = self.str2
-        os.system("bash -c '%s'" % start_uninstaller)
-        self.f_7 = self.directory_12 + self.selectItem_4
-        self.f_7 = open(self.f_7, mode="r", encoding="utf_8")
-        self.str3=str(self.f_7.readlines()[2])
-        print(self.str3)
-        rm_icon = 'rm ' + '"'+self.str3+'"' 
-        os.system("bash -c '%s'" % rm_icon)
-        rm_software_icon_delete = 'rm ' + '"'+self.directory_12 + self.selectItem_4+'"'
-        os.system("bash -c '%s'" % rm_software_icon_delete)
-        self.listWidget_3.clear()
-        self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/'
-        for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
-            self.listWidget_3.addItem(self.item_3)        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        # msg.setIconPixmap(pixmap)  # Своя картинка
+  
+        msg.setWindowTitle("Информация")
+        msg.setText("Удалить?")
+        msg.setInformativeText("Удалить приложение?")
+  
+        okButton = msg.addButton( '  Да  ', QMessageBox.AcceptRole)
+        msg.addButton('Нет', QMessageBox.RejectRole)
+        okButton.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(233, 15, 131, 255), stop:1 rgba(25, 206, 246, 255));")
+        msg.setStyleSheet("border-radius:5px;"
+"background-color: rgb(48, 48, 48);"
+"color: rgb(255, 255, 255);"
+"font:11pt;"
+"font-weight:900;") 
+  
+        msg.exec()
+        if msg.clickedButton() == okButton:        
+            self.selectItem_4 = self.listWidget_3.currentItem().text()
+            self.directory_12 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/'
+            self.f_8 = self.directory_12 + self.selectItem_4
+            self.f_8 = open(self.f_8, mode="r", encoding="utf_8")
+            self.str2=str(self.f_8.readlines()[1])
+            start_uninstaller = self.str2
+            os.system("bash -c '%s'" % start_uninstaller)
+            self.f_7 = self.directory_12 + self.selectItem_4
+            self.f_7 = open(self.f_7, mode="r", encoding="utf_8")
+            self.str3=str(self.f_7.readlines()[2])
+            print(self.str3)
+            rm_icon = 'rm ' + '"'+self.str3+'"' 
+            os.system("bash -c '%s'" % rm_icon)
+            rm_software_icon_delete = 'rm ' + '"'+self.directory_12 + self.selectItem_4+'"'
+            os.system("bash -c '%s'" % rm_software_icon_delete)
+            self.listWidget_3.clear()
+            self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/'
+            for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
+                self.listWidget_3.addItem(self.item_3)        
 
     def winecfg(self):
         try:
@@ -348,7 +365,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         directory3 = QtWidgets.QFileDialog.getOpenFileName(self,"выберете утсановщик", "","Windows Files (*.exe)")[0]
         print(directory3)
         self.text3 = str(directory3)
-        self.label.setText(self.text3)
+        self.label_6.setText(self.text3)
             
             
 
@@ -399,8 +416,9 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                     else:
                         print("No")
     def open_icon(self):
+        self.text4 = self.lineEdit_5.text()
         self.selectItem_6 = self.listWidget_3.currentItem().text()
-        xdg2 ='"'+ self.directory_9 +'/'+ self.selectItem_6 + '"'
+        xdg2 ='export ' + self.text4 + '&&'+ self.directory_9 +'/'+ '"'+self.selectItem_6 + '"'
         os.system("bash -c '%s'" % xdg2 + '&')
         print(xdg2)
             
