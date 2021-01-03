@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/evgenij/GamesForLinux/code_files/untitled.ui'
+# Form implementation generated from reading ui file '/home/dron/GamesForLinux/code_files/untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -177,8 +177,8 @@ class Ui_MainWindow(object):
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.gridLayout_7 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_7.setObjectName("gridLayout_7")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
@@ -190,7 +190,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.tabWidget.setAutoFillBackground(False)
         self.tabWidget.setStyleSheet("QToolButton::checked{\n"
-"border-radius:10px;\n"
+"border-radius:5px;\n"
 "font: 16pt \"Franxurter Totally\";\n"
 "background-color: rgb(255, 16, 72);\n"
 "}\n"
@@ -198,9 +198,7 @@ class Ui_MainWindow(object):
 "background-color: transparent;\n"
 "border:none;\n"
 "color: rgb(255, 255, 255);\n"
-"border-radius:10px;\n"
 "font: 16pt \"Franxurter Totally\";\n"
-"background-color: rgb(255, 16, 72);\n"
 "}\n"
 "QTabBar::tab:selected{\n"
 "background-color: rgb(48, 48, 48);\n"
@@ -251,6 +249,11 @@ class Ui_MainWindow(object):
         self.tabWidget_2.setSizePolicy(sizePolicy)
         self.tabWidget_2.setStyleSheet("QTabBar{\n"
 "background-color:rgb(255, 16, 72);\n"
+"}\n"
+"QToolButton::checked{\n"
+"border-radius:5px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"background-color: rgb(255, 16, 72);\n"
 "}")
         self.tabWidget_2.setTabPosition(QtWidgets.QTabWidget.West)
         self.tabWidget_2.setTabShape(QtWidgets.QTabWidget.Rounded)
@@ -261,43 +264,6 @@ class Ui_MainWindow(object):
         self.tab_5.setObjectName("tab_5")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.tab_5)
         self.gridLayout_5.setObjectName("gridLayout_5")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.toolButton_10 = QtWidgets.QToolButton(self.tab_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.toolButton_10.sizePolicy().hasHeightForWidth())
-        self.toolButton_10.setSizePolicy(sizePolicy)
-        self.toolButton_10.setMinimumSize(QtCore.QSize(100, 40))
-        self.toolButton_10.setStyleSheet("QToolButton::checked{\n"
-"border-radius:5px;\n"
-"background-color: rgb(255, 16, 72);\n"
-"}")
-        self.toolButton_10.setCheckable(True)
-        self.toolButton_10.setAutoRepeat(True)
-        self.toolButton_10.setAutoExclusive(True)
-        self.toolButton_10.setObjectName("toolButton_10")
-        self.verticalLayout_3.addWidget(self.toolButton_10)
-        self.toolButton_7 = QtWidgets.QToolButton(self.tab_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.toolButton_7.sizePolicy().hasHeightForWidth())
-        self.toolButton_7.setSizePolicy(sizePolicy)
-        self.toolButton_7.setMinimumSize(QtCore.QSize(100, 40))
-        self.toolButton_7.setStyleSheet("QToolButton::checked{\n"
-"border-radius:5px;\n"
-"background-color: rgb(255, 16, 72);\n"
-"}")
-        self.toolButton_7.setCheckable(True)
-        self.toolButton_7.setAutoRepeat(True)
-        self.toolButton_7.setAutoExclusive(True)
-        self.toolButton_7.setObjectName("toolButton_7")
-        self.verticalLayout_3.addWidget(self.toolButton_7)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_3.addItem(spacerItem)
-        self.gridLayout_5.addLayout(self.verticalLayout_3, 0, 1, 1, 1)
         self.groupBox_4 = QtWidgets.QGroupBox(self.tab_5)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -315,13 +281,6 @@ class Ui_MainWindow(object):
         self.groupBox_4.setObjectName("groupBox_4")
         self.gridLayout_11 = QtWidgets.QGridLayout(self.groupBox_4)
         self.gridLayout_11.setObjectName("gridLayout_11")
-        self.toolButton_8 = QtWidgets.QToolButton(self.groupBox_4)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/img/cross.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolButton_8.setIcon(icon1)
-        self.toolButton_8.setIconSize(QtCore.QSize(13, 13))
-        self.toolButton_8.setObjectName("toolButton_8")
-        self.gridLayout_11.addWidget(self.toolButton_8, 0, 1, 1, 1)
         self.toolButton_9 = QtWidgets.QToolButton(self.groupBox_4)
         self.toolButton_9.setStyleSheet("QToolButton{\n"
 "border-radius:16px;\n"
@@ -329,11 +288,18 @@ class Ui_MainWindow(object):
 "border:none;\n"
 "font:  11pt;\n"
 "}")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/newPrefix/img/search-3-16.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolButton_9.setIcon(icon2)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/newPrefix/img/search-3-16.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButton_9.setIcon(icon1)
         self.toolButton_9.setObjectName("toolButton_9")
         self.gridLayout_11.addWidget(self.toolButton_9, 0, 2, 1, 1)
+        self.toolButton_8 = QtWidgets.QToolButton(self.groupBox_4)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/newPrefix/img/cross.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButton_8.setIcon(icon2)
+        self.toolButton_8.setIconSize(QtCore.QSize(13, 13))
+        self.toolButton_8.setObjectName("toolButton_8")
+        self.gridLayout_11.addWidget(self.toolButton_8, 0, 1, 1, 1)
         self.lineEdit_4 = QtWidgets.QLineEdit(self.groupBox_4)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -406,12 +372,12 @@ class Ui_MainWindow(object):
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.gridLayout_11.addWidget(self.lineEdit_4, 0, 0, 1, 1)
         self.listWidget_3 = QtWidgets.QListWidget(self.groupBox_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.listWidget_3.sizePolicy().hasHeightForWidth())
         self.listWidget_3.setSizePolicy(sizePolicy)
-        self.listWidget_3.setMinimumSize(QtCore.QSize(486, 0))
+        self.listWidget_3.setMinimumSize(QtCore.QSize(470, 0))
         self.listWidget_3.setToolTipDuration(0)
         self.listWidget_3.setStyleSheet("QScrollBar:vertical {\n"
 "background-color: transparent;\n"
@@ -471,8 +437,83 @@ class Ui_MainWindow(object):
         self.listWidget_3.setUniformItemSizes(True)
         self.listWidget_3.setWordWrap(False)
         self.listWidget_3.setObjectName("listWidget_3")
-        self.gridLayout_11.addWidget(self.listWidget_3, 1, 0, 1, 3)
+        self.gridLayout_11.addWidget(self.listWidget_3, 1, 0, 1, 1)
         self.gridLayout_5.addWidget(self.groupBox_4, 0, 0, 8, 1)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setContentsMargins(-1, -1, 0, -1)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.toolButton_10 = QtWidgets.QToolButton(self.tab_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolButton_10.sizePolicy().hasHeightForWidth())
+        self.toolButton_10.setSizePolicy(sizePolicy)
+        self.toolButton_10.setMinimumSize(QtCore.QSize(100, 40))
+        self.toolButton_10.setStyleSheet("")
+        self.toolButton_10.setCheckable(True)
+        self.toolButton_10.setAutoRepeat(True)
+        self.toolButton_10.setAutoExclusive(True)
+        self.toolButton_10.setObjectName("toolButton_10")
+        self.verticalLayout_3.addWidget(self.toolButton_10)
+        self.toolButton_7 = QtWidgets.QToolButton(self.tab_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolButton_7.sizePolicy().hasHeightForWidth())
+        self.toolButton_7.setSizePolicy(sizePolicy)
+        self.toolButton_7.setMinimumSize(QtCore.QSize(100, 40))
+        self.toolButton_7.setStyleSheet("")
+        self.toolButton_7.setCheckable(True)
+        self.toolButton_7.setAutoRepeat(True)
+        self.toolButton_7.setAutoExclusive(True)
+        self.toolButton_7.setObjectName("toolButton_7")
+        self.verticalLayout_3.addWidget(self.toolButton_7)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem)
+        self.gridLayout_5.addLayout(self.verticalLayout_3, 0, 2, 6, 1)
+        self.groupBox_3 = QtWidgets.QGroupBox(self.tab_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.groupBox_3.sizePolicy().hasHeightForWidth())
+        self.groupBox_3.setSizePolicy(sizePolicy)
+        self.groupBox_3.setMinimumSize(QtCore.QSize(0, 0))
+        self.groupBox_3.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.groupBox_3.setStyleSheet("background-color: transparent;\n"
+"border:none;")
+        self.groupBox_3.setTitle("")
+        self.groupBox_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.groupBox_3.setFlat(True)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox_3)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.groupBox_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_5.setSizePolicy(sizePolicy)
+        self.lineEdit_5.setStyleSheet("border-width: 1px;        \n"
+"background-color: rgb(255, 16, 72);\n"
+"border-radius:5px;\n"
+"border:none;\n"
+"font: 14pt \"Franxurter Totally\";\n"
+"padding:6px;\n"
+"color: rgb(255, 255, 255);font: 14pt \"Franxurter Totally\";")
+        self.lineEdit_5.setText("")
+        self.lineEdit_5.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.lineEdit_5.setDragEnabled(True)
+        self.lineEdit_5.setPlaceholderText("")
+        self.lineEdit_5.setClearButtonEnabled(False)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.gridLayout_2.addWidget(self.lineEdit_5, 1, 0, 1, 1)
+        self.label_7 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_7.setStyleSheet("font: 14pt \"Franxurter Totally\";")
+        self.label_7.setTextFormat(QtCore.Qt.AutoText)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout_2.addWidget(self.label_7, 0, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.groupBox_3, 8, 0, 1, 3)
         self.tabWidget_2.addTab(self.tab_5, "")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
@@ -481,16 +522,13 @@ class Ui_MainWindow(object):
         self.gridLayout_9 = QtWidgets.QGridLayout()
         self.gridLayout_9.setObjectName("gridLayout_9")
         self.Installscript = QtWidgets.QToolButton(self.tab_3)
-        self.Installscript.setEnabled(False)
+        self.Installscript.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.Installscript.sizePolicy().hasHeightForWidth())
         self.Installscript.setSizePolicy(sizePolicy)
-        self.Installscript.setStyleSheet("QToolButton::checked{\n"
-"border-radius:5px;\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(255, 129, 25, 255), stop:1 rgba(255, 0, 0, 255));\n"
-"}")
+        self.Installscript.setStyleSheet("")
         self.Installscript.setIconSize(QtCore.QSize(40, 40))
         self.Installscript.setCheckable(True)
         self.Installscript.setAutoExclusive(True)
@@ -702,7 +740,7 @@ class Ui_MainWindow(object):
 "border:none;\n"
 "font:  11pt;\n"
 "}")
-        self.toolButton_3.setIcon(icon2)
+        self.toolButton_3.setIcon(icon1)
         self.toolButton_3.setObjectName("toolButton_3")
         self.gridLayout_10.addWidget(self.toolButton_3, 0, 2, 1, 1)
         self.listWidget = QtWidgets.QListWidget(self.groupBox_2)
@@ -764,7 +802,7 @@ class Ui_MainWindow(object):
         self.gridLayout_10.addWidget(self.listWidget, 1, 0, 1, 3)
         self.toolButton_4 = QtWidgets.QToolButton(self.groupBox_2)
         self.toolButton_4.setEnabled(False)
-        self.toolButton_4.setIcon(icon1)
+        self.toolButton_4.setIcon(icon2)
         self.toolButton_4.setIconSize(QtCore.QSize(13, 13))
         self.toolButton_4.setObjectName("toolButton_4")
         self.gridLayout_10.addWidget(self.toolButton_4, 0, 1, 1, 1)
@@ -775,17 +813,7 @@ class Ui_MainWindow(object):
         self.gridLayout_9.addWidget(self.groupBox_2, 3, 0, 1, 1)
         self.gridLayout_8.addLayout(self.gridLayout_9, 4, 0, 1, 1)
         self.tabWidget_2.addTab(self.tab_3, "")
-        self.gridLayout_4.addWidget(self.tabWidget_2, 0, 1, 1, 1)
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.tab)
-        self.lineEdit_5.setStyleSheet("border-width: 1px;        \n"
-"background-color: rgb(255, 16, 72);\n"
-"border-radius:5px;\n"
-"border:none;\n"
-"font: 14pt \"Franxurter Totally\";\n"
-"padding:6px;\n"
-"color: rgb(255, 255, 255);font: 14pt \"Franxurter Totally\";")
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.gridLayout_4.addWidget(self.lineEdit_5, 1, 1, 1, 1)
+        self.gridLayout_4.addWidget(self.tabWidget_2, 1, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.createprefix = QtWidgets.QWidget()
         self.createprefix.setStyleSheet("background-color: rgb(48, 48, 48);")
@@ -1065,68 +1093,15 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.listWidget_2 = QtWidgets.QListWidget(self.groupBox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
-        self.listWidget_2.setSizePolicy(sizePolicy)
-        self.listWidget_2.setMinimumSize(QtCore.QSize(510, 0))
-        self.listWidget_2.setStyleSheet("QScrollBar:vertical {\n"
-"background-color: transparent;\n"
-"width: 25px;\n"
-"margin: 0px 0px 0px 0px;\n"
-"}\n"
-"QScrollBar::handle:vertical {\n"
-"border-radius: 5px;\n"
-"background: rgb(48, 48, 48);\n"
-"min-height: 48px;\n"
-"}\n"
-"\n"
-"/* This remvoes the bottom button by setting the height to 0px */\n"
-"QScrollBar::add-line:vertical {\n"
-"height: 0px;\n"
-"subcontrol-position: bottom;\n"
-"subcontrol-origin: margin;\n"
-"}\n"
-"\n"
-"/* This remvoes the top button by setting the height to 0px */\n"
-"QScrollBar::sub-line:vertical {\n"
-"height: 0px;\n"
-"subcontrol-position: top;\n"
-"subcontrol-origin: margin;\n"
-"}\n"
-"\n"
-"/* need this to get rid of crosshatching on scrollbar background */\n"
-"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
-"background: none;\n"
-"}\n"
-"QListWidget{\n"
-"color:rgb(255, 255, 255);\n"
-"background-color: rgb(71, 71, 71);\n"
-"font: 16pt \"Franxurter Totally\";\n"
-"border:none;\n"
-"border-radius:13px;\n"
-"padding:5px;\n"
-"\n"
-"}\n"
-"QListWidget::item::selected{\n"
-"padding:-0px;\n"
-"border-radius:7px;\n"
-"background-color:  rgb(255, 16, 72);\n"
-"color:rgb(255, 255, 255);\n"
-"}\n"
-"QListWidget::item{\n"
-"padding:5px;\n"
-"color:rrgb(255, 16, 72);\n"
-"}")
-        self.listWidget_2.setFrameShape(QtWidgets.QFrame.WinPanel)
-        self.listWidget_2.setProperty("showDropIndicator", False)
-        self.listWidget_2.setDragDropMode(QtWidgets.QAbstractItemView.NoDragDrop)
-        self.listWidget_2.setIconSize(QtCore.QSize(13, 13))
-        self.listWidget_2.setProperty("isWrapping", False)
-        self.listWidget_2.setObjectName("listWidget_2")
-        self.gridLayout_3.addWidget(self.listWidget_2, 4, 0, 1, 1)
+        self.toolButton_2 = QtWidgets.QToolButton(self.groupBox)
+        self.toolButton_2.setMinimumSize(QtCore.QSize(32, 0))
+        self.toolButton_2.setText("")
+        self.toolButton_2.setIcon(icon2)
+        self.toolButton_2.setIconSize(QtCore.QSize(13, 13))
+        self.toolButton_2.setPopupMode(QtWidgets.QToolButton.DelayedPopup)
+        self.toolButton_2.setAutoRaise(False)
+        self.toolButton_2.setObjectName("toolButton_2")
+        self.gridLayout_3.addWidget(self.toolButton_2, 3, 1, 1, 1)
         self.toolButton = QtWidgets.QToolButton(self.groupBox)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1141,7 +1116,7 @@ class Ui_MainWindow(object):
 "border:none;\n"
 "font:  11pt;\n"
 "}")
-        self.toolButton.setIcon(icon2)
+        self.toolButton.setIcon(icon1)
         self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.toolButton.setAutoRaise(False)
         self.toolButton.setArrowType(QtCore.Qt.NoArrow)
@@ -1233,17 +1208,71 @@ class Ui_MainWindow(object):
         self.lineEdit_2.setClearButtonEnabled(False)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.gridLayout_3.addWidget(self.lineEdit_2, 3, 0, 1, 1)
-        self.toolButton_2 = QtWidgets.QToolButton(self.groupBox)
-        self.toolButton_2.setMinimumSize(QtCore.QSize(32, 0))
-        self.toolButton_2.setText("")
-        self.toolButton_2.setIcon(icon1)
-        self.toolButton_2.setIconSize(QtCore.QSize(13, 13))
-        self.toolButton_2.setPopupMode(QtWidgets.QToolButton.DelayedPopup)
-        self.toolButton_2.setAutoRaise(False)
-        self.toolButton_2.setObjectName("toolButton_2")
-        self.gridLayout_3.addWidget(self.toolButton_2, 3, 1, 1, 1)
+        self.listWidget_2 = QtWidgets.QListWidget(self.groupBox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
+        self.listWidget_2.setSizePolicy(sizePolicy)
+        self.listWidget_2.setMinimumSize(QtCore.QSize(500, 0))
+        self.listWidget_2.setStyleSheet("QScrollBar:vertical {\n"
+"background-color: transparent;\n"
+"width: 25px;\n"
+"margin: 0px 0px 0px 0px;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"border-radius: 5px;\n"
+"background: rgb(48, 48, 48);\n"
+"min-height: 48px;\n"
+"}\n"
+"\n"
+"/* This remvoes the bottom button by setting the height to 0px */\n"
+"QScrollBar::add-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* This remvoes the top button by setting the height to 0px */\n"
+"QScrollBar::sub-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* need this to get rid of crosshatching on scrollbar background */\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"}\n"
+"QListWidget{\n"
+"color:rgb(255, 255, 255);\n"
+"background-color: rgb(71, 71, 71);\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"border:none;\n"
+"border-radius:13px;\n"
+"padding:5px;\n"
+"\n"
+"}\n"
+"QListWidget::item::selected{\n"
+"padding:-0px;\n"
+"border-radius:7px;\n"
+"background-color:  rgb(255, 16, 72);\n"
+"color:rgb(255, 255, 255);\n"
+"}\n"
+"QListWidget::item{\n"
+"padding:5px;\n"
+"color:rrgb(255, 16, 72);\n"
+"}")
+        self.listWidget_2.setFrameShape(QtWidgets.QFrame.WinPanel)
+        self.listWidget_2.setProperty("showDropIndicator", False)
+        self.listWidget_2.setDragDropMode(QtWidgets.QAbstractItemView.NoDragDrop)
+        self.listWidget_2.setIconSize(QtCore.QSize(13, 13))
+        self.listWidget_2.setProperty("isWrapping", False)
+        self.listWidget_2.setObjectName("listWidget_2")
+        self.gridLayout_3.addWidget(self.listWidget_2, 4, 0, 1, 3)
         self.gridLayout_6.addWidget(self.groupBox, 0, 0, 1, 1)
         self.label_6 = QtWidgets.QLabel(self.tab_2)
+        self.label_6.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
         self.gridLayout_6.addWidget(self.label_6, 2, 0, 1, 1)
@@ -1251,10 +1280,20 @@ class Ui_MainWindow(object):
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setStyleSheet("background-color: rgb(48, 48, 48);")
         self.tab_4.setObjectName("tab_4")
-        self.gridLayout_7 = QtWidgets.QGridLayout(self.tab_4)
-        self.gridLayout_7.setObjectName("gridLayout_7")
-        self.toolButton1 = QtWidgets.QToolButton(self.tab_4)
+        self.gridLayout_12 = QtWidgets.QGridLayout(self.tab_4)
+        self.gridLayout_12.setObjectName("gridLayout_12")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_8 = QtWidgets.QLabel(self.tab_4)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy)
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout.addWidget(self.label_8)
+        self.toolButton1 = QtWidgets.QToolButton(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.toolButton1.sizePolicy().hasHeightForWidth())
@@ -1267,9 +1306,30 @@ class Ui_MainWindow(object):
         self.toolButton1.setAutoRepeat(True)
         self.toolButton1.setAutoExclusive(True)
         self.toolButton1.setObjectName("toolButton1")
-        self.gridLayout_7.addWidget(self.toolButton1, 0, 0, 1, 1)
+        self.horizontalLayout.addWidget(self.toolButton1)
+        self.gridLayout_12.addLayout(self.horizontalLayout, 0, 0, 1, 4)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_12.addItem(spacerItem4, 4, 0, 1, 3)
+        self.toolButton_5 = QtWidgets.QToolButton(self.tab_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolButton_5.sizePolicy().hasHeightForWidth())
+        self.toolButton_5.setSizePolicy(sizePolicy)
+        self.toolButton_5.setStyleSheet("QToolButton::checked{\n"
+"border-radius:5px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"background-color: rgb(255, 16, 72);\n"
+"}")
+        self.toolButton_5.setCheckable(True)
+        self.toolButton_5.setAutoRepeat(True)
+        self.toolButton_5.setAutoExclusive(True)
+        self.toolButton_5.setObjectName("toolButton_5")
+        self.gridLayout_12.addWidget(self.toolButton_5, 4, 3, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_12.addItem(spacerItem5, 1, 3, 1, 1)
         self.tabWidget.addTab(self.tab_4, "")
-        self.horizontalLayout_3.addWidget(self.tabWidget)
+        self.gridLayout_7.addWidget(self.tabWidget, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.actionrty = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon.fromTheme("folder")
@@ -1302,18 +1362,18 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Games4Linux"))
+        self.toolButton_9.setText(_translate("MainWindow", "..."))
+        self.toolButton_8.setText(_translate("MainWindow", "..."))
+        self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "Поиск"))
         self.toolButton_10.setText(_translate("MainWindow", "Запустить"))
         self.toolButton_7.setText(_translate("MainWindow", "Удалить"))
-        self.toolButton_8.setText(_translate("MainWindow", "..."))
-        self.toolButton_9.setText(_translate("MainWindow", "..."))
-        self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "Поиск"))
+        self.label_7.setText(_translate("MainWindow", "Командная строка для HUD"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("MainWindow", "Моя библиотека"))
         self.Installscript.setText(_translate("MainWindow", "Установка"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Поиск"))
         self.toolButton_3.setText(_translate("MainWindow", "..."))
         self.toolButton_4.setText(_translate("MainWindow", "..."))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("MainWindow", "Онлайн библиотека"))
-        self.lineEdit_5.setText(_translate("MainWindow", "DXVK_HUD="))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Библиотека"))
         self.label_3.setText(_translate("MainWindow", "Путь к префиксу:"))
         self.label_4.setText(_translate("MainWindow", "Путь к wine:"))
@@ -1333,12 +1393,13 @@ class Ui_MainWindow(object):
         self.WineCfg.setText(_translate("MainWindow", "Winecfg"))
         self.toolButton_6.setText(_translate("MainWindow", "..."))
         self.label_5.setText(_translate("MainWindow", "Путь к установщику:"))
-        self.listWidget_2.setWhatsThis(_translate("MainWindow", "<html><head/><body><p>ваапвап</p></body></html>"))
+        self.toolButton_2.setShortcut(_translate("MainWindow", "Backspace"))
         self.toolButton.setText(_translate("MainWindow", "Поиск"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Поиск"))
-        self.toolButton_2.setShortcut(_translate("MainWindow", "Backspace"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Префиксы"))
+        self.label_8.setText(_translate("MainWindow", "Версия программы:"))
         self.toolButton1.setText(_translate("MainWindow", "обновление "))
+        self.toolButton_5.setText(_translate("MainWindow", "MangoHud"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Настройки"))
         self.actionrty.setText(_translate("MainWindow", "rty"))
         self.actionrty.setShortcut(_translate("MainWindow", "Backspace"))

@@ -10,8 +10,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         # Это здесь нужно для доступа к переменным, методам
         # и т.д. в файле theme.py
         super().__init__()
-        F1 = 'export DXVK_HUD=full'
-        os.system("bash -c '%s'" % F1)  
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
         self.Createprefix.clicked.connect(self.browse_folder_prefix)
         self.Selectwine.clicked.connect(self.browse_folder_wine)
@@ -31,6 +29,14 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.toolButton_2.clicked.connect(self.clear_search)
         self.toolButton_10.clicked.connect(self.open_icon)
         self.toolButton_7.clicked.connect(self.delete_icon)
+        self.toolButton_5.clicked.connect(self.mango_hud)
+        f_10 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/HUD_settings'
+        f_10 = open(f_10, mode="r", encoding="utf_8")
+        hud=str(f_10.readlines()[0])
+        hud = hud.replace("\n", "")
+        self.lineEdit_5.setText(hud)
+        self.text4 = self.lineEdit_5.text()
+        self.text5 = self.lineEdit_5.text()
         Font_install = 'mkdir -p ~/.local/share/fonts'
         os.system("bash -c '%s'" % Font_install)
         Font_install_2 = 'cp /home/'+os.getlogin()+'/GamesForLinux/code_files/Font/Franxurter-Totally.ttf ~/.local/share/fonts'
@@ -49,7 +55,33 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon'
         for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
             self.listWidget_3.addItem(self.item_3)
-
+    def mango_hud(self):
+        #self.text4 = self.lineEdit_5.text()
+        #print(self.text4)
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        #msg.setIconPixmap(pixmap)  # Своя картинка
+  
+        msg.setWindowTitle("Информация")
+        msg.setText("MangoHud")
+        msg.setInformativeText("Установить MangoHud?")
+  
+        okButton = msg.addButton( '  Да  ', QMessageBox.AcceptRole)
+        msg.addButton('Нет', QMessageBox.RejectRole)
+        okButton.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(233, 15, 131, 255), stop:1 rgba(25, 206, 246, 255));")
+        msg.setStyleSheet("border-radius:5px;"
+"background-color: rgb(48, 48, 48);"
+"color: rgb(255, 255, 255);"
+"font:11pt;"
+"font-weight:900;") 
+        msg.exec()
+        if msg.clickedButton() == okButton:
+            patch_1= '/home/'+os.getlogin()+'/MangoHud/'
+            download ='python3 /home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'setPassword.py'
+            os.system("bash -c '%s'" % download)
+            #download_2 ='cd '+patch_1
+            #print(download_2)
+            #os.system("bash -c '%s'" % download_2)
     def clear_search(self):
         self.listWidget_2.clear() 
         self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
@@ -227,6 +259,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
     def Installexe(self):
+        #self.text4 = self.lineEdit_5.text()
         try:
             self.selectItem_3 = self.listWidget_2.currentItem().text()
             self.f_3 = self.directory_7+ self.selectItem_3
@@ -272,6 +305,10 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             f_6.write(self.str2+'uninstaller'+'"'+'\n')
             f_6.write('/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + self.selectItem_3 + ' | ' + self.filename)
             f_6.close()
+            #f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/' + self.selectItem_3 + ' | ' + self.filename
+            #f_9 = open(f_9, mode="w", encoding="utf_8")
+            #f_9.write(self.text4)
+            #f_9.close()
             chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
             os.system("bash -c '%s'" % chmod)
             chmod_2 = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
@@ -416,11 +453,16 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                     else:
                         print("No")
     def open_icon(self):
-        self.text4 = self.lineEdit_5.text()
         self.selectItem_6 = self.listWidget_3.currentItem().text()
-        xdg2 ='export ' + self.text4 + '&&'+ self.directory_9 +'/'+ '"'+self.selectItem_6 + '"'
+        self.text5 = self.lineEdit_5.text()
+        f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/HUD_settings'
+        f_9 = open(f_9, mode="w", encoding="utf_8")
+        f_9.write(self.text5)
+        f_9.close()
+        xdg2 ='export ' + self.text5 + '&& '+ self.directory_9 +'/'+ '"'+self.selectItem_6 + '"'
         os.system("bash -c '%s'" % xdg2 + '&')
         print(xdg2)
+        print(self.text5)
             
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
     app = QtWidgets.QApplication(sys.argv)  # Новый экземпляр QApplication

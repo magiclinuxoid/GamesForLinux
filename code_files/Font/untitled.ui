@@ -508,7 +508,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">QToolButton::checked{
-border-radius:10px;
+border-radius:5px;
 font: 16pt &quot;Franxurter Totally&quot;;
 background-color: rgb(255, 16, 72);
 }
@@ -516,9 +516,7 @@ QToolButton{
 background-color: transparent;
 border:none;
 color: rgb(255, 255, 255);
-border-radius:10px;
 font: 16pt &quot;Franxurter Totally&quot;;
-background-color: rgb(255, 16, 72);
 }
 QTabBar::tab:selected{
 background-color: rgb(48, 48, 48);
@@ -584,7 +582,7 @@ QTabBar::tab {
         <string>Библиотека</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="1">
+        <item row="1" column="0">
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -595,6 +593,11 @@ QTabBar::tab {
           <property name="styleSheet">
            <string notr="true">QTabBar{
 background-color:rgb(255, 16, 72);
+}
+QToolButton::checked{
+border-radius:5px;
+font: 16pt &quot;Franxurter Totally&quot;;
+background-color: rgb(255, 16, 72);
 }</string>
           </property>
           <property name="tabPosition">
@@ -620,91 +623,6 @@ background-color:rgb(255, 16, 72);
             <string>Моя библиотека</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="1">
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QToolButton" name="toolButton_10">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QToolButton::checked{
-border-radius:5px;
-background-color: rgb(255, 16, 72);
-}</string>
-                </property>
-                <property name="text">
-                 <string>Запустить</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <property name="autoRepeat">
-                 <bool>true</bool>
-                </property>
-                <property name="autoExclusive">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QToolButton" name="toolButton_7">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QToolButton::checked{
-border-radius:5px;
-background-color: rgb(255, 16, 72);
-}</string>
-                </property>
-                <property name="text">
-                 <string>Удалить</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-                <property name="autoRepeat">
-                 <bool>true</bool>
-                </property>
-                <property name="autoExclusive">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </item>
             <item row="0" column="0" rowspan="8">
              <widget class="QGroupBox" name="groupBox_4">
               <property name="sizePolicy">
@@ -726,23 +644,6 @@ padding:7px;
                <string/>
               </property>
               <layout class="QGridLayout" name="gridLayout_11">
-               <item row="0" column="1">
-                <widget class="QToolButton" name="toolButton_8">
-                 <property name="text">
-                  <string>...</string>
-                 </property>
-                 <property name="icon">
-                  <iconset resource="resource.qrc">
-                   <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>13</width>
-                   <height>13</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="2">
                 <widget class="QToolButton" name="toolButton_9">
                  <property name="styleSheet">
@@ -759,6 +660,23 @@ font:  11pt;
                  <property name="icon">
                   <iconset resource="resource.qrc">
                    <normaloff>:/newPrefix/img/search-3-16.ico</normaloff>:/newPrefix/img/search-3-16.ico</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QToolButton" name="toolButton_8">
+                 <property name="text">
+                  <string>...</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resource.qrc">
+                   <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>13</width>
+                   <height>13</height>
+                  </size>
                  </property>
                 </widget>
                </item>
@@ -973,17 +891,17 @@ font: 16pt &quot;Franxurter Totally&quot;;</string>
                  </property>
                 </widget>
                </item>
-               <item row="1" column="0" colspan="3">
+               <item row="1" column="0">
                 <widget class="QListWidget" name="listWidget_3">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>486</width>
+                   <width>470</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -1078,6 +996,207 @@ color:rrgb(255, 16, 72);
               </layout>
              </widget>
             </item>
+            <item row="0" column="2" rowspan="6">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QToolButton" name="toolButton_10">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Запустить</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>true</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="toolButton_7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Удалить</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>true</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="8" column="0" colspan="3">
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+border:none;</string>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="1" column="0">
+                <widget class="QLineEdit" name="lineEdit_5">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-width: 1px;        
+background-color: rgb(255, 16, 72);
+border-radius:5px;
+border:none;
+font: 14pt &quot;Franxurter Totally&quot;;
+padding:6px;
+color: rgb(255, 255, 255);font: 14pt &quot;Franxurter Totally&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Normal</enum>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string/>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Franxurter Totally&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Командная строка для HUD</string>
+                 </property>
+                 <property name="textFormat">
+                  <enum>Qt::AutoText</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QToolButton" name="toolButton_5">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>100</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QToolButton::checked{
+border-radius:5px;
+font: 16pt &quot;Franxurter Totally&quot;;
+background-color: rgb(255, 16, 72);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>MangoHud</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
            </layout>
           </widget>
           <widget class="QWidget" name="tab_3">
@@ -1090,7 +1209,7 @@ color:rrgb(255, 16, 72);
               <item row="0" column="1">
                <widget class="QToolButton" name="Installscript">
                 <property name="enabled">
-                 <bool>false</bool>
+                 <bool>true</bool>
                 </property>
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1099,10 +1218,7 @@ color:rrgb(255, 16, 72);
                  </sizepolicy>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QToolButton::checked{
-border-radius:5px;
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(255, 129, 25, 255), stop:1 rgba(255, 0, 0, 255));
-}</string>
+                 <string notr="true"/>
                 </property>
                 <property name="text">
                  <string>Установка</string>
@@ -1682,22 +1798,6 @@ color:rgb(255, 255, 255);
           </widget>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_5">
-          <property name="styleSheet">
-           <string notr="true">border-width: 1px;        
-background-color: rgb(255, 16, 72);
-border-radius:5px;
-border:none;
-font: 14pt &quot;Franxurter Totally&quot;;
-padding:6px;
-color: rgb(255, 255, 255);font: 14pt &quot;Franxurter Totally&quot;;</string>
-          </property>
-          <property name="text">
-           <string>DXVK_HUD=</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="createprefix">
@@ -2244,81 +2344,20 @@ padding:7px;
 </string>
           </property>
           <layout class="QGridLayout" name="gridLayout_3">
-           <item row="4" column="0">
-            <widget class="QListWidget" name="listWidget_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
+           <item row="3" column="1">
+            <widget class="QToolButton" name="toolButton_2">
              <property name="minimumSize">
               <size>
-               <width>510</width>
+               <width>32</width>
                <height>0</height>
               </size>
              </property>
-             <property name="whatsThis">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ваапвап&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <property name="text">
+              <string/>
              </property>
-             <property name="styleSheet">
-              <string notr="true">QScrollBar:vertical {
-background-color: transparent;
-width: 25px;
-margin: 0px 0px 0px 0px;
-}
-QScrollBar::handle:vertical {
-border-radius: 5px;
-background: rgb(48, 48, 48);
-min-height: 48px;
-}
-
-/* This remvoes the bottom button by setting the height to 0px */
-QScrollBar::add-line:vertical {
-height: 0px;
-subcontrol-position: bottom;
-subcontrol-origin: margin;
-}
-
-/* This remvoes the top button by setting the height to 0px */
-QScrollBar::sub-line:vertical {
-height: 0px;
-subcontrol-position: top;
-subcontrol-origin: margin;
-}
-
-/* need this to get rid of crosshatching on scrollbar background */
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-background: none;
-}
-QListWidget{
-color:rgb(255, 255, 255);
-background-color: rgb(71, 71, 71);
-font: 16pt &quot;Franxurter Totally&quot;;
-border:none;
-border-radius:13px;
-padding:5px;
-
-}
-QListWidget::item::selected{
-padding:-0px;
-border-radius:7px;
-background-color:  rgb(255, 16, 72);
-color:rgb(255, 255, 255);
-}
-QListWidget::item{
-padding:5px;
-color:rrgb(255, 16, 72);
-}</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::WinPanel</enum>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>false</bool>
-             </property>
-             <property name="dragDropMode">
-              <enum>QAbstractItemView::NoDragDrop</enum>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -2326,7 +2365,13 @@ color:rrgb(255, 16, 72);
                <height>13</height>
               </size>
              </property>
-             <property name="isWrapping" stdset="0">
+             <property name="shortcut">
+              <string>Backspace</string>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="autoRaise">
               <bool>false</bool>
              </property>
             </widget>
@@ -2628,20 +2673,78 @@ font: 16pt &quot;Franxurter Totally&quot;;
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
-            <widget class="QToolButton" name="toolButton_2">
+           <item row="4" column="0" colspan="3">
+            <widget class="QListWidget" name="listWidget_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
-               <width>32</width>
+               <width>500</width>
                <height>0</height>
               </size>
              </property>
-             <property name="text">
-              <string/>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:vertical {
+background-color: transparent;
+width: 25px;
+margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: rgb(48, 48, 48);
+min-height: 48px;
+}
+
+/* This remvoes the bottom button by setting the height to 0px */
+QScrollBar::add-line:vertical {
+height: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+/* This remvoes the top button by setting the height to 0px */
+QScrollBar::sub-line:vertical {
+height: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+QListWidget{
+color:rgb(255, 255, 255);
+background-color: rgb(71, 71, 71);
+font: 16pt &quot;Franxurter Totally&quot;;
+border:none;
+border-radius:13px;
+padding:5px;
+
+}
+QListWidget::item::selected{
+padding:-0px;
+border-radius:7px;
+background-color:  rgb(255, 16, 72);
+color:rgb(255, 255, 255);
+}
+QListWidget::item{
+padding:5px;
+color:rrgb(255, 16, 72);
+}</string>
              </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
+             <property name="frameShape">
+              <enum>QFrame::WinPanel</enum>
+             </property>
+             <property name="showDropIndicator" stdset="0">
+              <bool>false</bool>
+             </property>
+             <property name="dragDropMode">
+              <enum>QAbstractItemView::NoDragDrop</enum>
              </property>
              <property name="iconSize">
               <size>
@@ -2649,13 +2752,7 @@ font: 16pt &quot;Franxurter Totally&quot;;
                <height>13</height>
               </size>
              </property>
-             <property name="shortcut">
-              <string>Backspace</string>
-             </property>
-             <property name="popupMode">
-              <enum>QToolButton::DelayedPopup</enum>
-             </property>
-             <property name="autoRaise">
+             <property name="isWrapping" stdset="0">
               <bool>false</bool>
              </property>
             </widget>
@@ -2665,6 +2762,9 @@ font: 16pt &quot;Franxurter Totally&quot;;
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -2680,7 +2780,7 @@ font: 16pt &quot;Franxurter Totally&quot;;
         <string>Настройки</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="0">
+        <item row="1" column="1">
          <widget class="QToolButton" name="toolButton">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -2776,12 +2876,12 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgb
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>518</x>
-     <y>86</y>
+     <x>180</x>
+     <y>56</y>
     </hint>
     <hint type="destinationlabel">
-     <x>413</x>
-     <y>84</y>
+     <x>180</x>
+     <y>56</y>
     </hint>
    </hints>
   </connection>
@@ -2792,12 +2892,28 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgb
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>527</x>
-     <y>51</y>
+     <x>523</x>
+     <y>76</y>
     </hint>
     <hint type="destinationlabel">
-     <x>341</x>
-     <y>36</y>
+     <x>420</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_3</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>lineEdit_5</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>485</y>
     </hint>
    </hints>
   </connection>
