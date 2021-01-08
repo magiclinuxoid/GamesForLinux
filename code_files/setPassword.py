@@ -36,7 +36,9 @@ class Ui_MainWindow(object):
         
     def on(self):
         self.txt = self.lineEdit.text()
-        download ='echo ' + '"'+self.txt+'"' + '| sudo -S -k ' + '/home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'install_MangoHud.sh'
+        clone = 'git clone --recurse-submodules https://github.com/flightlessmango/MangoHud.git'
+        os.system("bash -c '%s'" % clone + ' &')
+        download ='echo ' + '"'+self.txt+'"' + '| sudo -S -k ' + 'xterm -e /home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'install_MangoHud.sh'
         os.system("bash -c '%s'" % download + ' &')
         MainWindow.close()       
         print(download)

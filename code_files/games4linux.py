@@ -37,12 +37,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.lineEdit_5.setText(hud)
         self.text4 = self.lineEdit_5.text()
         self.text5 = self.lineEdit_5.text()
-        Font_install = 'mkdir -p ~/.local/share/fonts'
-        os.system("bash -c '%s'" % Font_install)
-        Font_install_2 = 'cp /home/'+os.getlogin()+'/GamesForLinux/code_files/Font/Franxurter-Totally.ttf ~/.local/share/fonts'
-        os.system("bash -c '%s'" % Font_install_2)
-        Font_install_3 = 'fc-cache -f -v'
-        os.system("bash -c '%s'" % Font_install_3)
         self.directory_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/runner/'
         print(self.directory_6)
         for item in os.listdir(self.directory_6):  # для каждого файла в директории
