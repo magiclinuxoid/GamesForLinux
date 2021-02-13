@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.lineEdit)
         self.toolButton = QtWidgets.QToolButton(self.centralwidget)
         self.toolButton.setObjectName("toolButton")
-        self.toolButton.clicked.connect(self.on)
+        self.toolButton.clicked.connect(self.ok)
         self.horizontalLayout.addWidget(self.toolButton)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -34,15 +34,15 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
-    def on(self):
+    def ok(self):
         self.txt = self.lineEdit.text()
-        clone = 'git clone --recurse-submodules https://github.com/flightlessmango/MangoHud.git'
-        os.system("bash -c '%s'" % clone + ' &')
-        download ='echo ' + '"'+self.txt+'"' + '| sudo -S -k ' + 'xterm -e /home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'install_MangoHud.sh'
-        os.system("bash -c '%s'" % download + ' &')
-        MainWindow.close()       
+        clone = 'xterm -e git clone --recurse-submodules https://github.com/flightlessmango/MangoHud.git && cd ~/MangoHud'
+        os.system("bash -c '%s'" % clone)
+        download ='xterm -e ' + ' /home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'install_MangoHud.sh'
+        os.system("bash -c '%s'" % download)    
         print(download)
         print(self.txt)
+        MainWindow.close()  
         
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

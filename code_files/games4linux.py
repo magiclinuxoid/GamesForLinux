@@ -70,7 +70,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
 "font-weight:900;") 
         msg.exec()
         if msg.clickedButton() == okButton:
-            patch_1= '/home/'+os.getlogin()+'/MangoHud/'
             download ='python3 /home/'+os.getlogin()+'/GamesForLinux/code_files/' + 'setPassword.py'
             os.system("bash -c '%s'" % download)
             #download_2 ='cd '+patch_1
@@ -97,7 +96,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
 
     def browse_folder_prefix(self):
         self.directory = QtWidgets.QFileDialog.getExistingDirectory()
-
         self.text = str(self.directory)
         self.label.setText(self.text)
         
@@ -172,6 +170,10 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                 self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
                 for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
                     self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
+                self.listWidget_3.clear()
+                self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/'
+                for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
+                    self.listWidget_3.addItem(self.item_3)
         except AttributeError:
             error_1 = 'Выбери пути!'
             
@@ -179,10 +181,20 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
 
         
     def base(self):
-
         self.name = QFileInfo(str(self.directory)).fileName()
         print(self.name)
         self.nameprefix = self.name
+        self.icon_path = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + self.nameprefix
+        os.system("bash -c '%s'" % self.icon_path)
+        print(self.icon_path)
+        listWidget_path = '/home/'+os.getlogin()+'/GamesForLinux/code_files/listWidget_patch/path.txt'
+        listWidget_path = open(listWidget_path, mode="w", encoding="utf_8")
+        listWidget_path.write(self.icon_path)
+        listWidget_path.close()
+        listWidget_path_2 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/listWidget_patch/path.txt'
+        listWidget_path_2 = open(listWidget_path_2, mode="r", encoding="utf_8")
+        listWidget_path_2=str(listWidget_path_2.readlines()[0])
+        print(listWidget_path_2)
         if self.text2 == 'wine':
             if self.nameprefix != "":
                 self.cb=self.comboBox.currentText()
@@ -253,8 +265,8 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
     def Installexe(self):
-        #self.text4 = self.lineEdit_5.text()
         try:
+            self.directory_8 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/'
             self.selectItem_3 = self.listWidget_2.currentItem().text()
             self.f_3 = self.directory_7+ self.selectItem_3
             self.f_3 = open(self.f_3, mode="r", encoding="utf_8")
@@ -279,13 +291,18 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             self.str2=self.str2.replace("\n", "")
             print(self.str2)
             self.directory_10 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберете папку приложения",path)
-            directory_11 = QtWidgets.QFileDialog.getOpenFileNames(self,"выберете установщик",  self.directory_10,"Windows Files (*.exe)")[0]
+            directory_11 = QtWidgets.QFileDialog.getOpenFileNames(self,"выберете установщик",  self.directory_10,"Windows Files (*.msi)(*.exe)")[0]
             print(directory_11)
             self.filename = QFileInfo(str(self.directory_10)).fileName()
             path_exe = str(directory_11[0])
             print(path_exe)
             print(path)
             print(self.filename)
+            self.path_2 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +self.selectItem_3 + ' | ' + self.filename
+            f_11 = self.directory_8 + self.selectItem_3
+            f_11 = open(f_11, mode="a", encoding="utf_8")
+            f_11.write('rm '+'"'+self.path_2+'"' +'\n')
+            f_11.close()
             f_1 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' +self.selectItem_3 + ' | ' + self.filename
             f_1 = open(f_1, mode="w", encoding="utf_8")
             f_1.write('[Desktop Entry]'+'\n')

@@ -1,0 +1,3 @@
+#!/bin/sh
+WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64" /home/dron/Загрузки/Proton-5.9-GE-4-ST/dist/bin/wine "uninstaller"
+/home/dron/GamesForLinux/code_files/icon/Prefix x64 | The Sims 3

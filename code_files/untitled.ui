@@ -462,7 +462,7 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>Games4Linux</string>
+   <string>GamesForLinux</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resource.qrc">
@@ -551,7 +551,7 @@ QTabBar::tab {
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>

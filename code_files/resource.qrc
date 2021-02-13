@@ -5,6 +5,6 @@
     <file>../img/back.png</file>
     <file>../img/logonew.png</file>
     <file>../img/cross.svg</file>
-    <file>Font/Franxurter Totally.ttf</file>
+    <file>font/Franxurter-Totally.ttf</file>
   </qresource>
 </RCC>
