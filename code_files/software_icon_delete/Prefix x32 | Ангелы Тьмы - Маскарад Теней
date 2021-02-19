@@ -1,3 +1,0 @@
-#!/bin/sh
-WINEARCH=win32 WINEPREFIX="/home/dron/Prefix x32" /bin/wine "uninstaller"
-/home/dron/GamesForLinux/code_files/icon/Prefix x32 | Ангелы Тьмы - Маскарад Теней

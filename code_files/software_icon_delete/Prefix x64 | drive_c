@@ -1,3 +1,0 @@
-#!/bin/sh
-WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64" /home/dron/.local/share/lutris/runners/wine/lutris-5.7-11-x86_64/bin/wine "uninstaller"
-/home/dron/GamesForLinux/code_files/icon/Prefix x64 | drive_c

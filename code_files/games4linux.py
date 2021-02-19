@@ -5,6 +5,7 @@ from PyQt5.QtCore import QFileInfo
 from PyQt5.QtWidgets import *
 import theme# Это наш конвертированный файл дизайна
 import os
+
 class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
     def __init__(self):
         # Это здесь нужно для доступа к переменным, методам
@@ -25,18 +26,16 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.text = ''
         self.text2 = 'wine' #строки text теперь атрибуты класса и могут вызываться в любой функции
         self.text3 = ''
+        self.text4 = 'MANGOHUD=1'
+        self.text5 = self.lineEdit_5.text()
+        self.toolButton_11.hide()
+        self.toolButton_11.clicked.connect(self.lineEdit_5_update)
         self.toolButton.clicked.connect(self.searchItem)
         self.toolButton_2.clicked.connect(self.clear_search)
         self.toolButton_10.clicked.connect(self.open_icon)
         self.toolButton_7.clicked.connect(self.delete_icon)
         self.toolButton_5.clicked.connect(self.mango_hud)
-        f_10 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/HUD_settings'
-        f_10 = open(f_10, mode="r", encoding="utf_8")
-        hud=str(f_10.readlines()[0])
-        hud = hud.replace("\n", "")
-        self.lineEdit_5.setText(hud)
-        self.text4 = self.lineEdit_5.text()
-        self.text5 = self.lineEdit_5.text()
+        self.listWidget_3.itemClicked.connect(self.software_hud)
         self.directory_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/runner/'
         print(self.directory_6)
         for item in os.listdir(self.directory_6):  # для каждого файла в директории
@@ -49,6 +48,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.directory_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon'
         for self.item_3 in os.listdir(self.directory_9):  # для каждого файла в директории
             self.listWidget_3.addItem(self.item_3)
+            
     def mango_hud(self):
         #self.text4 = self.lineEdit_5.text()
         #print(self.text4)
@@ -187,14 +187,6 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.icon_path = '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + self.nameprefix
         os.system("bash -c '%s'" % self.icon_path)
         print(self.icon_path)
-        listWidget_path = '/home/'+os.getlogin()+'/GamesForLinux/code_files/listWidget_patch/path.txt'
-        listWidget_path = open(listWidget_path, mode="w", encoding="utf_8")
-        listWidget_path.write(self.icon_path)
-        listWidget_path.close()
-        listWidget_path_2 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/listWidget_patch/path.txt'
-        listWidget_path_2 = open(listWidget_path_2, mode="r", encoding="utf_8")
-        listWidget_path_2=str(listWidget_path_2.readlines()[0])
-        print(listWidget_path_2)
         if self.text2 == 'wine':
             if self.nameprefix != "":
                 self.cb=self.comboBox.currentText()
@@ -204,12 +196,12 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                 f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"'+' WINE=/bin/wine ' + '/home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks &'+'\n')
                 f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"' +' '+'/bin/wine '+ ' winecfg &'+'\n')
                 f.write(self.text+'/drive_c/'+'\n')
-                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+'/bin/wine' +' "')
+                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+'/bin/wine explorer' +' "')
                 f.close()
                 f2='/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/' + self.nameprefix 
                 f2 = open(f2, mode="w", encoding="utf_8")
                 f2.write('#!/bin/sh'+'\n')
-                f2.write('rm -r '+'"'+self.text+'"')
+                f2.write('rm -r '+'"'+self.text+'"'+'\n')
                 f2.close()
             else: 
                 msg = QMessageBox()
@@ -235,15 +227,15 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                 f = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/' + self.nameprefix 
                 f = open(f, mode="w", encoding="utf_8")
                 f.write('#!/bin/sh'+'\n')
-                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"' ' WINE='+self.text2+'/bin/wine'+' /home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks &'+'\n')
-                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"' +' '+self.text2+'/bin/wine'+' winecfg &'+'\n')
+                f.write('WINEARCH=''"'+self.cb+'"' + ' WINEPREFIX='+'"'+self.text+'"' ' WINE='+self.text2+'/bin/wine '+' /home/'+os.getlogin()+'/GamesForLinux/code_files/winetricks &'+'\n')
+                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"' +' '+self.text2+'/bin/wine '+' winecfg &'+'\n')
                 f.write(self.text+'/drive_c/'+'\n')
-                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+self.text2+'/bin/wine'+' "')
+                f.write('WINEARCH='+self.cb+ ' WINEPREFIX='+'"'+self.text+'"'+' '+self.text2+'/bin/wine explorer'+' "')
                 f.close()
                 f2='/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/' + self.nameprefix 
                 f2 = open(f2, mode="w", encoding="utf_8")
                 f2.write('#!/bin/sh'+'\n')
-                f2.write('rm -r '+'"'+self.text+'"')
+                f2.write('rm -r '+'"'+self.text+'"'+'\n')
                 f2.close()
             else: 
                 msg = QMessageBox()
@@ -264,6 +256,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
             self.listWidget_2.addItem(str(self.item_2))   # добавить файл в listWidget
+            
     def Installexe(self):
         try:
             self.directory_8 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate_delete/'
@@ -290,9 +283,27 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             path.replace("\n", "")
             self.str2=self.str2.replace("\n", "")
             print(self.str2)
-            self.directory_10 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберете папку приложения",path)
-            directory_11 = QtWidgets.QFileDialog.getOpenFileNames(self,"выберете установщик",  self.directory_10,"Windows Files (*.msi)(*.exe)")[0]
-            print(directory_11)
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            # msg.setIconPixmap(pixmap)  # Своя картинка
+    
+            msg.setWindowTitle("Информация")
+            msg.setText("Установка...")
+            msg.setInformativeText("нажмите ОК после установки")
+    
+            okButton = msg.addButton( ' ok ', QMessageBox.AcceptRole)
+            okButton.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(233, 15, 131, 255), stop:1 rgba(25, 206, 246, 255));")
+            msg.setStyleSheet("border-radius:5px;"
+    "background-color: rgb(48, 48, 48);"
+    "color: rgb(255, 255, 255);"
+    "font:11pt;"
+    "font-weight:900;") 
+  
+            msg.exec()
+            if msg.clickedButton() == okButton:
+                self.directory_10 = QtWidgets.QFileDialog.getExistingDirectory(self, "Выберете папку приложения",path)
+                directory_11 = QtWidgets.QFileDialog.getOpenFileNames(self,"выберете файл запуска",  self.directory_10,"Windows Files (*.msi)(*.exe)")[0]
+                print(directory_11)
             self.filename = QFileInfo(str(self.directory_10)).fileName()
             path_exe = str(directory_11[0])
             print(path_exe)
@@ -316,10 +327,10 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
             f_6.write(self.str2+'uninstaller'+'"'+'\n')
             f_6.write('/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + self.selectItem_3 + ' | ' + self.filename)
             f_6.close()
-            #f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/' + self.selectItem_3 + ' | ' + self.filename
-            #f_9 = open(f_9, mode="w", encoding="utf_8")
-            #f_9.write(self.text4)
-            #f_9.close()
+            f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/' + self.selectItem_3 + ' | ' + self.filename
+            f_9 = open(f_9, mode="w", encoding="utf_8")
+            f_9.write(self.text4)
+            f_9.close()
             chmod = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_icon_delete/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
             os.system("bash -c '%s'" % chmod)
             chmod_2 = 'chmod +x '+ '/home/'+os.getlogin()+'/GamesForLinux/code_files/icon/' + '"'+self.selectItem_3 + ' | ' + self.filename+'"'
@@ -335,6 +346,14 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         except IndexError:
             error_2 = 'Выбери пути!'
             QMessageBox.question(self, 'Введено', error_2, QMessageBox.Ok, QMessageBox.Ok)
+            
+    def software_hud(self):
+        self.selectItem_4 = self.listWidget_3.currentItem().text()
+        f_10 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/'+self.selectItem_4
+        f_10 = open(f_10, mode="r", encoding="utf_8")
+        f_10=str(f_10.readlines()[0])
+        f_10 = self.lineEdit_5.setText(f_10)
+            
     def delete_icon(self):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
@@ -463,14 +482,19 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
                         print("Yes")
                     else:
                         print("No")
-    def open_icon(self):
-        self.selectItem_6 = self.listWidget_3.currentItem().text()
+                        
+    def lineEdit_5_update(self):
+        self.selectItem_4 = self.listWidget_3.currentItem().text()
         self.text5 = self.lineEdit_5.text()
-        f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/HUD_settings'
+        f_9 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/software_HUD/'+ self.selectItem_4
         f_9 = open(f_9, mode="w", encoding="utf_8")
         f_9.write(self.text5)
         f_9.close()
-        xdg2 ='export ' + self.text5 + '&& '+ self.directory_9 +'/'+ '"'+self.selectItem_6 + '"'
+        print(self.text5)    
+        
+    def open_icon(self):
+        self.text5 = self.lineEdit_5.text()
+        xdg2 ='export ' + self.text5 + '&& '+ self.directory_9 +'/'+ '"'+self.selectItem_4 + '"'
         os.system("bash -c '%s'" % xdg2 + '&')
         print(xdg2)
         print(self.text5)

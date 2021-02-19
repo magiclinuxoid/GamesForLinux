@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.ApplicationModal)
-        MainWindow.resize(720, 538)
+        MainWindow.resize(1057, 610)
         MainWindow.setMinimumSize(QtCore.QSize(720, 538))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -241,6 +241,60 @@ class Ui_MainWindow(object):
         self.tab.setObjectName("tab")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.tab)
         self.gridLayout_4.setObjectName("gridLayout_4")
+        self.groupBox_3 = QtWidgets.QGroupBox(self.tab)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.groupBox_3.sizePolicy().hasHeightForWidth())
+        self.groupBox_3.setSizePolicy(sizePolicy)
+        self.groupBox_3.setMinimumSize(QtCore.QSize(0, 0))
+        self.groupBox_3.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.groupBox_3.setStyleSheet("background-color: transparent;\n"
+"border:none;")
+        self.groupBox_3.setTitle("")
+        self.groupBox_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.groupBox_3.setFlat(True)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox_3)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label_7 = QtWidgets.QLabel(self.groupBox_3)
+        self.label_7.setStyleSheet("font: 14pt \"Franxurter Totally\";")
+        self.label_7.setTextFormat(QtCore.Qt.AutoText)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout_2.addWidget(self.label_7, 0, 0, 1, 1)
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.groupBox_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_5.setSizePolicy(sizePolicy)
+        self.lineEdit_5.setStyleSheet("border-width: 1px;        \n"
+"background-color: rgb(255, 16, 72);\n"
+"border-radius:5px;\n"
+"border:none;\n"
+"font: 14pt \"Franxurter Totally\";\n"
+"padding:6px;\n"
+"color: rgb(255, 255, 255);font: 14pt \"Franxurter Totally\";")
+        self.lineEdit_5.setText("")
+        self.lineEdit_5.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.lineEdit_5.setDragEnabled(True)
+        self.lineEdit_5.setPlaceholderText("")
+        self.lineEdit_5.setClearButtonEnabled(False)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.gridLayout_2.addWidget(self.lineEdit_5, 1, 0, 1, 1)
+        self.toolButton_11 = QtWidgets.QToolButton(self.groupBox_3)
+        self.toolButton_11.setMinimumSize(QtCore.QSize(40, 38))
+        self.toolButton_11.setStyleSheet("QToolButton::checked{\n"
+"border-radius:10px;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"background-color: rgb(255, 16, 72);\n"
+"}")
+        self.toolButton_11.setCheckable(True)
+        self.toolButton_11.setAutoRepeat(True)
+        self.toolButton_11.setAutoExclusive(True)
+        self.toolButton_11.setObjectName("toolButton_11")
+        self.gridLayout_2.addWidget(self.toolButton_11, 1, 1, 1, 1)
+        self.gridLayout_4.addWidget(self.groupBox_3, 2, 0, 1, 1)
         self.tabWidget_2 = QtWidgets.QTabWidget(self.tab)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -437,7 +491,7 @@ class Ui_MainWindow(object):
         self.listWidget_3.setUniformItemSizes(True)
         self.listWidget_3.setWordWrap(False)
         self.listWidget_3.setObjectName("listWidget_3")
-        self.gridLayout_11.addWidget(self.listWidget_3, 1, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.listWidget_3, 1, 0, 1, 3)
         self.gridLayout_5.addWidget(self.groupBox_4, 0, 0, 8, 1)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setContentsMargins(-1, -1, 0, -1)
@@ -772,48 +826,6 @@ class Ui_MainWindow(object):
         self.gridLayout_8.addLayout(self.gridLayout_9, 4, 0, 1, 1)
         self.tabWidget_2.addTab(self.tab_3, "")
         self.gridLayout_4.addWidget(self.tabWidget_2, 1, 0, 1, 1)
-        self.groupBox_3 = QtWidgets.QGroupBox(self.tab)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_3.sizePolicy().hasHeightForWidth())
-        self.groupBox_3.setSizePolicy(sizePolicy)
-        self.groupBox_3.setMinimumSize(QtCore.QSize(0, 0))
-        self.groupBox_3.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.groupBox_3.setStyleSheet("background-color: transparent;\n"
-"border:none;")
-        self.groupBox_3.setTitle("")
-        self.groupBox_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.groupBox_3.setFlat(True)
-        self.groupBox_3.setObjectName("groupBox_3")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox_3)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.groupBox_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_5.sizePolicy().hasHeightForWidth())
-        self.lineEdit_5.setSizePolicy(sizePolicy)
-        self.lineEdit_5.setStyleSheet("border-width: 1px;        \n"
-"background-color: rgb(255, 16, 72);\n"
-"border-radius:5px;\n"
-"border:none;\n"
-"font: 14pt \"Franxurter Totally\";\n"
-"padding:6px;\n"
-"color: rgb(255, 255, 255);font: 14pt \"Franxurter Totally\";")
-        self.lineEdit_5.setText("")
-        self.lineEdit_5.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.lineEdit_5.setDragEnabled(True)
-        self.lineEdit_5.setPlaceholderText("")
-        self.lineEdit_5.setClearButtonEnabled(False)
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.gridLayout_2.addWidget(self.lineEdit_5, 1, 0, 1, 1)
-        self.label_7 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_7.setStyleSheet("font: 14pt \"Franxurter Totally\";")
-        self.label_7.setTextFormat(QtCore.Qt.AutoText)
-        self.label_7.setObjectName("label_7")
-        self.gridLayout_2.addWidget(self.label_7, 0, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_3, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.createprefix = QtWidgets.QWidget()
         self.createprefix.setStyleSheet("background-color: rgb(48, 48, 48);")
@@ -1268,6 +1280,7 @@ class Ui_MainWindow(object):
         self.listWidget_2.setDragDropMode(QtWidgets.QAbstractItemView.NoDragDrop)
         self.listWidget_2.setIconSize(QtCore.QSize(13, 13))
         self.listWidget_2.setProperty("isWrapping", False)
+        self.listWidget_2.setViewMode(QtWidgets.QListView.ListMode)
         self.listWidget_2.setObjectName("listWidget_2")
         self.gridLayout_3.addWidget(self.listWidget_2, 4, 0, 1, 3)
         self.gridLayout_6.addWidget(self.groupBox, 0, 0, 1, 1)
@@ -1310,17 +1323,64 @@ class Ui_MainWindow(object):
         self.toolButton1.setObjectName("toolButton1")
         self.horizontalLayout.addWidget(self.toolButton1)
         self.gridLayout_12.addLayout(self.horizontalLayout, 0, 0, 1, 4)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_12.addItem(spacerItem4, 4, 0, 1, 3)
-        self.toolButton_5 = QtWidgets.QToolButton(self.tab_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_12.addItem(spacerItem4, 1, 3, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_12.addItem(spacerItem5, 4, 0, 1, 3)
+        self.tabWidget.addTab(self.tab_4, "")
+        self.tab_6 = QtWidgets.QWidget()
+        self.tab_6.setStyleSheet("background-color: rgb(48, 48, 48);")
+        self.tab_6.setObjectName("tab_6")
+        self.gridLayout_13 = QtWidgets.QGridLayout(self.tab_6)
+        self.gridLayout_13.setObjectName("gridLayout_13")
+        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_13.addItem(spacerItem6, 5, 3, 1, 1)
+        self.textBrowser = QtWidgets.QTextBrowser(self.tab_6)
+        self.textBrowser.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.textBrowser.setStyleSheet("QScrollBar:vertical {\n"
+"width: 10px;\n"
+"margin: 0px 0px 0px 0px;\n"
+"background-color: rgb(71, 71, 71);\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: bottom;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* This remvoes the top button by setting the height to 0px */\n"
+"QScrollBar::sub-line:vertical {\n"
+"height: 0px;\n"
+"subcontrol-position: top;\n"
+"subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"/* need this to get rid of crosshatching on scrollbar background */\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"border-radius: 5px;\n"
+"background: rgb(255, 16, 72);\n"
+"min-height: 1px;\n"
+"}\n"
+"QTextBrowser{\n"
+"border-radius:13px;\n"
+"padding:15px;\n"
+"background-color: rgb(71, 71, 71);\n"
+"}")
+        self.textBrowser.setPlaceholderText("")
+        self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout_13.addWidget(self.textBrowser, 2, 0, 4, 1)
+        self.toolButton_5 = QtWidgets.QToolButton(self.tab_6)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setVerticalStretch(40)
         sizePolicy.setHeightForWidth(self.toolButton_5.sizePolicy().hasHeightForWidth())
         self.toolButton_5.setSizePolicy(sizePolicy)
-        self.toolButton_5.setMinimumSize(QtCore.QSize(100, 40))
+        self.toolButton_5.setMinimumSize(QtCore.QSize(0, 40))
         self.toolButton_5.setStyleSheet("QToolButton::checked{\n"
-"border-radius:5px;\n"
+"border-radius:10px;\n"
 "font: 16pt \"Franxurter Totally\";\n"
 "background-color: rgb(255, 16, 72);\n"
 "}")
@@ -1328,11 +1388,22 @@ class Ui_MainWindow(object):
         self.toolButton_5.setAutoRepeat(True)
         self.toolButton_5.setAutoExclusive(True)
         self.toolButton_5.setObjectName("toolButton_5")
-        self.gridLayout_12.addWidget(self.toolButton_5, 4, 3, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_12.addItem(spacerItem5, 1, 3, 1, 1)
-        self.tabWidget.addTab(self.tab_4, "")
-        self.gridLayout_7.addWidget(self.tabWidget, 1, 0, 1, 1)
+        self.gridLayout_13.addWidget(self.toolButton_5, 0, 3, 1, 1)
+        self.lineEdit = QtWidgets.QLineEdit(self.tab_6)
+        self.lineEdit.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lineEdit.setStyleSheet("border-width: 1px;        \n"
+"background-color: rgb(255, 16, 72);\n"
+"border-radius:10px;\n"
+"border:none;\n"
+"font: 16pt \"Franxurter Totally\";\n"
+"padding:7px;\n"
+"color: rgb(255, 255, 255);")
+        self.lineEdit.setFrame(False)
+        self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout_13.addWidget(self.lineEdit, 0, 0, 1, 1)
+        self.tabWidget.addTab(self.tab_6, "")
+        self.gridLayout_7.addWidget(self.tabWidget, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.actionrty = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon.fromTheme("folder")
@@ -1351,6 +1422,8 @@ class Ui_MainWindow(object):
         self.toolButton_2.clicked.connect(self.lineEdit_2.clear)
         self.toolButton_4.clicked.connect(self.lineEdit_3.clear)
         self.toolButton_8.clicked.connect(self.lineEdit_4.clear)
+        self.lineEdit_5.textEdited['QString'].connect(self.toolButton_11.show)
+        self.toolButton_11.clicked.connect(self.toolButton_11.hide)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.selectexe, self.installexe)
         MainWindow.setTabOrder(self.installexe, self.comboBox)
@@ -1364,7 +1437,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Games4Linux"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "GamesForLinux"))
+        self.label_7.setText(_translate("MainWindow", "Командная строка для HUD"))
+        self.toolButton_11.setText(_translate("MainWindow", "Сохранить"))
         self.toolButton_9.setText(_translate("MainWindow", "..."))
         self.toolButton_8.setText(_translate("MainWindow", "..."))
         self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "Поиск"))
@@ -1376,7 +1451,6 @@ class Ui_MainWindow(object):
         self.toolButton_3.setText(_translate("MainWindow", "..."))
         self.toolButton_4.setText(_translate("MainWindow", "..."))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("MainWindow", "Онлайн библиотека"))
-        self.label_7.setText(_translate("MainWindow", "Командная строка для HUD"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Библиотека"))
         self.label_3.setText(_translate("MainWindow", "Путь к префиксу:"))
         self.label_4.setText(_translate("MainWindow", "Путь к wine:"))
@@ -1400,10 +1474,321 @@ class Ui_MainWindow(object):
         self.toolButton.setText(_translate("MainWindow", "Поиск"))
         self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Поиск"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Префиксы"))
-        self.label_8.setText(_translate("MainWindow", "Версия программы:"))
+        self.label_8.setText(_translate("MainWindow", "Версия программы:v0.23"))
         self.toolButton1.setText(_translate("MainWindow", "обновление "))
-        self.toolButton_5.setText(_translate("MainWindow", "MangoHud"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Настройки"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" cellspacing=\"2\" cellpadding=\"0\"><thead>\n"
+"<tr>\n"
+"<td>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Переменная</p></td>\n"
+"<td>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Описание</p></td></tr></thead>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_temp</span><br /><span style=\" font-family:\'Noto Mono\';\">gpu_temp</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает текущую температуру CPU/GPU</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">core_load </p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает нагрузку и частоту на ядро</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_core_clock</span><br /><span style=\" font-family:\'Noto Mono\';\">gpu_mem_clock</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает частоту ядра GPU/памяти</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">ram</span><br /><span style=\" font-family:\'Noto Mono\';\">vram</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает использование системной оперативной памяти/VRAM</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">full</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Включает большинство переключаемых параметров (в настоящее время исключает гистограмму)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_size=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Настраиваемый размер шрифта (по умолчанию=24)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_size_text=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Настраиваемый размер шрифта для другого текста, такого как метаданные мультимедиа (по умолчанию=24)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_scale=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установить глобальный масштаб шрифта (по умолчанию=1.0)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_file</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Измените шрифт по умолчанию (установите местоположение в файл .TTF/.OTF )</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_file_text</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Измените шрифт текста. В противном случае font_file используется</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_glyph_ranges</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Укажите дополнительные диапазоны глифов шрифтов, разделенные запятыми: корейский, китайский, китайский упрощенный, японский, кириллический, тайский, вьетнамский, latin_ext_a, latin_ext_b. Если вы испытываете сбои или текст представляет собой просто квадраты, уменьшите размер шрифта или диапазоны глифов.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">no_small_font</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Use primary font size for smaller text like units</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">width=</span><br /><span style=\" font-family:\'Noto Mono\';\">height=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Используйте основной размер шрифта для меньшего текста, такого как</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">ширина единиц измерения</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">position=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Расположение панели управления: сверху-слева (по умолчанию), верхний правый, нижний левый, нижний правый, верхний-центр</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">offset_x</span> <span style=\" font-family:\'Noto Mono\';\">offset_y</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Позиция HUD смещения</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">no_display</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Скрыть hud по умолчанию</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">toggle_hud=</span><br /><span style=\" font-family:\'Noto Mono\';\">toggle_logging=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Модифицируемые горячие клавиши переключения. По умолчанию используются Shift_R+F12 и Shift_L+F2 соответственно.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">reload_cfg=</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Измените привязку клавиш для перезагрузки конфигурации. Default = Shift_L+F4</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">time</span><br /><span style=\" font-family:\'Noto Mono\';\">time_format=%T</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает местное время. См. Справку по форматированию std::put_time. ПРИМЕЧАНИЕ: Иногда приложения (или AMDVLK (должны быть исправлены в последней версии)) могут установить переменную окружения TZ (timezone) в UTC/GMT</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_color</span><br /><span style=\" font-family:\'Noto Mono\';\">gpu_color</span><br /><span style=\" font-family:\'Noto Mono\';\">vram_color</span><br /><span style=\" font-family:\'Noto Mono\';\">ram_color</span><br /><span style=\" font-family:\'Noto Mono\';\">io_color</span><br /><span style=\" font-family:\'Noto Mono\';\">engine_color</span><br /><span style=\" font-family:\'Noto Mono\';\">frametime_color</span><br /><span style=\" font-family:\'Noto Mono\';\">background_color</span><br /><span style=\" font-family:\'Noto Mono\';\">text_color</span><br /><span style=\" font-family:\'Noto Mono\';\">media_player_color</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменение цветов по умолчанию: gpu_color=RRGGBB</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">alpha</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите непрозрачность всего текста и фреймового графика 0.0-1.0</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">background_alpha</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите непрозрачность фона 0.0-1.0</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">read_cfg</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Добавьте в MANGOHUD_CONFIG в качестве первого параметра, чтобы также загрузить конфигурационный файл. В противном случае используются только параметры MANGOHUD_CONFIG.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">output_folder</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установить расположение выходных файлов (необходимых для ведения журнала)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">log_duration</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите количество времени, в течение которого будет выполняться ведение журнала (в секундах)</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">vsync</span><br /><span style=\" font-family:\'Noto Mono\';\">gl_vsync</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите vsync для OpenGL или Vulkan</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">media_player</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показать метаданные медиаплеера</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">media_player_name</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Принудительное имя службы DBus медиаплеера без org.mpris.MediaPlayer2 часть, как spotify, vlc, audacious или кантата. Если ни один из них не установлен, МангоХуд пытается переключиться между играющими в данный момент игроками.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">media_player_order</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Порядок полей метаданных медиаплеера. По умолчанию используется название,исполнитель,альбом.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">font_scale_media_player</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменение размера текста медиаплеера относительно font_size</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">io_read</span><br /><span style=\" font-family:\'Noto Mono\';\">io_write</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показать без кэширования ввода-вывода для чтения/записи, МБ/с</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">pci_dev</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Выберите GPU-устройство в версии multi-GPU setups</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">version</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показывает текущую версию</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">mangohud</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">fps_limit</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ограничьте частоту кадров приложений. Разделенный запятыми список одного или нескольких значений FPS. 0 означает неограниченное.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">toggle_fps_limit</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Цикл между ограничениями FPS. По умолчанию используется Shift_L+F1.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">arch</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показать, является ли приложение 32-или 64-битной</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">гистограммой</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">histogram</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Измените график fps на гистограмму</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_text</span><br /><span style=\" font-family:\'Noto Mono\';\">gpu_text</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Переопределение CPU и GPU text</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">log_interval</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Измените интервал журнала по умолчанию, 100 - это значение по умолчанию</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">vulkan_driver</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает используемый драйвер vulkan, radv/amdgpu-pro/amdvlk</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_name</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображает название процессора от шины PCI.идентификаторы</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_power</span><br /><span style=\" font-family:\'Noto Mono\';\">gpu_power</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Дисплей CPU/GPU draw in watts</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">engine_version</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображение OpenGL или vulkan и версии движка рендеринга на основе vulkan</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">permit_upload</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Разрешить загрузку журналов в Flightlessmango.com</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">upload_log</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменить привязку клавиш для загрузки журнала</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">benchmark_percentiles</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Настройте, какие процентили частоты кадров отображаются в сводке журнала. Значение по умолчанию-97,AVG,1,0.1</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">wine</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показывает текущую версию Wine или Proton в использовании</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">wine_color</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменение цвета wine/proton текста</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_mhz</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Показывает текущую частоту процессора МГц</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_load_change</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменяет цвет загрузки графического процессора в зависимости от загрузки</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_load_color</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите цвета для изменения нагрузки gpu low,medium и high <span style=\" font-family:\'Noto Mono\';\">gpu_load_color=0000FF,00FFFF,FF00FF</span></p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">gpu_load_value</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите значения для средней и высокой нагрузки, например gpu_load_value=50,90</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_load_change</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Изменяет цвет загрузки процессора в зависимости от загрузки</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_load_color</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите цвета для изменения нагрузки gpu low,medium и high cpu_load_color=0000FF,00FFFF,FF00FF</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cpu_load_value</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите значения для средней и высокой нагрузки, например cpu_load_value=50,90</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">cellpadding_y</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите вертикальное заполнение ячеек, по умолчанию -0.085</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">frametime</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Отображение времени кадра рядом с текстом fps</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">table_columns</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Установите количество столбцов таблицы для ImGui, по умолчанию 3.</p></td></tr>\n"
+"<tr>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Noto Mono\';\">blacklist</span></p></td>\n"
+"<td>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Добавьте программу в черный список, например blacklist=vkcube,WatchDogs2.exe</p></td></tr></table></body></html>"))
+        self.toolButton_5.setText(_translate("MainWindow", "MangoHUD"))
+        self.lineEdit.setText(_translate("MainWindow", "Пример: MANGOHUD=1 MANGOHUD_CONFIG=cpu_temp,gpu_temp,position=top-right,height=500,font_size=32"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("MainWindow", "MangoHUD"))
         self.actionrty.setText(_translate("MainWindow", "rty"))
         self.actionrty.setShortcut(_translate("MainWindow", "Backspace"))
         self.actionEnglish.setText(_translate("MainWindow", "English"))
