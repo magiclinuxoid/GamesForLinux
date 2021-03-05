@@ -1,0 +1,313 @@
+; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/combase/combase.spec; do not edit!
+
+LIBRARY combase.dll
+
+EXPORTS
+  ObjectStublessClient3@0 @1 PRIVATE
+  ObjectStublessClient4@0 @2 PRIVATE
+  ObjectStublessClient5@0 @3 PRIVATE
+  ObjectStublessClient6@0 @4 PRIVATE
+  ObjectStublessClient7@0 @5 PRIVATE
+  ObjectStublessClient8@0 @6 PRIVATE
+  ObjectStublessClient9@0 @7 PRIVATE
+  ObjectStublessClient10@0 @8 PRIVATE
+  ObjectStublessClient11@0 @9 PRIVATE
+  ObjectStublessClient12@0 @10 PRIVATE
+  ObjectStublessClient13@0 @11 PRIVATE
+  ObjectStublessClient14@0 @12 PRIVATE
+  ObjectStublessClient15@0 @13 PRIVATE
+  ObjectStublessClient16@0 @14 PRIVATE
+  ObjectStublessClient17@0 @15 PRIVATE
+  ObjectStublessClient18@0 @16 PRIVATE
+  ObjectStublessClient19@0 @17 PRIVATE
+  ObjectStublessClient20@0 @18 PRIVATE
+  ObjectStublessClient21@0 @19 PRIVATE
+  ObjectStublessClient22@0 @20 PRIVATE
+  ObjectStublessClient23@0 @21 PRIVATE
+  ObjectStublessClient24@0 @22 PRIVATE
+  ObjectStublessClient25@0 @23 PRIVATE
+  ObjectStublessClient26@0 @24 PRIVATE
+  ObjectStublessClient27@0 @25 PRIVATE
+  ObjectStublessClient28@0 @26 PRIVATE
+  ObjectStublessClient29@0 @27 PRIVATE
+  ObjectStublessClient30@0 @28 PRIVATE
+  ObjectStublessClient31@0 @29 PRIVATE
+  ObjectStublessClient32@0 @30 PRIVATE
+  NdrProxyForwardingFunction3@0 @31 PRIVATE
+  NdrProxyForwardingFunction4@0 @32 PRIVATE
+  NdrProxyForwardingFunction5@0 @33 PRIVATE
+  NdrProxyForwardingFunction6@0 @34 PRIVATE
+  NdrProxyForwardingFunction7@0 @35 PRIVATE
+  NdrProxyForwardingFunction8@0 @36 PRIVATE
+  NdrProxyForwardingFunction9@0 @37 PRIVATE
+  NdrProxyForwardingFunction10@0 @38 PRIVATE
+  NdrProxyForwardingFunction11@0 @39 PRIVATE
+  NdrProxyForwardingFunction12@0 @40 PRIVATE
+  NdrProxyForwardingFunction13@0 @41 PRIVATE
+  NdrProxyForwardingFunction14@0 @42 PRIVATE
+  NdrProxyForwardingFunction15@0 @43 PRIVATE
+  NdrProxyForwardingFunction16@0 @44 PRIVATE
+  NdrProxyForwardingFunction17@0 @45 PRIVATE
+  NdrProxyForwardingFunction18@0 @46 PRIVATE
+  NdrProxyForwardingFunction19@0 @47 PRIVATE
+  NdrProxyForwardingFunction20@0 @48 PRIVATE
+  NdrProxyForwardingFunction21@0 @49 PRIVATE
+  NdrProxyForwardingFunction22@0 @50 PRIVATE
+  NdrProxyForwardingFunction23@0 @51 PRIVATE
+  NdrProxyForwardingFunction24@0 @52 PRIVATE
+  NdrProxyForwardingFunction25@0 @53 PRIVATE
+  NdrProxyForwardingFunction26@0 @54 PRIVATE
+  NdrProxyForwardingFunction27@0 @55 PRIVATE
+  NdrProxyForwardingFunction28@0 @56 PRIVATE
+  NdrProxyForwardingFunction29@0 @57 PRIVATE
+  NdrProxyForwardingFunction30@0 @58 PRIVATE
+  NdrProxyForwardingFunction31@0 @59 PRIVATE
+  NdrProxyForwardingFunction32@0 @60 PRIVATE
+  NdrOleInitializeExtension@0 @61 PRIVATE
+  RoFailFastWithErrorContextInternal2@0 @62 PRIVATE
+  RoFailFastWithErrorContextInternal@0 @63 PRIVATE
+  UpdateProcessTracing@0 @64 PRIVATE
+  CLSIDFromOle1Class@0 @65 PRIVATE
+  CLSIDFromProgID@8=ole32.CLSIDFromProgID @66
+  CLSIDFromString@8=ole32.CLSIDFromString @67
+  CleanupOleStateInAllTls@0 @68 PRIVATE
+  CleanupTlsOleState@4 @69
+  ClearCleanupFlag@0 @70 PRIVATE
+  CoAddRefServerProcess@0=ole32.CoAddRefServerProcess @71
+  CoAllowUnmarshalerCLSID@0 @72 PRIVATE
+  CoCancelCall@0 @73 PRIVATE
+  CoCopyProxy@8=ole32.CoCopyProxy @74
+  CoCreateErrorInfo@0 @75 PRIVATE
+  CoCreateFreeThreadedMarshaler@8=ole32.CoCreateFreeThreadedMarshaler @76
+  CoCreateGuid@4=ole32.CoCreateGuid @77
+  CoCreateInstance@20=ole32.CoCreateInstance @78
+  CoCreateInstanceEx@24=ole32.CoCreateInstanceEx @79
+  CoCreateInstanceFromApp@0 @80 PRIVATE
+  CoCreateObjectInContext@0 @81 PRIVATE
+  CoDeactivateObject@0 @82 PRIVATE
+  CoDecodeProxy@0 @83 PRIVATE
+  CoDecrementMTAUsage@4=ole32.CoDecrementMTAUsage @84
+  CoDisableCallCancellation@4=ole32.CoDisableCallCancellation @85
+  CoDisconnectContext@0 @86 PRIVATE
+  CoDisconnectObject@8=ole32.CoDisconnectObject @87
+  CoEnableCallCancellation@4=ole32.CoEnableCallCancellation @88
+  CoFreeUnusedLibraries@0=ole32.CoFreeUnusedLibraries @89
+  CoFreeUnusedLibrariesEx@8=ole32.CoFreeUnusedLibrariesEx @90
+  CoGetActivationState@24=ole32.CoGetActivationState @91
+  CoGetApartmentID@0 @92 PRIVATE
+  CoGetApartmentType@8=ole32.CoGetApartmentType @93
+  CoGetCallContext@8=ole32.CoGetCallContext @94
+  CoGetCallState@8=ole32.CoGetCallState @95
+  CoGetCallerTID@4=ole32.CoGetCallerTID @96
+  CoGetCancelObject@0 @97 PRIVATE
+  CoGetClassObject@20=ole32.CoGetClassObject @98
+  CoGetClassVersion@0 @99 PRIVATE
+  CoGetContextToken@4=ole32.CoGetContextToken @100
+  CoGetCurrentLogicalThreadId@4=ole32.CoGetCurrentLogicalThreadId @101
+  CoGetCurrentProcess@0=ole32.CoGetCurrentProcess @102
+  CoGetDefaultContext@12=ole32.CoGetDefaultContext @103
+  CoGetErrorInfo@0 @104 PRIVATE
+  CoGetInstanceFromFile@32=ole32.CoGetInstanceFromFile @105
+  CoGetInstanceFromIStorage@28=ole32.CoGetInstanceFromIStorage @106
+  CoGetInterfaceAndReleaseStream@12=ole32.CoGetInterfaceAndReleaseStream @107
+  CoGetMalloc@8=ole32.CoGetMalloc @108
+  CoGetMarshalSizeMax@24=ole32.CoGetMarshalSizeMax @109
+  CoGetModuleType@0 @110 PRIVATE
+  CoGetObjectContext@8=ole32.CoGetObjectContext @111
+  CoGetPSClsid@8=ole32.CoGetPSClsid @112
+  CoGetProcessIdentifier@0 @113 PRIVATE
+  CoGetStandardMarshal@24=ole32.CoGetStandardMarshal @114
+  CoGetStdMarshalEx@0 @115 PRIVATE
+  CoGetSystemSecurityPermissions@0 @116 PRIVATE
+  CoGetTreatAsClass@8=ole32.CoGetTreatAsClass @117
+  CoImpersonateClient@0=ole32.CoImpersonateClient @118
+  CoIncrementMTAUsage@4=ole32.CoIncrementMTAUsage @119
+  CoInitializeEx@8=ole32.CoInitializeEx @120
+  CoInitializeSecurity@36=ole32.CoInitializeSecurity @121
+  CoInitializeWOW@8=ole32.CoInitializeWOW @122
+  CoInvalidateRemoteMachineBindings@0 @123 PRIVATE
+  CoIsHandlerConnected@4=ole32.CoIsHandlerConnected @124
+  CoLockObjectExternal@12=ole32.CoLockObjectExternal @125
+  CoMarshalHresult@8=ole32.CoMarshalHresult @126
+  CoMarshalInterThreadInterfaceInStream@12=ole32.CoMarshalInterThreadInterfaceInStream @127
+  CoMarshalInterface@24=ole32.CoMarshalInterface @128
+  CoPopServiceDomain@0 @129 PRIVATE
+  CoPushServiceDomain@0 @130 PRIVATE
+  CoQueryAuthenticationServices@0 @131 PRIVATE
+  CoQueryClientBlanket@28=ole32.CoQueryClientBlanket @132
+  CoQueryProxyBlanket@32=ole32.CoQueryProxyBlanket @133
+  CoReactivateObject@0 @134 PRIVATE
+  CoRegisterActivationFilter@0 @135 PRIVATE
+  CoRegisterClassObject@20=ole32.CoRegisterClassObject @136
+  CoRegisterInitializeSpy@8=ole32.CoRegisterInitializeSpy @137
+  CoRegisterMallocSpy@4=ole32.CoRegisterMallocSpy @138
+  CoRegisterMessageFilter@8=ole32.CoRegisterMessageFilter @139
+  CoRegisterPSClsid@8=ole32.CoRegisterPSClsid @140
+  CoRegisterSurrogate@4=ole32.CoRegisterSurrogate @141
+  CoRegisterSurrogateEx@8=ole32.CoRegisterSurrogateEx @142
+  CoReleaseMarshalData@4=ole32.CoReleaseMarshalData @143
+  CoReleaseServerProcess@0=ole32.CoReleaseServerProcess @144
+  CoResumeClassObjects@0=ole32.CoResumeClassObjects @145
+  CoRetireServer@0 @146 PRIVATE
+  CoRevertToSelf@0=ole32.CoRevertToSelf @147
+  CoRevokeClassObject@4=ole32.CoRevokeClassObject @148
+  CoRevokeInitializeSpy@8=ole32.CoRevokeInitializeSpy @149
+  CoRevokeMallocSpy@0=ole32.CoRevokeMallocSpy @150
+  CoSetCancelObject@0 @151 PRIVATE
+  CoSetErrorInfo@0 @152 PRIVATE
+  CoSetProxyBlanket@32=ole32.CoSetProxyBlanket @153
+  CoSuspendClassObjects@0=ole32.CoSuspendClassObjects @154
+  CoSwitchCallContext@8=ole32.CoSwitchCallContext @155
+  CoTaskMemAlloc@4=ole32.CoTaskMemAlloc @156
+  CoTaskMemFree@4=ole32.CoTaskMemFree @157
+  CoTaskMemRealloc@8=ole32.CoTaskMemRealloc @158
+  CoTestCancel@0 @159 PRIVATE
+  CoUninitialize@0=ole32.CoUninitialize @160
+  CoUnloadingWOW@0 @161 PRIVATE
+  CoUnmarshalHresult@8=ole32.CoUnmarshalHresult @162
+  CoUnmarshalInterface@12=ole32.CoUnmarshalInterface @163
+  CoVrfCheckThreadState@0 @164 PRIVATE
+  CoVrfGetThreadState@0 @165 PRIVATE
+  CoVrfReleaseThreadState@0 @166 PRIVATE
+  CoWaitForMultipleHandles@20=ole32.CoWaitForMultipleHandles @167
+  CoWaitForMultipleObjects@0 @168 PRIVATE
+  CreateErrorInfo@4=ole32.CreateErrorInfo @169
+  CreateStreamOnHGlobal@12=ole32.CreateStreamOnHGlobal @170
+  DcomChannelSetHResult@0 @171 PRIVATE
+  DllDebugObjectRPCHook@8=ole32.DllDebugObjectRPCHook @172
+  DllGetActivationFactory@8 @173
+  DllGetClassObject@12=ole32.DllGetClassObject @174 PRIVATE
+  EnableHookObject@0 @175 PRIVATE
+  FreePropVariantArray@8=ole32.FreePropVariantArray @176
+  FreePropVariantArrayWorker@0 @177 PRIVATE
+  GetCatalogHelper@0 @178 PRIVATE
+  GetErrorInfo@8=ole32.GetErrorInfo @179
+  GetFuncDescs@0 @180 PRIVATE
+  GetHGlobalFromStream@8=ole32.GetHGlobalFromStream @181
+  GetHookInterface@0 @182 PRIVATE
+  GetRestrictedErrorInfo@4 @183
+  HSTRING_UserFree@0 @184 PRIVATE
+  HSTRING_UserFree64@0 @185 PRIVATE
+  HSTRING_UserMarshal@0 @186 PRIVATE
+  HSTRING_UserMarshal64@0 @187 PRIVATE
+  HSTRING_UserSize@0 @188 PRIVATE
+  HSTRING_UserSize64@0 @189 PRIVATE
+  HSTRING_UserUnmarshal@0 @190 PRIVATE
+  HSTRING_UserUnmarshal64@0 @191 PRIVATE
+  HkOleRegisterObject@0 @192 PRIVATE
+  IIDFromString@8=ole32.IIDFromString @193
+  InternalAppInvokeExceptionFilter@0 @194 PRIVATE
+  InternalCCFreeUnused@0 @195 PRIVATE
+  InternalCCGetClassInformationForDde@0 @196 PRIVATE
+  InternalCCGetClassInformationFromKey@0 @197 PRIVATE
+  InternalCCSetDdeServerWindow@0 @198 PRIVATE
+  InternalCMLSendReceive@0 @199 PRIVATE
+  InternalCallAsProxyExceptionFilter@0 @200 PRIVATE
+  InternalCallFrameExceptionFilter@0 @201 PRIVATE
+  InternalCallerIsAppContainer@0 @202 PRIVATE
+  InternalCanMakeOutCall@0 @203 PRIVATE
+  InternalCoIsSurrogateProcess@0 @204 PRIVATE
+  InternalCoRegisterDisconnectCallback@0 @205 PRIVATE
+  InternalCoRegisterSurrogatedObject@0 @206 PRIVATE
+  InternalCoStdMarshalObject@0 @207 PRIVATE
+  InternalCoUnregisterDisconnectCallback@0 @208 PRIVATE
+  InternalCompleteObjRef@0 @209 PRIVATE
+  InternalCreateCAggId@0 @210 PRIVATE
+  InternalCreateIdentityHandler@0 @211 PRIVATE
+  InternalDoATClassCreate@0 @212 PRIVATE
+  InternalFillLocalOXIDInfo@0 @213 PRIVATE
+  InternalFreeObjRef@0 @214 PRIVATE
+  InternalGetWindowPropInterface@0 @215 PRIVATE
+  InternalIrotEnumRunning@0 @216 PRIVATE
+  InternalIrotGetObject@0 @217 PRIVATE
+  InternalIrotGetTimeOfLastChange@0 @218 PRIVATE
+  InternalIrotIsRunning@0 @219 PRIVATE
+  InternalIrotNoteChangeTime@0 @220 PRIVATE
+  InternalIrotRegister@0 @221 PRIVATE
+  InternalIrotRevoke@0 @222 PRIVATE
+  InternalIsApartmentInitialized@0 @223 PRIVATE
+  InternalIsProcessInitialized@0 @224 PRIVATE
+  InternalMarshalObjRef@0 @225 PRIVATE
+  InternalNotifyDDStartOrStop@0 @226 PRIVATE
+  InternalOleModalLoopBlockFn@0 @227 PRIVATE
+  InternalRegisterWindowPropInterface@0 @228 PRIVATE
+  InternalReleaseMarshalObjRef@0 @229 PRIVATE
+  InternalSTAInvoke@0 @230 PRIVATE
+  InternalServerExceptionFilter@0 @231 PRIVATE
+  InternalSetAptCallCtrlOnTlsIfRequired@0 @232 PRIVATE
+  InternalSetOleThunkWowPtr@0 @233 PRIVATE
+  InternalStubInvoke@0 @234 PRIVATE
+  InternalTlsAllocData@0 @235 PRIVATE
+  InternalUnmarshalObjRef@0 @236 PRIVATE
+  IsErrorPropagationEnabled@0 @237 PRIVATE
+  NdrExtStubInitialize@0 @238 PRIVATE
+  NdrOleDllGetClassObject@0 @239 PRIVATE
+  NdrpFindInterface@0 @240 PRIVATE
+  ProgIDFromCLSID@8=ole32.ProgIDFromCLSID @241
+  PropVariantClear@4=ole32.PropVariantClear @242
+  PropVariantCopy@8=ole32.PropVariantCopy @243
+  ReleaseFuncDescs@0 @244 PRIVATE
+  RoActivateInstance@8 @245
+  RoCaptureErrorContext@0 @246 PRIVATE
+  RoClearError@0 @247 PRIVATE
+  RoFailFastWithErrorContext@0 @248 PRIVATE
+  RoFreeParameterizedTypeExtra@0 @249 PRIVATE
+  RoGetActivatableClassRegistration@0 @250 PRIVATE
+  RoGetActivationFactory@12 @251
+  RoGetAgileReference@0 @252 PRIVATE
+  RoGetApartmentIdentifier@4 @253
+  RoGetErrorReportingFlags@0 @254 PRIVATE
+  RoGetMatchingRestrictedErrorInfo@0 @255 PRIVATE
+  RoGetParameterizedTypeInstanceIID@20 @256
+  RoGetServerActivatableClasses@12 @257
+  RoInitialize@4 @258
+  RoInspectCapturedStackBackTrace@0 @259 PRIVATE
+  RoInspectThreadErrorInfo@0 @260 PRIVATE
+  RoOriginateError@0 @261 PRIVATE
+  RoOriginateErrorW@0 @262 PRIVATE
+  RoOriginateLanguageException@12 @263
+  RoParameterizedTypeExtraGetTypeSignature@0 @264 PRIVATE
+  RoRegisterActivationFactories@16 @265
+  RoRegisterForApartmentShutdown@12 @266
+  RoReportCapabilityCheckFailure@0 @267 PRIVATE
+  RoReportFailedDelegate@0 @268 PRIVATE
+  RoReportUnhandledError@0 @269 PRIVATE
+  RoResolveRestrictedErrorInfoReference@0 @270 PRIVATE
+  RoRevokeActivationFactories@0 @271 PRIVATE
+  RoSetErrorReportingFlags@0 @272 PRIVATE
+  RoTransformError@0 @273 PRIVATE
+  RoTransformErrorW@0 @274 PRIVATE
+  RoUninitialize@0 @275
+  RoUnregisterForApartmentShutdown@0 @276 PRIVATE
+  SetCleanupFlag@0 @277 PRIVATE
+  SetErrorInfo@8=ole32.SetErrorInfo @278
+  SetRestrictedErrorInfo@0 @279 PRIVATE
+  StringFromCLSID@8=ole32.StringFromCLSID @280
+  StringFromGUID2@12=ole32.StringFromGUID2 @281
+  StringFromIID@8=ole32.StringFromIID @282
+  UpdateDCOMSettings@0 @283 PRIVATE
+  WdtpInterfacePointer_UserMarshal@20=ole32.WdtpInterfacePointer_UserMarshal @284
+  WdtpInterfacePointer_UserMarshal64@0 @285 PRIVATE
+  WdtpInterfacePointer_UserSize@20=ole32.WdtpInterfacePointer_UserSize @286
+  WdtpInterfacePointer_UserSize64@0 @287 PRIVATE
+  WdtpInterfacePointer_UserUnmarshal@16=ole32.WdtpInterfacePointer_UserUnmarshal @288
+  WdtpInterfacePointer_UserUnmarshal64@0 @289 PRIVATE
+  WindowsCompareStringOrdinal@12 @290
+  WindowsConcatString@12 @291
+  WindowsCreateString@12 @292
+  WindowsCreateStringReference@16 @293
+  WindowsDeleteString@4 @294
+  WindowsDeleteStringBuffer@4 @295
+  WindowsDuplicateString@8 @296
+  WindowsGetStringLen@4 @297
+  WindowsGetStringRawBuffer@8 @298
+  WindowsInspectString@0 @299 PRIVATE
+  WindowsIsStringEmpty@4 @300
+  WindowsPreallocateStringBuffer@12 @301
+  WindowsPromoteStringBuffer@8 @302
+  WindowsReplaceString@0 @303 PRIVATE
+  WindowsStringHasEmbeddedNull@8 @304
+  WindowsSubstring@12 @305
+  WindowsSubstringWithSpecifiedLength@16 @306
+  WindowsTrimStringEnd@12 @307
+  WindowsTrimStringStart@12 @308

@@ -1,0 +1,42 @@
+; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/rtworkq/rtworkq.spec; do not edit!
+
+LIBRARY rtworkq.dll
+
+EXPORTS
+  RtwqAddPeriodicCallback@12 @1
+  RtwqAllocateSerialWorkQueue@8 @2
+  RtwqAllocateWorkQueue@8 @3
+  RtwqBeginRegisterWorkQueueWithMMCSS@0 @4 PRIVATE
+  RtwqBeginUnregisterWorkQueueWithMMCSS@0 @5 PRIVATE
+  RtwqCancelDeadline@4 @6
+  RtwqCancelMultipleWaitingWorkItem@0 @7 PRIVATE
+  RtwqCancelWorkItem@8 @8
+  RtwqCreateAsyncResult@16 @9
+  RtwqEndRegisterWorkQueueWithMMCSS@0 @10 PRIVATE
+  RtwqEndUnregisterWorkQueueWithMMCSS@0 @11 PRIVATE
+  RtwqGetPlatform@0 @12 PRIVATE
+  RtwqGetWorkQueueMMCSSClass@0 @13 PRIVATE
+  RtwqGetWorkQueueMMCSSPriority@0 @14 PRIVATE
+  RtwqGetWorkQueueMMCSSTaskId@0 @15 PRIVATE
+  RtwqInvokeCallback@4 @16
+  RtwqJoinWorkQueue@0 @17 PRIVATE
+  RtwqLockPlatform@0 @18
+  RtwqLockSharedWorkQueue@16 @19
+  RtwqLockWorkQueue@4 @20
+  RtwqPutMultipleWaitingWorkItem@0 @21 PRIVATE
+  RtwqPutWaitingWorkItem@16 @22
+  RtwqPutWorkItem@12 @23
+  RtwqRegisterPlatformEvents@0 @24 PRIVATE
+  RtwqRegisterPlatformWithMMCSS@0 @25 PRIVATE
+  RtwqRemovePeriodicCallback@4 @26
+  RtwqScheduleWorkItem@16 @27
+  RtwqSetDeadline@16 @28
+  RtwqSetDeadline2@24 @29
+  RtwqSetLongRunning@8 @30
+  RtwqShutdown@0 @31
+  RtwqStartup@0 @32
+  RtwqUnjoinWorkQueue@0 @33 PRIVATE
+  RtwqUnlockPlatform@0 @34
+  RtwqUnlockWorkQueue@4 @35
+  RtwqUnregisterPlatformEvents@0 @36 PRIVATE
+  RtwqUnregisterPlatformFromMMCSS@0 @37 PRIVATE

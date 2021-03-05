@@ -23,6 +23,7 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.Installscript.clicked.connect(self.scripts_run)
         self.Prefixload.clicked.connect(self.base)
         self.deleteitem.clicked.connect(self.delete)
+        self.toolButton_12.clicked.connect(self.wine_select_path)
         self.text = ''
         self.text2 = 'wine' #строки text теперь атрибуты класса и могут вызываться в любой функции
         self.text3 = ''
@@ -35,11 +36,13 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         self.toolButton_10.clicked.connect(self.open_icon)
         self.toolButton_7.clicked.connect(self.delete_icon)
         self.toolButton_5.clicked.connect(self.mango_hud)
-        self.listWidget_3.itemClicked.connect(self.software_hud)
+        self.listWidget_3.itemClicked.connect(self.software_hud)     
         self.directory_6 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/runner/'
+        self.groupBox_7.hide()
+        self.toolButton_12.hide()
         print(self.directory_6)
         for item in os.listdir(self.directory_6):  # для каждого файла в директории
-            self.comboBox_2.addItem(item)   # добавить файл в comboBox
+            self.listWidget_4.addItem(item)   # добавить файл в comboBox
             
         self.directory_7 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/prefix_locate/'
         for self.item_2 in os.listdir(self.directory_7):  # для каждого файла в директории
@@ -109,8 +112,9 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         msg.setText("Wine")
         msg.setInformativeText("Выбрать системный wine?")
   
-        okButton = msg.addButton( '  Да  ', QMessageBox.AcceptRole)
-        msg.addButton('Нет', QMessageBox.RejectRole)
+        okButton = msg.addButton( '  системный wine  ', QMessageBox.AcceptRole)
+        msg.addButton(' выбрать wine ', QMessageBox.RejectRole)
+        okButton_2 = msg.addButton(' загрузить wine ', QMessageBox.RejectRole)
         okButton.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(233, 15, 131, 255), stop:1 rgba(25, 206, 246, 255));")
         msg.setStyleSheet("border-radius:5px;"
 "background-color: rgb(48, 48, 48);"
@@ -122,11 +126,22 @@ class ExampleApp(QtWidgets.QMainWindow, theme.Ui_MainWindow):
         if msg.clickedButton() == okButton:
             self.wine = 'wine'
             self.label_2.setText(self.wine)
+        elif msg.clickedButton() == okButton_2:
+            print('hello')
+            
         else:
-            directory_2 = QtWidgets.QFileDialog.getExistingDirectory()
-            self.text2 = str(directory_2)
-            self.label_2.setText(self.text2)
-
+            self.groupBox_7.show()
+            self.toolButton_12.show()
+            self.groupBox_5.hide()
+            self.groupBox_6.hide()            
+    def wine_select_path(self):
+        self.directory_13 = '/home/'+os.getlogin()+'/GamesForLinux/code_files/runner/'
+        self.selectItem_5 = self.listWidget_4.currentItem().text()
+        self.text2 = self.directory_13 + self.selectItem_5
+        #directory_2 = QtWidgets.QFileDialog.getExistingDirectory()
+        #self.text2 = str(directory_2)
+        self.label_2.setText(self.text2)
+        
     def scripts_run(self):
         self.selectedLayers=self.comboBox_2.currentText()
         self.text5 = str(self.directory_6)

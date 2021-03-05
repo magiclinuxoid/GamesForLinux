@@ -8349,6 +8349,42 @@ load_dxvk173()
     helper_dxvk_d9vk "${file1}" "5.8" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
 }
 
+w_metadata dxvk180 dlls \
+    title="Vulkan-based D3D9/D3D10/D3D11 implementation for Linux / Wine (1.8)" \
+    publisher="Philip Rebohle" \
+    year="2017" \
+    media="download" \
+    file1="dxvk-1.8.tar.gz" \
+    installed_file1="${W_SYSTEM32_DLLS_WIN}/d3d9.dll" \
+    installed_file2="${W_SYSTEM32_DLLS_WIN}/d3d10core.dll" \
+    installed_file3="${W_SYSTEM32_DLLS_WIN}/d3d11.dll" \
+    installed_file4="${W_SYSTEM32_DLLS_WIN}/dxgi.dll"
+
+load_dxvk180()
+{
+    # https://github.com/doitsujin/dxvk
+    w_download "https://github.com/doitsujin/dxvk/releases/download/v1.8/dxvk-1.8.tar.gz" e84f7ac494ac7f5013976744470899226d145e29617c407ff52870055bda476e
+    helper_dxvk_d9vk "${file1}" "5.14" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
+}
+
+w_metadata dxvk181 dlls \
+    title="Vulkan-based D3D9/D3D10/D3D11 implementation for Linux / Wine (1.8.1)" \
+    publisher="Philip Rebohle" \
+    year="2017" \
+    media="download" \
+    file1="dxvk-1.8.1.tar.gz" \
+    installed_file1="${W_SYSTEM32_DLLS_WIN}/d3d9.dll" \
+    installed_file2="${W_SYSTEM32_DLLS_WIN}/d3d10core.dll" \
+    installed_file3="${W_SYSTEM32_DLLS_WIN}/d3d11.dll" \
+    installed_file4="${W_SYSTEM32_DLLS_WIN}/dxgi.dll"
+
+load_dxvk181()
+{
+    # https://github.com/doitsujin/dxvk
+    w_download "https://github.com/doitsujin/dxvk/releases/download/v1.8.1/dxvk-1.8.1.tar.gz" 756a09c46f8279ade84456e3af038f64613a51e00a2d4cfffa4c91c10ede60e8
+    helper_dxvk_d9vk "${file1}" "5.14" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
+}
+
 #----------------------------------------------------------------
 
 w_metadata dxvk dlls \
@@ -8367,32 +8403,8 @@ load_dxvk()
     _W_dxvk_version="$(w_get_github_latest_release doitsujin dxvk)"
     _W_dxvk_version="${_W_dxvk_version#v}"
     w_linkcheck_ignore=1 w_download "https://github.com/doitsujin/dxvk/releases/download/v${_W_dxvk_version}/dxvk-${_W_dxvk_version}.tar.gz"
-    helper_dxvk_d9vk "dxvk-${_W_dxvk_version}.tar.gz" "5.8" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
+    helper_dxvk_d9vk "dxvk-${_W_dxvk_version}.tar.gz" "5.14" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
     unset _W_dxvk_version
-}
-
-#----------------------------------------------------------------
-
-w_metadata dxvk_master dlls \
-    title="Vulkan-based D3D9/D3D10/D3D11 implementation for Linux / Wine (master)" \
-    publisher="Philip Rebohle" \
-    year="2017" \
-    media="download" \
-    file1="dxvk_master.zip" \
-    installed_file1="${W_SYSTEM32_DLLS_WIN}/d3d9.dll" \
-    installed_file2="${W_SYSTEM32_DLLS_WIN}/d3d10core.dll" \
-    installed_file3="${W_SYSTEM32_DLLS_WIN}/d3d11.dll" \
-    installed_file4="${W_SYSTEM32_DLLS_WIN}/dxgi.dll"
-
-load_dxvk_master()
-{
-    # https://git.froggi.es/doitsujin/dxvk
-    # FIXME: Delete cached file, when verb is forced. Gitlab artifacts do not supply any version/commit hash information.
-    if test "${WINETRICKS_FORCE}" = 1 && test -f "${W_CACHE}/${W_PACKAGE}/${file1}"; then
-        w_try rm -f "${W_CACHE}/${W_PACKAGE}/${file1}"
-    fi
-    w_linkcheck_ignore=1 w_download_to "${W_CACHE}/${W_PACKAGE}" "https://git.froggi.es/doitsujin/dxvk/-/jobs/artifacts/master/download?job=dxvk" "" "dxvk_master.zip"
-    helper_dxvk_d9vk "${file1}" "5.8" "1.2.140" "dxgi,d3d9,d3d10core,d3d11"
 }
 
 #----------------------------------------------------------------
@@ -9230,6 +9242,9 @@ load_dotnet35sp1()
     w_call remove_mono
 
     w_set_winver winxp
+
+    w_override_dlls native mscoree mscorwks
+    w_wineserver -w
 
     # The installer is braindead and picks the lowest drive letter that's writable
     # winetricks_set_wineprefix(), which is called by w_do_call() sets up this symlink so that wine
@@ -18814,10 +18829,6 @@ load_dragonage()
         cp -f "${ini}" "${ini}.old"
     fi
 
-    if w_workaround_wine_bug 22383 "use strictdrawordering to avoid video problems" ,4.15; then
-        w_call strictdrawordering=enabled
-    fi
-
     if w_workaround_wine_bug 22557 "Setting UseVSync=0 to avoid black menu" ,4.15; then
         sed 's,UseVSync=1,UseVSync=0,' < "${ini}" > "${ini}.new"
         mv -f "${ini}.new" "${ini}"
@@ -18886,10 +18897,6 @@ load_dragonage_ue()
         }
         winwaitclose
     "
-
-    if w_workaround_wine_bug 22383 "use strictdrawordering to avoid video problems" ,4.15; then
-        w_call strictdrawordering=enabled
-    fi
 
     if w_workaround_wine_bug 23730 "Run with WINEDEBUG=-all to reduce flickering" ,4.15; then
         :
@@ -21976,7 +21983,7 @@ winetricks_set_wined3d_var()
         enable*) arg=enabled;;
         hard*) arg=hardware;;
         repack) arg=repack;;
-        backbuffer|fbo|gdi|gl|no3d|none|readdraw|readtex|texdraw|textex|vulkan|auto) arg=$2;;
+        arb|backbuffer|fbo|gdi|gl|glsl|no3d|none|readdraw|readtex|texdraw|textex|vulkan|auto) arg=$2;;
         [0-9]*) arg=$2;;
         *) w_die "illegal value $2 for $1";;
     esac
@@ -21993,27 +22000,12 @@ _EOF_
 }
 
 #----------------------------------------------------------------
-# AlwaysOffscreen settings
-
-w_metadata ao=enabled settings \
-    title_uk="Увімкнути AlwaysOffscreen" \
-    title="Enable AlwaysOffscreen"
-w_metadata ao=disabled settings \
-    title_uk="Вимкнути AlwaysOffscreen (за замовчуванням)" \
-    title="Disable AlwaysOffscreen (default)"
-
-load_ao()
-{
-    winetricks_set_wined3d_var AlwaysOffscreen "$1"
-}
-
-#----------------------------------------------------------------
 # CheckFloatConstants settings
 
 w_metadata cfc=enabled settings \
     title_uk="Увімкнути CheckFloatConstants" \
     title="Enable CheckFloatConstants"
-w_metadata cfc=disable settings \
+w_metadata cfc=disabled settings \
     title_uk="Вимкнути CheckFloatConstants (за замовчуванням)" \
     title="Disable CheckFloatConstants (default)"
 
@@ -22024,6 +22016,9 @@ load_cfc()
 #----------------------------------------------------------------
 # CSMT settings
 
+w_metadata csmt=force settings \
+    title_uk="Увімкнути та примусити серіалізацію команд OpenGL або Vulkan між кількома потоками команд в одній програмі" \
+    title="Enable and force serialisation of OpenGL or Vulkan commands between multiple command streams in the same application"
 w_metadata csmt=on settings \
     title_uk="Увімкнути Command Stream Multithreading (за замовчуванням)" \
     title="Enable Command Stream Multithreading (default)"
@@ -22036,6 +22031,7 @@ load_csmt()
     case "$1" in
         off) arg=0;;
         on)  arg=1;;
+        force) arg=3;;
         *) w_die "illegal value $1 for csmt";;
     esac
 
@@ -22053,20 +22049,6 @@ _EOF_
 #----------------------------------------------------------------
 # DirectDraw settings
 
-w_metadata glsl=enabled settings \
-    title_uk="Увімкнути GLSL шейдери (за замовчуванням)" \
-    title="Enable GLSL shaders (default)"
-w_metadata glsl=disabled settings \
-    title_uk="Вимкнути GLSL шейдери та використовувати ARB шейдери (іноді впливає на швидкодію)" \
-    title="Disable GLSL shaders, use ARB shaders (faster, but sometimes breaks)"
-
-load_glsl()
-{
-    winetricks_set_wined3d_var UseGLSL "$1"
-}
-
-#----------------------------------------------------------------
-
 w_metadata gsm=0 settings \
     title_uk="Встановити MaxShaderModelGS на 0" \
     title="Set MaxShaderModelGS to 0"
@@ -22083,20 +22065,6 @@ w_metadata gsm=3 settings \
 load_gsm()
 {
     winetricks_set_wined3d_var MaxShaderModelGS "$1"
-}
-
-#----------------------------------------------------------------
-
-w_metadata multisampling=enabled settings \
-    title_uk="Увімкнути Direct3D мультисемплінг" \
-    title="Enable Direct3D multisampling"
-w_metadata multisampling=disabled settings \
-    title_uk="Вимкнути Direct3D мультисемплінг" \
-    title="Disable Direct3D multisampling"
-
-load_multisampling()
-{
-    winetricks_set_wined3d_var Multisampling "$1"
 }
 
 #----------------------------------------------------------------
@@ -22146,16 +22114,47 @@ load_psm()
 
 #----------------------------------------------------------------
 
-w_metadata strictdrawordering=enabled settings \
-    title_uk="Увімкнути StrictDrawOrdering" \
-    title="Enable StrictDrawOrdering"
-w_metadata strictdrawordering=disabled settings \
-    title_uk="Вимкнути StrictDrawOrdering (за замовчуванням)" \
-    title="Disable StrictDrawOrdering (default)"
+w_metadata shader_backend=glsl settings \
+    title_uk="Встановити shader_backend на glsl" \
+    title="Set shader_backend to glsl"
+w_metadata shader_backend=arb settings \
+    title_uk="Встановити shader_backend на arb" \
+    title="Set shader_backend to arb"
+w_metadata shader_backend=none settings \
+    title_uk="Встановити shader_backend на none" \
+    title="Set shader_backend to none"
 
-load_strictdrawordering()
+load_shader_backend()
 {
-    winetricks_set_wined3d_var StrictDrawOrdering "$1"
+    winetricks_set_wined3d_var shader_backend "$1"
+}
+
+#----------------------------------------------------------------
+
+w_metadata ssm=disabled settings \
+    title_uk="Вимкнути Struct Shader Math (за замовчуванням)" \
+    title="Disable Struct Shader Math (default)"
+w_metadata ssm=enabled settings \
+    title_uk="Увімкнути Struct Shader Math"\
+    title="Enable Struct Shader Math"
+
+load_ssm()
+{
+    case "$1" in
+        disabled) arg=0;;
+        enabled) arg=1;;
+        *) w_die "illegal value $1 for csmt";;
+    esac
+
+    echo "Setting strict_shader_math to ${arg}"
+    cat > "${W_TMP}"/set-ssm.reg <<_EOF_
+REGEDIT4
+
+[HKEY_CURRENT_USER\\Software\\Wine\\Direct3D]
+"strict_shader_math"=dword:${arg}
+
+_EOF_
+    w_try_regedit "${W_TMP}"/set-ssm.reg
 }
 
 #----------------------------------------------------------------
@@ -23047,22 +23046,12 @@ execute_command()
         shell) winetricks_shell ;;
 
         # These have to come before *=disabled to avoid looking like DLLs
+        cfc=disable*) w_call cfc=disabled ;;
         fontsmooth=disable*) w_call fontsmooth=disable ;;
-        glsl=disable*) w_call glsl=disabled ;;
-        multisampling=disable*) w_call multisampling=disabled ;;
         mwo=disable*) w_call mwo=disable ;;   # FIXME: relax matching so we can handle these spelling differences in verb instead of here
         rtlm=disable*) w_call rtlm=disabled ;;
         sound=disable*) w_call sound=disabled ;;
-        ao=disable*) w_call ao=disabled ;;
-        strictdrawordering=disable*) w_call strictdrawordering=disabled ;;
-
-        # Use winecfg if you want a GUI for plain old DLL overrides
-        alldlls=*) w_call "$1" ;;
-        *=native) w_do_call native "${cmd}";;
-        *=builtin) w_do_call builtin "${cmd}";;
-        *=default) w_do_call default "${cmd}";;
-        *=disabled) w_do_call disabled "${cmd}";;
-        vd=*) w_do_call "${cmd}";;
+        ssm=disable*) w_call ssm=disabled ;;
 
         # Hacks for backwards compatibility
         # 2017/03/22: add deprecation notices
@@ -23070,7 +23059,6 @@ execute_command()
         comdlg32.ocx) w_warn "Calling comdlg32.ocx is deprecated, please use comdlg32ocx instead" ; w_call comdlg32ocx ;;
         dotnet1) w_warn "Calling dotnet1 is deprecated, please use dotnet11 instead" ; w_call dotnet11 ;;
         dotnet2) w_warn "Calling dotnet2 is deprecated, please use dotnet20 instead" ; w_call dotnet20 ;;
-        d9vk_master) w_warn "Calling d9vk_master is deprecated, please use dxvk_master instead" ; w_call dxvk_master ;;
         ddr=gdi) w_warn "Calling ddr=gdi is deprecated, please use renderer=gdi or renderer=no3d instead" ; w_call renderer=gdi ;;
         ddr=opengl) w_warn "Calling ddr=opengl is deprecated, please use renderer=gl instead" ; w_call renderer=gl ;;
         dxvk54) w_warn "Calling dxvk54 is deprecated, please use dxvk054 instead" ; w_call dxvk054 ;;
@@ -23098,6 +23086,8 @@ execute_command()
         fontsmooth-disable) w_warn "Calling fontsmooth-disable is deprecated, please use fontsmooth=disable instead" ; w_call fontsmooth=disable ;;
         fontsmooth-gray) w_warn "Calling fontsmooth-gray is deprecated, please use fontsmooth=gray instead" ; w_call fontsmooth=gray ;;
         fontsmooth-rgb) w_warn "Calling fontsmooth-rgb is deprecated, please use fontsmooth=rgb instead" ; w_call fontsmooth=rgb ;;
+        glsl=enabled) w_warn "Calling glsl=enabled is deprecated, please use shader_backend=glsl instead" ; w_call shader_backend=glsl ;;
+        glsl=disabled) w_warn "Calling glsl=disabled is deprecated, please use shader_backend=arb instead" ; w_call shader_backend=arb ;;
         glsl-disable) w_warn "Calling glsl-disable is deprecated, please use glsl=disabled instead" ; w_call glsl=disabled ;;
         glsl-enable) w_warn "Calling glsl-enable is deprecated, please use glsl=enabled instead" ; w_call glsl=enabled ;;
         ie6_full) w_warn "Calling ie6_full is deprecated, please use ie6 instead" ; w_call ie6 ;;
@@ -23107,6 +23097,8 @@ execute_command()
         oss) w_warn "Calling oss is deprecated, please use sound=oss instead" ; w_call sound=oss ;;
         psdkwin7) w_warn "psdkwin7 has been removed, use psdkwin71 instead"; w_call psdkwin71 ;;
         python) w_warn "Calling python is deprecated, please use python26 instead" ; w_call python26 ;;
+        strictdrawordering=enabled) w_warn "Calling strictdrawordering=enabled is deprecated, please use csmt=enabled instead" ; w_call csmt=enabled ;;
+        strictdrawordering=disabled) w_warn "Calling strictdrawordering=disabled is deprecated, please use csmt=disabled instead" ; w_call csmt=disabled ;;
         vbrun60) w_warn "Calling vbrun60 is deprecated, please use vb6run instead" ; w_call vb6run ;;
         vcrun2005sp1) w_warn "Calling vcrun2005sp1 is deprecated, please use vcrun2005 instead" ; w_call vcrun2005 ;;
         vcrun2008sp1) w_warn "Calling vcrun2008sp1 is deprecated, please use vcrun2008 instead" ; w_call vcrun2008 ;;
@@ -23114,6 +23106,14 @@ execute_command()
         # See https://github.com/Winetricks/winetricks/issues/747
         xact_jun2010) w_warn "Calling xact_jun2010 is deprecated, please use xact instead" ; w_call xact ;;
         xlive) w_warn "Calling xlive is deprecated, please use gfw instead" ; w_call gfw ;;
+
+        # Use winecfg if you want a GUI for plain old DLL overrides
+        alldlls=*) w_call "$1" ;;
+        *=native) w_do_call native "${cmd}";;
+        *=builtin) w_do_call builtin "${cmd}";;
+        *=default) w_do_call default "${cmd}";;
+        *=disabled) w_do_call disabled "${cmd}";;
+        vd=*) w_do_call "${cmd}";;
 
         # Normal verbs, with metadata and load_ functions
         *)

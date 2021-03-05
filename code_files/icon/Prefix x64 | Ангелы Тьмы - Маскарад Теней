@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64" /home/dron/GamesForLinux/code_files/runner/lutris-lol-5.5-2-x86_64/bin/wine explorer "/home/dron/Prefix x64/drive_c/Program Files (x86)/MyPlayCity.ru/Ангелы Тьмы - Маскарад Теней/game.exe"
+Type=Application
+Path=/home/dron/Prefix x64/drive_c/Program Files (x86)/MyPlayCity.ru/Ангелы Тьмы - Маскарад Теней

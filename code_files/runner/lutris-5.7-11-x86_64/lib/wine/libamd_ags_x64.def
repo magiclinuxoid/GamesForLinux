@@ -1,0 +1,34 @@
+; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/amd_ags_x64/amd_ags_x64.spec; do not edit!
+
+LIBRARY amd_ags_x64.dll
+
+EXPORTS
+  agsDeInit@4 @1
+  agsDriverExtensionsDX11_BeginUAVOverlap@0 @2 PRIVATE
+  agsDriverExtensionsDX11_CreateBuffer@0 @3 PRIVATE
+  agsDriverExtensionsDX11_CreateTexture1D@0 @4 PRIVATE
+  agsDriverExtensionsDX11_CreateTexture2D@0 @5 PRIVATE
+  agsDriverExtensionsDX11_CreateTexture3D@0 @6 PRIVATE
+  agsDriverExtensionsDX11_DeInit@0 @7 PRIVATE
+  agsDriverExtensionsDX11_EndUAVOverlap@0 @8 PRIVATE
+  agsDriverExtensionsDX11_GetMaxClipRects@0 @9 PRIVATE
+  agsDriverExtensionsDX11_IASetPrimitiveTopology@0 @10 PRIVATE
+  agsDriverExtensionsDX11_Init@0 @11 PRIVATE
+  agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirect@0 @12 PRIVATE
+  agsDriverExtensionsDX11_MultiDrawIndexedInstancedIndirectCountIndirect@0 @13 PRIVATE
+  agsDriverExtensionsDX11_MultiDrawInstancedIndirect@0 @14 PRIVATE
+  agsDriverExtensionsDX11_MultiDrawInstancedIndirectCountIndirect@0 @15 PRIVATE
+  agsDriverExtensionsDX11_NotifyResourceBeginAllAccess@0 @16 PRIVATE
+  agsDriverExtensionsDX11_NotifyResourceEndAllAccess@0 @17 PRIVATE
+  agsDriverExtensionsDX11_NotifyResourceEndWrites@0 @18 PRIVATE
+  agsDriverExtensionsDX11_NumPendingAsyncCompileJobs@0 @19 PRIVATE
+  agsDriverExtensionsDX11_SetClipRects@0 @20 PRIVATE
+  agsDriverExtensionsDX11_SetDepthBounds@0 @21 PRIVATE
+  agsDriverExtensionsDX11_SetDiskShaderCacheEnabled@0 @22 PRIVATE
+  agsDriverExtensionsDX11_SetMaxAsyncCompileThreadCount@0 @23 PRIVATE
+  agsDriverExtensionsDX11_SetViewBroadcastMasks@0 @24 PRIVATE
+  agsDriverExtensionsDX12_DeInit@0 @25 PRIVATE
+  agsDriverExtensionsDX12_Init@0 @26 PRIVATE
+  agsGetCrossfireGPUCount@0 @27 PRIVATE
+  agsInit@12 @28
+  agsSetDisplayMode@0 @29 PRIVATE

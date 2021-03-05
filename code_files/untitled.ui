@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1057</width>
+    <width>1066</width>
     <height>610</height>
    </rect>
   </property>
@@ -551,7 +551,7 @@ QTabBar::tab {
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <property name="iconSize">
        <size>
@@ -1802,175 +1802,121 @@ color:rgb(255, 255, 255);
         <string>Создание</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="2" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="styleSheet">
-             <string notr="true">border-width: 1px;        
-background-color: rgb(255, 16, 72);
-border-radius:10px;
-border:none;
-font: 16pt &quot;Franxurter Totally&quot;;
-padding:1px;
-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string>Путь к префиксу:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="textInteractionFlags">
-             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_4">
-            <property name="styleSheet">
-             <string notr="true">border-width: 1px;        
-border-style: solid;
-background-color: rgb(255, 16, 72);
-border-radius:10px;
-border:none;
-font: 16pt &quot;Franxurter Totally&quot;;
-padding:1px;
-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string>Путь к wine:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="8" column="0">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
+          <property name="styleSheet">
+           <string notr="true">
+border-radius:13px;
+
+
+</string>
           </property>
-         </spacer>
-        </item>
-        <item row="1" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QToolButton" name="Createprefix">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>70</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QToolButton" name="Createprefix">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>70</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QToolButton::checked{
 border-radius:10px;
 background-color:rgb(255, 16, 72);
 }</string>
-            </property>
-            <property name="text">
-             <string>Создать и выбрать
+               </property>
+               <property name="text">
+                <string>Создать и выбрать
  префикс</string>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-            <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextUnderIcon</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="Selectwine">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="Selectwine">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QToolButton::checked{
 border-radius:10px;
 background-color: rgb(255, 16, 72);
 }</string>
-            </property>
-            <property name="text">
-             <string>Выбрать wine</string>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-            <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextUnderIcon</enum>
-            </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignHCenter">
-           <widget class="QComboBox" name="comboBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QComboBox{
+               </property>
+               <property name="text">
+                <string>Выбрать wine</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QComboBox" name="comboBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox{
 border-width: 1px;        
 border-style: solid;
 background-color: rgb(255, 16, 72);
@@ -2000,67 +1946,261 @@ border-radius:10px;
 color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 16, 72);
 }</string>
-            </property>
-            <property name="currentText">
-             <string>win64</string>
-            </property>
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <item>
-             <property name="text">
-              <string>win64</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>win32</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="Prefixload">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
+               </property>
+               <property name="currentText">
+                <string>win64</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>win64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>win32</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="Prefixload">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QToolButton::checked{
 border-radius:10px;
 background-color: rgb(255, 16, 72);;
 }</string>
-            </property>
-            <property name="text">
-             <string>сконфигурировать 
+               </property>
+               <property name="text">
+                <string>сконфигурировать 
 префикс</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::InstantPopup</enum>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="styleSheet">
+                <string notr="true">border-width: 1px;        
+background-color: rgb(255, 16, 72);
+border-radius:10px;
+border:none;
+font: 16pt &quot;Franxurter Totally&quot;;
+padding:1px;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>Путь к префиксу:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="styleSheet">
+                <string notr="true">border-width: 1px;        
+border-style: solid;
+background-color: rgb(255, 16, 72);
+border-radius:10px;
+border:none;
+font: 16pt &quot;Franxurter Totally&quot;;
+padding:1px;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>Путь к wine:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
             </property>
-            <property name="iconSize">
-             <size>
-              <width>40</width>
-              <height>40</height>
-             </size>
+            <property name="title">
+             <string/>
             </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-            <property name="popupMode">
-             <enum>QToolButton::InstantPopup</enum>
-            </property>
-            <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextUnderIcon</enum>
-            </property>
+            <layout class="QGridLayout" name="gridLayout_15">
+             <item row="0" column="0">
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
+        </item>
+        <item row="1" column="0" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(71, 71, 71);
+border-radius:13px;
+padding:7px;
+
+</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QListWidget" name="listWidget_4">
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:vertical {
+background-color: transparent;
+width: 25px;
+margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: rgb(48, 48, 48);
+min-height: 48px;
+}
+
+/* This remvoes the bottom button by setting the height to 0px */
+QScrollBar::add-line:vertical {
+height: 0px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+/* This remvoes the top button by setting the height to 0px */
+QScrollBar::sub-line:vertical {
+height: 0px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+QListWidget{
+color:rgb(255, 255, 255);
+background-color: rgb(71, 71, 71);
+font: 16pt &quot;Franxurter Totally&quot;;
+border:none;
+border-radius:13px;
+padding:5px;
+
+}
+QListWidget::item::selected{
+padding:-0px;
+border-radius:7px;
+background-color:  rgb(255, 16, 72);
+color:rgb(255, 255, 255);
+}
+QListWidget::item{
+padding:5px;
+color:rrgb(255, 16, 72);
+}</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>13</width>
+               <height>13</height>
+              </size>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QToolButton" name="toolButton_12">
+             <property name="styleSheet">
+              <string notr="true">border-radius:10px;
+background-color: rgb(255, 16, 72);</string>
+             </property>
+             <property name="text">
+              <string>выбрать</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -2078,248 +2218,6 @@ background-color: rgb(255, 16, 72);;
         <string>Префиксы</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="3">
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QToolButton" name="selectexe">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-font: 16pt &quot;Franxurter Totally&quot;;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>Выбрать .exe</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-            <property name="autoRepeat">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="installexe">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>127</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>Установка</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="Line" name="line">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="deleteitem">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>Удалить</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="Winetricks">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>Winetricks</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="WineCfg">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>Winecfg</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="toolButton_6">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QToolButton::checked{
-border-radius:10px;
-background-color: rgb(255, 16, 72);
-}</string>
-            </property>
-            <property name="text">
-             <string>...</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_5">
-          <property name="styleSheet">
-           <string notr="true">border-width: 1px;        
-background-color: rgb(255, 16, 72);
-border-radius:10px;
-border:none;
-font: 16pt &quot;Franxurter Totally&quot;;
-padding:1px;
-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>Путь к установщику:</string>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox">
           <property name="sizePolicy">
@@ -2338,84 +2236,6 @@ padding:7px;
 </string>
           </property>
           <layout class="QGridLayout" name="gridLayout_3">
-           <item row="3" column="1">
-            <widget class="QToolButton" name="toolButton_2">
-             <property name="minimumSize">
-              <size>
-               <width>32</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>13</width>
-               <height>13</height>
-              </size>
-             </property>
-             <property name="shortcut">
-              <string>Backspace</string>
-             </property>
-             <property name="popupMode">
-              <enum>QToolButton::DelayedPopup</enum>
-             </property>
-             <property name="autoRaise">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QToolButton" name="toolButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="baseSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QToolButton{
-border-radius:16px;
-background-color: rgb(255, 16, 72);
-border:none;
-font:  11pt;
-}</string>
-             </property>
-             <property name="text">
-              <string>Поиск</string>
-             </property>
-             <property name="icon">
-              <iconset resource="resource.qrc">
-               <normaloff>:/newPrefix/img/search-3-16.ico</normaloff>:/newPrefix/img/search-3-16.ico</iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonIconOnly</enum>
-             </property>
-             <property name="autoRaise">
-              <bool>false</bool>
-             </property>
-             <property name="arrowType">
-              <enum>Qt::NoArrow</enum>
-             </property>
-            </widget>
-           </item>
            <item row="3" column="0">
             <widget class="QLineEdit" name="lineEdit_2">
              <property name="enabled">
@@ -2667,7 +2487,7 @@ font: 16pt &quot;Franxurter Totally&quot;;
              </property>
             </widget>
            </item>
-           <item row="4" column="0" colspan="3">
+           <item row="5" column="0" colspan="4">
             <widget class="QListWidget" name="listWidget_2">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
@@ -2754,6 +2574,84 @@ color:rrgb(255, 16, 72);
              </property>
             </widget>
            </item>
+           <item row="3" column="3">
+            <widget class="QToolButton" name="toolButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolButton{
+border-radius:16px;
+background-color: rgb(255, 16, 72);
+border:none;
+font:  11pt;
+}</string>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/newPrefix/img/search-3-16.ico</normaloff>:/newPrefix/img/search-3-16.ico</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonIconOnly</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>false</bool>
+             </property>
+             <property name="arrowType">
+              <enum>Qt::NoArrow</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QToolButton" name="toolButton_2">
+             <property name="minimumSize">
+              <size>
+               <width>32</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/newPrefix/img/cross.svg</normaloff>:/newPrefix/img/cross.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>13</width>
+               <height>13</height>
+              </size>
+             </property>
+             <property name="shortcut">
+              <string>Backspace</string>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -2764,6 +2662,248 @@ color:rrgb(255, 16, 72);
           </property>
           <property name="text">
            <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QToolButton" name="selectexe">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+font: 16pt &quot;Franxurter Totally&quot;;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>Выбрать .exe</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="installexe">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>127</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>Установка</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="deleteitem">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="Winetricks">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>Winetricks</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="WineCfg">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>Winecfg</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButton_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton::checked{
+border-radius:10px;
+background-color: rgb(255, 16, 72);
+}</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="styleSheet">
+           <string notr="true">border-width: 1px;        
+background-color: rgb(255, 16, 72);
+border-radius:10px;
+border:none;
+font: 16pt &quot;Franxurter Totally&quot;;
+padding:1px;
+color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Путь к установщику:</string>
           </property>
          </widget>
         </item>
@@ -2791,7 +2931,7 @@ color:rrgb(255, 16, 72);
              <string notr="true">font: 16pt &quot;Franxurter Totally&quot;;</string>
             </property>
             <property name="text">
-             <string>Версия программы:v0.23</string>
+             <string>Версия программы:v0.25</string>
             </property>
            </widget>
           </item>
@@ -3329,7 +3469,6 @@ color: rgb(255, 255, 255);</string>
   <tabstop>installexe</tabstop>
   <tabstop>comboBox</tabstop>
   <tabstop>Prefixload</tabstop>
-  <tabstop>Createprefix</tabstop>
   <tabstop>Selectwine</tabstop>
   <tabstop>deleteitem</tabstop>
   <tabstop>Winetricks</tabstop>
@@ -3341,18 +3480,18 @@ color: rgb(255, 255, 255);</string>
  </resources>
  <connections>
   <connection>
-   <sender>toolButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>lineEdit_2</receiver>
-   <slot>clear()</slot>
+   <sender>lineEdit_5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>toolButton_11</receiver>
+   <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>842</x>
-     <y>43</y>
+     <x>236</x>
+     <y>589</y>
     </hint>
     <hint type="destinationlabel">
-     <x>330</x>
-     <y>43</y>
+     <x>1047</x>
+     <y>591</y>
     </hint>
    </hints>
   </connection>
@@ -3363,12 +3502,28 @@ color: rgb(255, 255, 255);</string>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>879</x>
-     <y>107</y>
+     <x>894</x>
+     <y>105</y>
     </hint>
     <hint type="destinationlabel">
-     <x>197</x>
-     <y>109</y>
+     <x>92</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>875</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>41</y>
     </hint>
    </hints>
   </connection>
@@ -3389,18 +3544,66 @@ color: rgb(255, 255, 255);</string>
    </hints>
   </connection>
   <connection>
-   <sender>lineEdit_5</sender>
-   <signal>textEdited(QString)</signal>
-   <receiver>toolButton_11</receiver>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>toolButton_12</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>125</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>groupBox_5</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>194</x>
-     <y>498</y>
+     <x>146</x>
+     <y>432</y>
     </hint>
     <hint type="destinationlabel">
-     <x>988</x>
-     <y>499</y>
+     <x>98</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>groupBox_6</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>430</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>531</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>groupBox_7</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>443</y>
     </hint>
    </hints>
   </connection>
@@ -3411,12 +3614,12 @@ color: rgb(255, 255, 255);</string>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>994</x>
-     <y>502</y>
+     <x>1005</x>
+     <y>577</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1020</x>
-     <y>511</y>
+     <x>1042</x>
+     <y>574</y>
     </hint>
    </hints>
   </connection>
