@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>../img/arrow-216-16.png</file>
+    <file>../img/settings.svg</file>
+    <file>../img/search-3-16.ico</file>
+    <file>../img/back.png</file>
+    <file>../img/logonew.png</file>
+    <file>../img/cross.svg</file>
+    <file>font/Franxurter-Totally.ttf</file>
+  </qresource>
+</RCC>

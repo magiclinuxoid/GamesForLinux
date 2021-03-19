@@ -1,0 +1,58 @@
+# Last proton_dist configuration - Вт дек 29 00:06:57 MSK 2020 :
+
+Local cfg files used
+You will be prompted after the 64-bit side is built (compat workaround)
+
+Wine (plain) version: 6.0rc4.r0.ge377786a71c
+Using wine-staging patchset (version 6.0rc4.r2.g8b1e0eec)
+
+Disabled the local Esync patchset to use Staging impl instead.
+Not using vkd3d native library for d3d12 translation (allows using vkd3d-proton)
+
+Done applying reverting hotfixes (if any) - list available in prepare.log
+
+use_clock_monotonic.patch -- ( Applied clock_monotonic patch )
+FS_bypass_compositor.patch -- ( Applied Fullscreen compositor bypass patch )
+mwo.patch -- ( Applied Mechwarrior Online fix )
+childwindow.patch -- ( Applied child window for vk patch )
+steam.patch -- ( Applied steam crossover hack )
+CSMT-toggle.patch -- ( Applied CSMT toggle logic patch )
+
+Staging overrides, if any: -W dinput-SetActionMap-genre -W dinput-axis-recalc -W dinput-joy-mappings -W dinput-reconnect-joystick -W dinput-remap-joystick
+
+assettocorsa_hud_perf-proton.patch -- ( Applied Assetto Corsa HUD performance fix (proton edition) )
+mk11.patch -- ( Applied Mortal Kombat 11 fix )
+fsync-unix-staging.patch -- ( Applied fsync, an experimental replacement for esync (unix, staging) )
+server_Abort_waiting_on_a_completion_port_when_closing_it.patch -- ( Added Abort waiting on a completion port when closing it Proton patch )
+
+LAA-unix-staging.patch -- ( Applied large address aware override support )
+proton-tkg-steamclient-swap.patch -- ( Applied steamclient substitution hack )
+
+proton-tkg-staging.patch -- ( Using Steam-specific Proton-tkg patches (staging) 2/3 )
+proton-steam-bits.patch -- ( Using Steam-specific Proton-tkg patches (staging) 3/3 )
+proton-pa-staging.patch -- ( Enable Proton's PA additions )
+proton-cpu-topology-overrides.patch -- ( Enable Proton's CPU topology override support )
+proton-sdl-joy.patch -- ( Enable SDL Joystick support (from Proton) )
+SteamVR support disabled as it requires proton_fs_hack
+proton-winevulkan-nofshack.patch -- ( Using Proton winevulkan patches (nofshack) )
+msvcrt_nativebuiltin.patch -- ( Enforce msvcrt Dlls to native then builtin (from Proton) )
+josh-flat-theme.patch -- ( Add Josh's better-theme )
+proton-win10-default-staging.patch -- ( Enforce win10 as default wine version (staging) )
+dxvk_config_dxgi_support.patch -- ( Add support for dxvk_config library to Wine's dxgi )
+
+Applied your own patch amdags.mypatch
+Applied your own patch FinalFantasyXVHack.mypatch
+Applied your own patch origin_downloads_e4ca5dbe_revert.mypatch
+
+wine-tkg-staging.patch -- ( Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead. )
+
+
+With predefined optimizations:
+CFLAGS = -O2 -ftree-vectorize
+LDFLAGS = -Wl,-O1,--sort-common,--as-needed
+CROSSCFLAGS = -O2 -ftree-vectorize
+CROSSLDFLAGS = -Wl,-O1,--sort-common,--as-needed
+CC = ccache gcc
+CXX = ccache g++
+CROSSCC64 = ccache x86_64-w64-mingw32-gcc
+CROSSCC32 = ccache i686-w64-mingw32-gcc

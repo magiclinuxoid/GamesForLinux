@@ -1,0 +1,8 @@
+; File generated automatically from ../wine-mirror-git/dlls/sensapi/sensapi.spec; do not edit!
+
+LIBRARY sensapi.dll
+
+EXPORTS
+  IsDestinationReachableA @1
+  IsDestinationReachableW @2
+  IsNetworkAlive @3

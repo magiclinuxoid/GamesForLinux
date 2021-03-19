@@ -1,0 +1,1 @@
+MANGOHUD=1 MANGOHUD_CONFIG=cpu_temp,gpu_temp,position=top-right,height=500,font_size=32

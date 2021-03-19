@@ -1,0 +1,3 @@
+#!/bin/sh
+WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64" /home/dron/GamesForLinux/code_files/runner/GamesForLinux_6.3-staging-mod/dist/bin/wine explorer "uninstaller"
+/home/dron/GamesForLinux/code_files/icon/Prefix x64 | Steam
