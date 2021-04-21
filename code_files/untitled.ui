@@ -551,7 +551,7 @@ QTabBar::tab {
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <property name="iconSize">
        <size>
@@ -616,7 +616,8 @@ border:none;</string>
            <item row="0" column="0">
             <widget class="QLabel" name="label_7">
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;Franxurter Totally&quot;;</string>
+              <string notr="true">color:rgb(255, 255, 255);
+font: 14pt &quot;Franxurter Totally&quot;;</string>
              </property>
              <property name="text">
               <string>Командная строка для HUD</string>
@@ -2967,7 +2968,7 @@ background-color: rgb(255, 16, 72);
                <item row="0" column="0">
                 <widget class="QToolButton" name="toolButton_13">
                  <property name="text">
-                  <string>...</string>
+                  <string>Wine ver</string>
                  </property>
                  <property name="icon">
                   <iconset resource="resource.qrc">
@@ -2978,6 +2979,9 @@ background-color: rgb(255, 16, 72);
                    <width>20</width>
                    <height>20</height>
                   </size>
+                 </property>
+                 <property name="toolButtonStyle">
+                  <enum>Qt::ToolButtonTextOnly</enum>
                  </property>
                 </widget>
                </item>
@@ -3048,10 +3052,11 @@ color: rgb(255, 255, 255);</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 16pt &quot;Franxurter Totally&quot;;</string>
+             <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Franxurter Totally&quot;;</string>
             </property>
             <property name="text">
-             <string>Версия программы:v0.25</string>
+             <string>Версия программы:v0.27</string>
             </property>
            </widget>
           </item>
@@ -3127,20 +3132,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgb
         <string>MangoHUD</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_13">
-        <item row="5" column="3">
-         <spacer name="verticalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="0" rowspan="4">
+        <item row="1" column="0" rowspan="4">
          <widget class="QTextBrowser" name="textBrowser">
           <property name="layoutDirection">
            <enum>Qt::LeftToRight</enum>
@@ -3177,318 +3169,336 @@ QTextBrowser{
 border-radius:13px;
 padding:15px;
 background-color: rgb(71, 71, 71);
+color: rgb(255, 255, 255);
+font: 16pt &quot;Franxurter Totally&quot;;
 }</string>
           </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;table border=&quot;0&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot;&gt;&lt;thead&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Franxurter Totally'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;table border=&quot;0&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Переменная&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Описание&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;td width=&quot;176&quot; style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; font-weight:600; color:#c0bfbc;&quot;&gt;Variable &lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td width=&quot;449&quot; style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; font-weight:600; color:#c0bfbc;&quot;&gt;Description&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_temp&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_temp&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает текущую температуру CPU/GPU&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_temp&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_temp&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays current CPU/GPU temperature&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;core_load &lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает нагрузку и частоту на ядро&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;core_load&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays load &amp;amp; frequency per core&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_core_clock&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_mem_clock&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает частоту ядра GPU/памяти&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_core_clock&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_mem_clock&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays GPU core/memory frequency&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;ram&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;vram&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает использование системной оперативной памяти/VRAM&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;ram&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;vram&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays system RAM/VRAM usage&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;full&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Включает большинство переключаемых параметров (в настоящее время исключает гистограмму)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;full&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Enables most of the toggleable parameters (currently excludes histogram)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_size=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Настраиваемый размер шрифта (по умолчанию=24)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_size=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Customizeable font size (default=24)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_size_text=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Настраиваемый размер шрифта для другого текста, такого как метаданные мультимедиа (по умолчанию=24)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_size_text=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Customizeable font size for other text like media metadata (default=24)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_scale=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установить глобальный масштаб шрифта (по умолчанию=1.0)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_scale=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set global font scale (default=1.0)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_file&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Измените шрифт по умолчанию (установите местоположение в файл .TTF/.OTF )&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_file&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change default font (set location to .TTF/.OTF file )&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_file_text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Измените шрифт текста. В противном случае font_file используется&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_file_text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change text font. Otherwise font_file is used&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_glyph_ranges&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Укажите дополнительные диапазоны глифов шрифтов, разделенные запятыми: корейский, китайский, китайский упрощенный, японский, кириллический, тайский, вьетнамский, latin_ext_a, latin_ext_b. Если вы испытываете сбои или текст представляет собой просто квадраты, уменьшите размер шрифта или диапазоны глифов.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_glyph_ranges&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Specify extra font glyph ranges, comma separated: korean, chinese, chinese_simplified, japanese, cyrillic, thai, vietnamese, latin_ext_a, latin_ext_b. If you experience crashes or text is just squares, reduce font size or glyph ranges.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;no_small_font&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use primary font size for smaller text like units&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;no_small_font&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Use primary font size for smaller text like units&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;width=&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;height=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Используйте основной размер шрифта для меньшего текста, такого как&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ширина единиц измерения&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;width=&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;height=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Customizeable hud dimensions (in pixels)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;position=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Расположение панели управления: сверху-слева (по умолчанию), верхний правый, нижний левый, нижний правый, верхний-центр&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;position=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Location of the hud: top-left (default), top-right, bottom-left, bottom-right, top-center&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;offset_x&lt;/span&gt; &lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;offset_y&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Позиция HUD смещения&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;offset_xoffset_y&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Hud position offsets&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;no_display&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Скрыть hud по умолчанию&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;no_display&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Hide the hud by default&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;toggle_hud=&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;toggle_logging=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Модифицируемые горячие клавиши переключения. По умолчанию используются Shift_R+F12 и Shift_L+F2 соответственно.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;toggle_hud=&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;toggle_logging=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Modifiable toggle hotkeys. Default are Shift_R+F12 and Shift_L+F2, respectively.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;reload_cfg=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Измените привязку клавиш для перезагрузки конфигурации. Default = Shift_L+F4&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;reload_cfg=&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change keybind for reloading the config. Default = Shift_L+F4&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;time&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;time_format=%T&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает местное время. См. Справку по форматированию std::put_time. ПРИМЕЧАНИЕ: Иногда приложения (или AMDVLK (должны быть исправлены в последней версии)) могут установить переменную окружения TZ (timezone) в UTC/GMT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;time&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;time_format=%T&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays local time. See &lt;/span&gt;&lt;a href=&quot;https://en.cppreference.com/w/cpp/io/manip/put_time&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; text-decoration: underline; color:#c0bfbc;&quot;&gt;std::put_time&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt; for formatting help. NOTE: Sometimes apps (or AMDVLK (should be fixed in latest)) may set TZ (timezone) environment variable to UTC/GMT&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;vram_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;ram_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;io_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;engine_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;frametime_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;background_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;text_color&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;media_player_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменение цветов по умолчанию: gpu_color=RRGGBB&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;vram_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;ram_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;io_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;engine_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;frametime_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;background_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;text_color&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;media_player_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change default colors: gpu_color=RRGGBB&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;alpha&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите непрозрачность всего текста и фреймового графика 0.0-1.0&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;alpha&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the opacity of all text and frametime graph 0.0-1.0&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;background_alpha&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите непрозрачность фона 0.0-1.0&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;background_alpha&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the opacity of the background 0.0-1.0&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;read_cfg&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Добавьте в MANGOHUD_CONFIG в качестве первого параметра, чтобы также загрузить конфигурационный файл. В противном случае используются только параметры MANGOHUD_CONFIG.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;read_cfg&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Add to MANGOHUD_CONFIG as first parameter to also load config file. Otherwise only MANGOHUD_CONFIG parameters are used.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;output_folder&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установить расположение выходных файлов (необходимых для ведения журнала)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;output_folder&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set location of the output files (Required for logging)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;log_duration&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите количество времени, в течение которого будет выполняться ведение журнала (в секундах)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;log_duration&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set amount of time the logging will run for (in seconds)&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;vsync&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gl_vsync&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите vsync для OpenGL или Vulkan&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;vsync&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gl_vsync&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set vsync for OpenGL or Vulkan&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;media_player&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показать метаданные медиаплеера&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;media_player&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Show media player metadata&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;media_player_name&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Принудительное имя службы DBus медиаплеера без org.mpris.MediaPlayer2 часть, как spotify, vlc, audacious или кантата. Если ни один из них не установлен, МангоХуд пытается переключиться между играющими в данный момент игроками.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;media_player_name&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Force media player DBus service name without the org.mpris.MediaPlayer2 part, like spotify, vlc, audacious or cantata. If none is set, MangoHud tries to switch between currently playing players.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;media_player_order&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Порядок полей метаданных медиаплеера. По умолчанию используется название,исполнитель,альбом.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;media_player_order&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Media player metadata field order. Defaults to title,artist,album.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;font_scale_media_player&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменение размера текста медиаплеера относительно font_size&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;font_scale_media_player&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change size of media player text relative to font_size&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;io_read&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;io_write&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показать без кэширования ввода-вывода для чтения/записи, МБ/с&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;io_read&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;io_write&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Show non-cached IO read/write, in MiB/s&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;pci_dev&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Выберите GPU-устройство в версии multi-GPU setups&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;pci_dev&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Select GPU device in multi-gpu setups&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показывает текущую версию&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;mangohud&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Shows current mangohud version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;fps_limit&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ограничьте частоту кадров приложений. Разделенный запятыми список одного или нескольких значений FPS. 0 означает неограниченное.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;fps_limit&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Limit the apps framerate. Comma-separated list of one or more FPS values. 0 means unlimited.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;toggle_fps_limit&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Цикл между ограничениями FPS. По умолчанию используется Shift_L+F1.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;toggle_fps_limit&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Cycle between FPS limits. Defaults to Shift_L+F1.&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;arch&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показать, является ли приложение 32-или 64-битной&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;гистограммой&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;arch&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Show if the application is 32 or 64 bit&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;histogram&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Измените график fps на гистограмму&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;histogram&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change fps graph to histogram&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_text&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Переопределение CPU и GPU text&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_text&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Override CPU and GPU text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;log_interval&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Измените интервал журнала по умолчанию, 100 - это значение по умолчанию&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;log_interval&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change the default log interval, 100 is default&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;vulkan_driver&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает используемый драйвер vulkan, radv/amdgpu-pro/amdvlk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;vulkan_driver&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays used vulkan driver, radv/amdgpu-pro/amdvlk&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_name&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображает название процессора от шины PCI.идентификаторы&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_name&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Displays GPU name from pci.ids&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_power&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_power&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Дисплей CPU/GPU draw in watts&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_power&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_power&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Display CPU/GPU draw in watts&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;engine_version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображение OpenGL или vulkan и версии движка рендеринга на основе vulkan&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;engine_version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Display OpenGL or vulkan and vulkan-based render engine's version&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;permit_upload&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Разрешить загрузку журналов в Flightlessmango.com&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;permit_upload&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Allow uploading of logs to Flightlessmango.com&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;upload_log&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменить привязку клавиш для загрузки журнала&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;upload_log&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change keybind for uploading log&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;benchmark_percentiles&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Настройте, какие процентили частоты кадров отображаются в сводке журнала. Значение по умолчанию-97,AVG,1,0.1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;benchmark_percentiles&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Configure which framerate percentiles are shown in the logging summary. Default is 97,AVG,1,0.1&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;wine&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показывает текущую версию Wine или Proton в использовании&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;wine&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Shows current Wine or Proton version in use&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;wine_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменение цвета wine/proton текста&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;wine_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Change color of the wine/proton text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_mhz&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Показывает текущую частоту процессора МГц&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_mhz&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Shows the CPUs current MHz&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_load_change&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменяет цвет загрузки графического процессора в зависимости от загрузки&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_load_change&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Changes the color of the GPU load depending on load&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_load_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите цвета для изменения нагрузки gpu low,medium и high &lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_load_color=0000FF,00FFFF,FF00FF&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_load_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the colors for the gpu load change low,medium and high. e.g gpu_load_color=0000FF,00FFFF,FF00FF&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;gpu_load_value&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите значения для средней и высокой нагрузки, например gpu_load_value=50,90&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;gpu_load_value&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the values for medium and high load e.g gpu_load_value=50,90&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_load_change&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Изменяет цвет загрузки процессора в зависимости от загрузки&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_load_change&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Changes the color of the CPU load depending on load&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_load_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите цвета для изменения нагрузки gpu low,medium и high cpu_load_color=0000FF,00FFFF,FF00FF&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_load_color&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the colors for the gpu load change low,medium and high. e.g cpu_load_color=0000FF,00FFFF,FF00FF&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cpu_load_value&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите значения для средней и высокой нагрузки, например cpu_load_value=50,90&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cpu_load_value&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the values for medium and high load e.g cpu_load_value=50,90&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;cellpadding_y&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите вертикальное заполнение ячеек, по умолчанию -0.085&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;cellpadding_y&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the vertical cellpadding, default is -0.085&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;frametime&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Отображение времени кадра рядом с текстом fps&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;frametime&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Display frametime next to fps text&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;table_columns&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Установите количество столбцов таблицы для ImGui, по умолчанию 3.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;table_columns&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Set the number of table columns for ImGui, defaults to 3&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Noto Mono';&quot;&gt;blacklist&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Добавьте программу в черный список, например blacklist=vkcube,WatchDogs2.exe&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;blacklist&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&quot; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; border-top-color:#000000; border-right-color:#000000; border-bottom-color:#000000; border-left-color:#000000;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Franxurter Totally Medium'; font-size:14pt; color:#c0bfbc;&quot;&gt;Add a program to the blacklist. e.g blacklist=vkcube,WatchDogs2.exe&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#c0bfbc;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="placeholderText">
            <string/>
@@ -3555,6 +3565,19 @@ color: rgb(255, 255, 255);</string>
           </property>
          </widget>
         </item>
+        <item row="4" column="3">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
      </widget>
@@ -3600,34 +3623,18 @@ color: rgb(255, 255, 255);</string>
  </resources>
  <connections>
   <connection>
-   <sender>lineEdit_5</sender>
-   <signal>textEdited(QString)</signal>
-   <receiver>toolButton_11</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>236</x>
-     <y>589</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1047</x>
-     <y>591</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>toolButton_4</sender>
+   <sender>toolButton_8</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit_3</receiver>
+   <receiver>lineEdit_4</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>894</x>
-     <y>105</y>
+     <x>878</x>
+     <y>64</y>
     </hint>
     <hint type="destinationlabel">
-     <x>92</x>
-     <y>74</y>
+     <x>420</x>
+     <y>61</y>
     </hint>
    </hints>
   </connection>
@@ -3648,18 +3655,50 @@ color: rgb(255, 255, 255);</string>
    </hints>
   </connection>
   <connection>
-   <sender>toolButton_8</sender>
+   <sender>lineEdit_5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>toolButton_11</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>589</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1047</x>
+     <y>591</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_14</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit_4</receiver>
+   <receiver>groupBox_8</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>306</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_3</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>878</x>
-     <y>64</y>
+     <x>894</x>
+     <y>105</y>
     </hint>
     <hint type="destinationlabel">
-     <x>420</x>
-     <y>61</y>
+     <x>92</x>
+     <y>74</y>
     </hint>
    </hints>
   </connection>
@@ -3682,22 +3721,6 @@ color: rgb(255, 255, 255);</string>
   <connection>
    <sender>toolButton_12</sender>
    <signal>clicked()</signal>
-   <receiver>groupBox_5</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>146</x>
-     <y>432</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>98</x>
-     <y>186</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>toolButton_12</sender>
-   <signal>clicked()</signal>
    <receiver>groupBox_6</receiver>
    <slot>show()</slot>
    <hints>
@@ -3708,38 +3731,6 @@ color: rgb(255, 255, 255);</string>
     <hint type="destinationlabel">
      <x>139</x>
      <y>531</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>toolButton_12</sender>
-   <signal>clicked()</signal>
-   <receiver>groupBox_7</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>146</x>
-     <y>432</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>238</x>
-     <y>443</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>toolButton_11</sender>
-   <signal>clicked()</signal>
-   <receiver>toolButton_11</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1005</x>
-     <y>577</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1042</x>
-     <y>574</y>
     </hint>
    </hints>
   </connection>
@@ -3760,18 +3751,50 @@ color: rgb(255, 255, 255);</string>
    </hints>
   </connection>
   <connection>
-   <sender>toolButton_14</sender>
+   <sender>toolButton_11</sender>
    <signal>clicked()</signal>
-   <receiver>groupBox_8</receiver>
+   <receiver>toolButton_11</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>102</x>
-     <y>569</y>
+     <x>1005</x>
+     <y>577</y>
     </hint>
     <hint type="destinationlabel">
-     <x>306</x>
-     <y>404</y>
+     <x>1042</x>
+     <y>574</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>groupBox_5</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>groupBox_7</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>443</y>
     </hint>
    </hints>
   </connection>
