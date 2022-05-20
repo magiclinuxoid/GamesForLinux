@@ -5,3 +5,5 @@ mkdir $HOME/GamesForLinux/code_files/prefix_locate
 mkdir $HOME/GamesForLinux/code_files/icon
 mkdir $HOME/GamesForLinux/code_files/prefix_locate_delete
 mkdir $HOME/GamesForLinux/code_files/software_icon_delete
+mkdir $HOME/GamesForLinux/code_files/software_HUD
+mkdir $HOME/GamesForLinux/code_files/prefix_locate_wine_ver

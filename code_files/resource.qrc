@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>1600x1200.png</file>
     <file>../img/arrow-216-16.png</file>
     <file>../img/settings.svg</file>
     <file>../img/search-3-16.ico</file>

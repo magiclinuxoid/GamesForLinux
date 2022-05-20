@@ -1,18 +1,9 @@
-#!/usr/bin/env bash
-# ============================================================================ #
-# This script will create a shortcut on applications menu for windows programs 
-# installed with wine.
-# Autor: Thiago silva
-# Contact: thiagos.dasilva@gmail.com
-# URL: https://github.com/thiggy01/wine-create-shortcut
-# ============================================================================ #
-
-# Check if an application argument was submited.
 if [[ $(file --mime-type -b "$1") = application/* ]]; then
 
-#     Get the full path, the name and directory name of submited application file.
+    # Get the full path, the name and directory name of submited application file.
     myFile=$(realpath "$1")
     echo $myFile
+    myBaseName=$(basename "$myFile")
     echo $myBaseName
     myPath=$(dirname "$myFile")
     echo $myPath
@@ -33,8 +24,5 @@ if [[ $(file --mime-type -b "$1") = application/* ]]; then
     convert -alpha on "/tmp/$myBaseName.ico" "/tmp/$myBaseName.png" 2> /dev/null
     VerInst imagemagick
     # Select the best png image file.
-    cp "$(ls -S -1 "/tmp/$myBaseName"*".png"  | head -n 1)" "$HOME/GamesForLinux/code_files/img_icon/$myBaseName.png"
+    cp "$(ls -S -1 "/tmp/$myBaseName"*".png"  | head -n 1)" "$HOME/Games4Linux/code_files/img_icon/$myBaseName.png"
 fi
-
-
-    

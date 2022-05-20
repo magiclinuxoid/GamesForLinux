@@ -1,0 +1,5 @@
+#!/bin/sh
+WINEARCH="win64" WINEPREFIX="/home/dron/Prefix x64" WINE=$GamesForLinux /home/dron/GamesForLinux/code_files/winetricks &
+WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64"  $GamesForLinux winecfg &
+/home/dron/Prefix x64/drive_c/
+WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64"  $GamesForLinux  "

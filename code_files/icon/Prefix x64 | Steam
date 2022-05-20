@@ -1,0 +1,3 @@
+#!/bin/sh
+cd '/home/dron/Prefix x64/drive_c/Program Files (x86)/Steam'
+Exec=WINEARCH=win64 WINEPREFIX="/home/dron/Prefix x64"  $GamesForLinux  "/home/dron/Prefix x64/drive_c/Program Files (x86)/Steam/Steam.exe"

@@ -210,9 +210,30 @@ color: rgb(255, 16, 72);</string>
       </layout>
      </widget>
     </widget>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>30</y>
+       <width>381</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
     <zorder>circularBg</zorder>
     <zorder>circularProgress</zorder>
     <zorder>container</zorder>
+    <zorder>tabWidget</zorder>
    </widget>
   </widget>
  </widget>
